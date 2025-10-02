@@ -1,0 +1,116 @@
+/*General Information*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+    background-color: #262626;
+}
+
+/* Header */
+
+.topcorner {
+padding-right: 50px;
+padding-left: 5px;
+font: bold 35px 'Nunito', sans-serif;
+}
+
+header {
+    background-color: #262626;
+    color: #afa685;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.topbutton {
+    color: #afa685;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid transparent;
+    font: bold 16px 'Nunito', sans-serif;
+    font-size: 1.2rem; /* Larger font size for buttons */
+    padding: 12px 25px; /* Increased padding for better size */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.topbutton:hover {
+    border-color: #afa685;
+}
+
+/*Body Formatting*/
+h1 {
+    font-size: 4rem;
+    padding-top: 0px;
+    padding-left: 10px;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: left;
+    padding-left: 10px;
+}
+
+p {
+    line-height: 1.6;
+    font: bold  'Nunito', sans-serif;
+    padding-left: 10px;
+}
+
+.left-half {
+    padding-left: 10px;
+    font: bold  30px 'Nunito', sans-serif;
+    float: left; /* Align to the left */
+    width: 50%; /* Each half occupies 50% of the parent container's width */ 
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.right-half {
+    padding-top: 55px;
+    font: bold  30px 'Nunito', sans-serif;
+    float: right; /* Align to the left */
+    width: 50%; /* Each half occupies 50% of the parent container's width */ 
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.center {
+    text-align: center;
+    color: #afa685;
+}
+
+hr {
+    padding-bottom: 20px;
+    color: #afa685;
+}
+
+
+/* Images */
+.image-content {
+    flex: 1;
+    max-width: 45%; /* Reduced maximum size */
+    display: flex;
+    justify-content: center;
+}
+
+.ecliss-image {
+    max-width: 50%; /* Smaller size for the image */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-image {
+    max-width: 70%; /* Smaller size for the image */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+    width: 14em;
+}
+
