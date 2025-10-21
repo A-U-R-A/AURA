@@ -404,15 +404,29 @@ footer {
     transform: scale(1.05);
 }
 
-/* Responsive layout */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .project,
     .project.reverse {
-        flex-direction: column;
+        flex-direction: column;       /* stack text and image vertically */
         text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .project-text {
+        max-width: 90%;               /* narrower text for small screens */
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .project-image {
+        max-width: 100%;
     }
 
     .project-image img {
-        max-width: 90%;
+        max-width: 90%;               /* scale image to fit screen */
+        height: auto;                 /* maintain aspect ratio */
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 }
