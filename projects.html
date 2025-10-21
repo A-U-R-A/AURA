@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"> </html>
+<html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +12,57 @@
     <link rel="icon" href="icons/logo_gold.png" type="image/logo_gold" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="styles.css">
 </head>
-    <body>
-        <header>
-            <div class="topcorner">
-                A.U.R.A.
-            </div>
-            <div class="head">
-                <a href="index.html"><button class="topbutton">Home</button></a>
-                <a href="contact.html"><button class="topbutton">Contact</button></a>
-                <a href="projects.html"><button class="topbutton">Projects</button></a>
-                <a href="poster.html"><button class="topbutton">Poster</button></a>
-            </div>
-        </header>
+
+<body>
+    <header>
+        <div class="topcorner">A.U.R.A.</div>
+        <div class="head">
+            <a href="index.html"><button class="topbutton">Home</button></a>
+            <a href="contact.html"><button class="topbutton">Contact</button></a>
+            <a href="projects.html"><button class="topbutton">Projects</button></a>
+            <a href="poster.html"><button class="topbutton">Poster</button></a>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
         <div class="center">
             <h1>Projects</h1>
         </div>
-        <h2>Software</h2>
-        <p>We are currently in development of a software for the preventative maintenence system<br>
-        This is a private software as of this moment, so information can not be released as of now
 
-        </p>
-        <div id="footer"></div>
-        <footer>
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Preventative Maintenance Software</h2>
+                    <p>
+                        Our core software is designed to analyze real-time spacecraft data collected by ECLIS sensors.  
+                        It automatically identifies potential system inefficiencies or anomalies and provides early warnings  
+                        to mission operators. This predictive system enables faster decision-making and ensures optimal  
+                        mission safety and performance.
+                    </p>
+                </div>
+                <div class="project-image">
+                    <img src="images/main_software.png" alt="Main Software Screenshot">
+                </div>
+            </div>
+
+            <div class="project reverse">
+                <div class="project-image">
+                    <img src="images/software_graphs.png" alt="Software Graphs">
+                </div>
+                <div class="project-text">
+                    <h2>Data Ingestion and Visualization</h2>
+                    <p>
+                        Our data ingestion module captures vast sensor streams in real time, converting them into clear  
+                        visual insights. The graphing and analytics interface lets operators view performance metrics,  
+                        detect trends, and act on insights immediately — a critical tool for long-duration missions.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
         © 2025 A.U.R.A. | Designed for Intelligent Space Operations
-        </footer>
-    </body>
+    </footer>
+</body>
+</html>

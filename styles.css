@@ -337,3 +337,82 @@ footer {
         height: 100px;
     }
 }
+
+/* =====================================================
+   PROJECTS PAGE
+===================================================== */
+.project-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 1rem 4rem 1rem;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+.project.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.project-text h2 {
+    color: #afa685;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.project-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .project,
+    .project.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-image img {
+        max-width: 90%;
+    }
+}
