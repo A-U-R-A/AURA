@@ -1,80 +1,126 @@
-/*General Information*/
+/* =====================================================
+   GLOBAL STYLES
+===================================================== */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
     color: #ffffff;
     background-color: #262626;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-/* Header */
-
-.topcorner {
-padding-right: 50px;
-padding-left: 5px;
-font: bold 35px 'Nunito', sans-serif;
+/* Smooth fade-in for sections */
+section, header, .left-half, .right-half, .image-content {
+    animation: fadeIn 1.2s ease-in;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
 header {
     background-color: #262626;
     color: #afa685;
-    padding: 5px;
+    padding: 10px 20px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.topcorner {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+}
+
+/* Navigation buttons */
+.head {
+    display: flex;
+    gap: 15px;
 }
 
 .topbutton {
     color: #afa685;
-    border-radius: 10px;
     background: transparent;
     border: 2px solid transparent;
-    font: bold 16px 'Nunito', sans-serif;
-    font-size: 1.2rem; /* Larger font size for buttons */
-    padding: 12px 25px; /* Increased padding for better size */
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .topbutton:hover {
     border-color: #afa685;
+    background-color: rgba(175, 166, 133, 0.1);
+    transform: translateY(-2px);
 }
 
-/*Body Formatting*/
+/* =====================================================
+   TEXT STYLING
+===================================================== */
+h1, h2 {
+    margin: 1rem 0;
+    color: #afa685;
+    text-shadow: 0 0 5px rgba(175, 166, 133, 0.3);
+}
+
 h1 {
-    font-size: 4rem;
-    padding-top: 0px;
-    padding-left: 10px;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
 h2 {
-    font-size: 3rem;
-    text-align: left;
+    font-size: 2.2rem;
     padding-left: 10px;
 }
 
 p {
-    line-height: 1.6;
-    font: bold  'Nunito', sans-serif;
-    padding-left: 10px;
+    font-size: 1.1rem;
+    padding: 0 10px;
+    margin-bottom: 1.5rem;
 }
 
-.left-half {
-    padding-left: 10px;
-    font: bold  30px 'Nunito', sans-serif;
-    float: left; /* Align to the left */
-    width: 50%; /* Each half occupies 50% of the parent container's width */ 
-    box-sizing: border-box; /* Include padding in the width calculation */
+/* =====================================================
+   LAYOUT SECTIONS
+===================================================== */
+.left-half, .right-half {
+    font-size: 1.3rem;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
-.right-half {
-    padding-top: 55px;
-    font: bold  30px 'Nunito', sans-serif;
-    float: right; /* Align to the left */
-    width: 50%; /* Each half occupies 50% of the parent container's width */ 
-    box-sizing: border-box; /* Include padding in the width calculation */
+/* Desktop layout */
+@media (min-width: 768px) {
+    .left-half, .right-half {
+        float: left;
+        width: 50%;
+    }
+}
+
+/* Reset floats on smaller screens */
+@media (max-width: 767px) {
+    .left-half, .right-half {
+        float: none;
+        width: 100%;
+        font-size: 1.1rem;
+        text-align: center;
+    }
 }
 
 .center {
@@ -83,34 +129,211 @@ p {
 }
 
 hr {
-    padding-bottom: 20px;
-    color: #afa685;
+    border: none;
+    border-top: 1px solid #afa685;
+    margin: 30px auto;
+    width: 80%;
 }
 
-
-/* Images */
+/* =====================================================
+   IMAGES
+===================================================== */
 .image-content {
-    flex: 1;
-    max-width: 45%; /* Reduced maximum size */
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
 }
 
-.ecliss-image {
-    max-width: 50%; /* Smaller size for the image */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+.ecliss-image,
 .ai-image {
-    max-width: 70%; /* Smaller size for the image */
+    max-width: 80%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ecliss-image:hover,
+.ai-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(175, 166, 133, 0.6);
 }
 
 .badge {
-    width: 14em;
+    width: 12em;
+    display: block;
+    margin: 10px auto;
 }
 
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+    text-align: center;
+    color: #afa685;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    background-color: #1e1e1e;
+    border-top: 1px solid rgba(175, 166, 133, 0.3);
+}
+
+/* =====================================================
+   MOBILE RESPONSIVENESS
+===================================================== */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .topcorner {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .head {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .topbutton {
+        width: auto;
+        padding: 8px 16px;
+        font-size: 0.95rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .ecliss-image,
+    .ai-image {
+        max-width: 90%;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* =====================================================
+   CONTACT PAGE STYLING (IMPROVED GRID)
+===================================================== */
+.contact-section {
+    padding: 2rem 1rem 4rem 1rem;
+    text-align: center;
+}
+
+.team-email {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #afa685;
+}
+
+.team-email a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #afa685;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.team-email a:hover {
+    color: #afa685;
+    border-color: #ffffff;
+}
+
+/* 🔹 Flexible, evenly distributed grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-items: center; /* centers any leftover cards */
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Individual Contact Card */
+.contact-card {
+    background-color: #1e1e1e;
+    border: 1px solid rgba(175, 166, 133, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(175, 166, 133, 0.6);
+}
+
+/* Contact Names & Emails */
+.contact-card h3 {
+    margin: 0.5rem 0;
+    color: #afa685;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.contact-card p a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card p a:hover {
+    color: #afa685;
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .contact-photo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .contact-card h3 {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        justify-content: center;
+    }
+
+    .team-email {
+        font-size: 1rem;
+    }
+
+    .contact-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
