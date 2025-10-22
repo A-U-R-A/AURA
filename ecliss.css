@@ -1,0 +1,174 @@
+/* =====================================================
+   ECLISS PAGE STYLES
+   Scoped under .ecliss-page to avoid conflicts
+===================================================== */
+
+.ecliss-page {
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+    background-color: #262626;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   Header Overrides
+===================================================== */
+.ecliss-page header {
+    background-color: #262626;
+    color: #afa685;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.ecliss-page .topcorner {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+}
+
+.ecliss-page .head {
+    display: flex;
+    gap: 15px;
+}
+
+.ecliss-page .topbutton {
+    color: #afa685;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ecliss-page .topbutton:hover {
+    border-color: #afa685;
+    background-color: rgba(175, 166, 133, 0.1);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   Section Layout (text + image side by side)
+===================================================== */
+.ecliss-page .project-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 1rem 4rem 1rem;
+}
+
+.ecliss-page .project-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.ecliss-page .project-text {
+    flex: 1 1 400px;
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+.ecliss-page .project-text h1,
+.ecliss-page .project-text h2 {
+    color: #afa685;
+    text-shadow: 0 0 5px rgba(175, 166, 133, 0.3);
+}
+
+.ecliss-page .project-text h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.ecliss-page .project-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ecliss-page .project-text h3 {
+    font-size: 1.3rem;
+    color: #afa685;
+    margin-top: 1rem;
+}
+
+.ecliss-page .project-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* =====================================================
+   Images
+===================================================== */
+.ecliss-page .project-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.ecliss-page .project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ecliss-page .project-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(175, 166, 133, 0.6);
+}
+
+/* =====================================================
+   Footer
+===================================================== */
+.ecliss-page footer {
+    text-align: center;
+    color: #afa685;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    background-color: #1e1e1e;
+    border-top: 1px solid rgba(175, 166, 133, 0.3);
+}
+
+/* =====================================================
+   Mobile Responsiveness
+===================================================== */
+@media (max-width: 768px) {
+    .ecliss-page .project-section,
+    .ecliss-page .project-section.reverse {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .ecliss-page .project-text {
+        max-width: 90%;
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+
+    .ecliss-page .project-image img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .ecliss-page .project-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .ecliss-page .project-text h2 {
+        font-size: 1.6rem;
+    }
+}
