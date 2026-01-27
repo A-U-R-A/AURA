@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Features</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="Gold-Icon" href="/icons/logo_gold.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="topcorner">A.U.R.A.</div>
+        <div class="head">
+            <a href="index.html"><button class="topbutton">Home</button></a>
+            <a href="features.html"><button class="topbutton">Features</button></a>
+            <a href="projects.html"><button class="topbutton">Projects</button></a>
+            <a href="contact.html"><button class="topbutton">Contact</button></a>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="center">
+            <h1>Technical Features</h1>
+            <p>Comprehensive capabilities built into the A.U.R.A. system</p>
+        </div>
+
+        <!-- Real-Time Monitoring -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Real-Time Data Monitoring</h2>
+                    <p>
+                        A.U.R.A. continuously ingests sensor data from 28+ environmental sensors distributed across the spacecraft. 
+                        Data is processed and displayed in real-time with automatic refresh every second, ensuring mission operators 
+                        always have current system status information at their fingertips.
+                    </p>
+                    <h3>Key Capabilities:</h3>
+                    <ul>
+                        <li>Parallel data ingestion from multiple sensor streams</li>
+                        <li>Real-time parameter normalization and validation</li>
+                        <li>Historical data queue (10,000+ rows) for trend analysis</li>
+                        <li>Configurable refresh rates for different operational scenarios</li>
+                        <li>Automatic data logging to CSV storage</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Machine Learning & Anomaly Detection -->
+        <section class="project-section reverse">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Machine Learning & Anomaly Detection</h2>
+                    <p>
+                        Advanced ML algorithms automatically detect anomalies and predict maintenance requirements before failures occur. 
+                        The system uses Isolation Forest for unsupervised anomaly detection and can be extended with supervised learning models.
+                    </p>
+                    <h3>ML Components:</h3>
+                    <ul>
+                        <li><strong>Isolation Forest:</strong> Identifies outliers in sensor data with configurable contamination thresholds</li>
+                        <li><strong>Anomaly Scoring:</strong> Generates anomaly scores for all incoming sensor readings</li>
+                        <li><strong>Model Training:</strong> Retrainable models that adapt to spacecraft operational patterns</li>
+                        <li><strong>Predictive Maintenance:</strong> Forecasts remaining useful life for system components</li>
+                        <li><strong>Pattern Recognition:</strong> Identifies subtle deviations from normal operation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Twin -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Digital Twin Visualization</h2>
+                    <p>
+                        An interactive digital representation of the spacecraft enables operators to visualize system states, 
+                        test maintenance procedures, and validate repairs before implementation. The digital twin uses reinforcement 
+                        learning models trained on realistic operational scenarios.
+                    </p>
+                    <h3>Digital Twin Features:</h3>
+                    <ul>
+                        <li>SVG-based 3D spacecraft visualization</li>
+                        <li>Interactive sensor location display</li>
+                        <li>Real-time sensor data overlay</li>
+                        <li>Maintenance simulation capabilities</li>
+                        <li>Click-through interface for sensor inspection</li>
+                        <li>Reinforcement learning model integration for decision support</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Management & Security -->
+        <section class="project-section reverse">
+            <div class="project">
+                <div class="project-text">
+                    <h2>User Management & Access Control</h2>
+                    <p>
+                        Comprehensive role-based access control ensures appropriate data visibility and system permissions. 
+                        The system supports three user roles with different capabilities and data access levels.
+                    </p>
+                    <h3>User Roles:</h3>
+                    <ul>
+                        <li><strong>Administrator:</strong> Full system access, user management, configuration, model retraining</li>
+                        <li><strong>Operator:</strong> Real-time monitoring, alert response, manual maintenance logging</li>
+                        <li><strong>Analyst:</strong> Historical data analysis, report generation, model evaluation</li>
+                    </ul>
+                    <h3>Security Features:</h3>
+                    <ul>
+                        <li>User authentication and login system</li>
+                        <li>JSON-based user credential storage</li>
+                        <li>Role-based page visibility and feature access</li>
+                        <li>Audit logging for administrative actions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subsystem Coverage -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Comprehensive Subsystem Coverage</h2>
+                    <p>
+                        A.U.R.A. monitors all critical life support subsystems required for crew safety and mission success. 
+                        Each subsystem is continuously evaluated for normal operation and maintenance requirements.
+                    </p>
+                    <h3>Monitored Subsystems:</h3>
+                    <ul>
+                        <li><strong>Atmosphere Revitalization (ARS):</strong> O₂/CO₂ pressure, humidity control</li>
+                        <li><strong>Oxygen Generation System (OGS):</strong> O₂ production rate and purity</li>
+                        <li><strong>Water Recovery System (WRS):</strong> Water purity and production metrics</li>
+                        <li><strong>Temperature & Humidity Control (THC):</strong> Cabin climate regulation</li>
+                        <li><strong>Trace Contaminant Control (TCC):</strong> Gaseous contaminant monitoring</li>
+                        <li><strong>Waste Management System (WMS):</strong> Waste containment tracking</li>
+                        <li><strong>Fire Detection & Suppression (FDS):</strong> Fire hazard monitoring</li>
+                        <li><strong>Air Circulation/Ventilation (ACV):</strong> Airflow distribution</li>
+                        <li><strong>Pressure Control System (PCS):</strong> Cabin pressure stability</li>
+                        <li><strong>Microbial Monitoring (MM):</strong> Biological contamination detection</li>
+                        <li><strong>Vacuum System (VS):</strong> External environment monitoring</li>
+                        <li><strong>Mass Spectrometer (MS):</strong> Atmospheric composition analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Analysis & Reporting -->
+        <section class="project-section reverse">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Data Analysis & Historical Reporting</h2>
+                    <p>
+                        The system provides comprehensive tools for analyzing historical sensor data, identifying trends, 
+                        and generating actionable reports for mission planning and maintenance scheduling.
+                    </p>
+                    <h3>Analysis Features:</h3>
+                    <ul>
+                        <li>CSV-based data storage for long-term historical records</li>
+                        <li>Parameter-specific detail views with trend visualization</li>
+                        <li>Configurable data aggregation and statistical analysis</li>
+                        <li>Comparative analysis between operational periods</li>
+                        <li>Export capabilities for external analysis tools</li>
+                        <li>Real-time data generation for testing and validation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Metrics -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Performance & Efficiency</h2>
+                    <p>
+                        A.U.R.A. is optimized for real-time operations in the resource-constrained environment of spacecraft systems, 
+                        with proven performance improvements over traditional reactive maintenance approaches.
+                    </p>
+                    <h3>Proven Results:</h3>
+                    <ul>
+                        <li><strong>60%+ Reduction:</strong> Average maintenance preparation time per mission</li>
+                        <li><strong>45%+ Reduction:</strong> Safety incident rates through early warning detection</li>
+                        <li><strong>1-Second Refresh:</strong> Real-time data update frequency for rapid response</li>
+                        <li><strong>28+ Sensors:</strong> Simultaneous monitoring capability across spacecraft</li>
+                        <li><strong>13+ Subsystems:</strong> Complete life support system coverage</li>
+                        <li><strong>99%+ Uptime:</strong> Designed for mission-critical reliability</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="project-section reverse">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Technology Stack</h2>
+                    <p>
+                        A.U.R.A. leverages modern, proven technologies for reliability, maintainability, and extensibility 
+                        in spacecraft operations.
+                    </p>
+                    <h3>Core Technologies:</h3>
+                    <ul>
+                        <li><strong>Frontend:</strong> PyQt5 (Python GUI framework)</li>
+                        <li><strong>Backend:</strong> Python with modular architecture</li>
+                        <li><strong>Machine Learning:</strong> Scikit-learn (Isolation Forest, models)</li>
+                        <li><strong>Data Processing:</strong> Pandas, NumPy</li>
+                        <li><strong>Visualization:</strong> SVG-based digital twin, real-time graphs</li>
+                        <li><strong>Data Storage:</strong> JSON (user management), CSV (sensor data)</li>
+                        <li><strong>Modularity:</strong> Core, UI, Data, ML, and Legacy components</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        © 2025 A.U.R.A. | Designed for Intelligent Space Operations
+    </footer>
+
+</body>
+</html>
