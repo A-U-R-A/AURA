@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Home</title>
+    <title>A.U.R.A. | Home</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,13 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css"> <!-- Original site CSS -->
-    <link rel="stylesheet" href="ecliss.css"> <!-- New scoped CSS for ECLISS page -->
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Favicon -->
     <link rel="icon" type="Gold-Icon" href="/icons/logo_gold.png">
 </head>
-<body class="ecliss-page">
+<body>
 
     <!-- Header -->
     <header>
@@ -33,102 +32,111 @@
     <!-- Hero / Intro Section -->
     <section class="project-section">
         <div class="center">
-            <h1>AI Preventive Maintenance System - NASA ECLISS</h1>
+            <h1>AI Preventive Maintenance System</h1>
+            <p>A.U.R.A. - Advanced Understandable Reasoning Architecture</p>
             <p>Requested by NASA MSFC-HP40</p>
         </div>
     </section>
 
     <!-- Executive Summary -->
-    <section class="project-section reverse">
-        <div class="project-text">
-            <h2>Executive Summary</h2>
-            <p>Implementing AI and Machine Learning (ML) for predictive maintenance in off-planet Environmental Control and Life Support Integrated Systems (ECLIS) dramatically improves crew safety and operational efficiency, reducing both maintenance preparation time and safety incident rates by over 45%.</p>
-        </div>
-        <div class="project-image">
-            <img src="images/ai_pipeline.png" alt="AI/ML Analysis" class="ai-image">
+    <section class="project-section">
+        <div class="project">
+            <div class="project-text">
+                <h2>Executive Summary</h2>
+                <p>Implementing AI and Machine Learning (ML) for predictive maintenance in off-planet Environmental Control and Life Support Systems (ECLSS) dramatically improves crew safety and operational efficiency, reducing both maintenance preparation time and safety incident rates by over 45%.</p>
+            </div>
+            <div class="project-image">
+                <img src="images/ai_pipeline.png" alt="AI/ML Analysis Pipeline">
+            </div>
         </div>
     </section>
 
     <!-- Overview -->
-     <div class="project">
-                <div class="project-text">
-                    <h2>Overview</h2>
-                    <p>
-                        As human spaceflight ventures farther from Earth, the reliability and autonomy of life support systems become mission-critical. An AI/ML-powered Predictive Maintenance System—leveraging the Major Constituent Analyzer (MCA), Monitoring and Control System (MCS), and a network of advanced sensors—transforms ECLIS from a reactive to a proactive safety net. This system continuously monitors, analyzes, and forecasts the health of all vital subsystems, enabling early detection of anomalies and optimized maintenance scheduling.
-                    </p>
-                    <p>
-                        The A.U.R.A. system processes real-time data from 28+ sensors across 13 critical subsystems including atmosphere revitalization, oxygen generation, water recovery, temperature/humidity control, and more. Advanced anomaly detection algorithms identify subtle deviations from normal operation, while machine learning models predict component failures before they occur.
-                    </p>
-                </div>
-                <div class="project-image">
-                    <img src="icons/hunch.png" alt="Digital Twin Example Image">
-                </div>
+    <section class="project-section">
+        <div class="project project-reverse">
+            <div class="project-image">
+                <img src="icons/hunch.png" alt="System Architecture">
             </div>
+            <div class="project-text">
+                <h2>System Overview</h2>
+                <p>
+                    As human spaceflight ventures farther from Earth, the reliability and autonomy of life support systems become mission-critical. An AI/ML-powered Predictive Maintenance System transforms ECLSS from reactive to proactive safety management, enabling early detection of anomalies and optimized maintenance scheduling.
+                </p>
+                <p>
+                    The A.U.R.A. system processes real-time data from 28+ sensors across 13 critical subsystems including atmosphere revitalization, oxygen generation, water recovery, and temperature/humidity control. Advanced anomaly detection algorithms identify subtle deviations from normal operation, while machine learning models predict component failures before they occur.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- System Features & Benefits -->
-    <section class="project-section reverse">
-        <div class="project-text">
-            <h2>System Features & Benefits</h2>
-            <article>
-                <h3>1. Real-Time Fault Detection & Prognostics</h3>
-                <p>AI/ML algorithms process continuous data streams from the MCA, MCS, and other environmental sensors to identify subtle deviations from normal operation. Early anomaly detection allows for intervention before faults escalate, minimizing unplanned downtime and risk to crew safety.</p>
-            </article>
-            <article>
-                <h3>2. Multi-Subsystem Monitoring</h3>
-                <p>A.U.R.A. monitors 13+ critical life support subsystems including Atmosphere Revitalization, Oxygen Generation, Water Recovery, Temperature/Humidity Control, Trace Contaminant Control, and more. Real-time visualization of all parameters ensures complete system awareness.</p>
-            </article>
-            <article>
-                <h3>3. Optimized Maintenance & Resource Efficiency</h3>
-                <p>Predictive analytics estimate the remaining useful life of components, recommending maintenance only when necessary. Reduced spare part requirements and fewer unnecessary interventions lower mission costs and conserve mass/volume—critical for off-planet operations.</p>
-            </article>
-            <article>
-                <h3>4. Digital Twin Simulation</h3>
-                <p>An interactive digital twin of the spacecraft enables operators to visualize system states, test maintenance procedures, and validate repairs before implementing them in actual hardware. Reinforcement learning models trained on the digital twin improve decision-making accuracy.</p>
-            </article>
-            <article>
-                <h3>5. Advanced Anomaly Detection</h3>
-                <p>Isolation Forest algorithms identify outliers and irregular patterns in sensor readings, detecting potential system faults and sensor drift. This data preprocessing ensures training datasets are accurate and representative, improving overall model reliability.</p>
-            </article>
-            <article>
-                <h3>6. Enhanced Crew Safety & Efficiency</h3>
-                <p>Automated diagnostics and predictive alerts streamline astronaut workflows, reducing cognitive load and preparation time. Integrated health monitoring links ECLIS performance with crew health analytics, providing a holistic approach to risk management.</p>
-            </article>
-            <article>
-                <h3>7. Role-Based Access Control</h3>
-                <p>Comprehensive user management system with role-based permissions (admin, operator, analyst) ensures appropriate access to sensitive system data and configuration options.</p>
-            </article>
-            <article>
-                <h3>8. Minimized Preparation and Downtime</h3>
-                <p>AI-guided troubleshooting and maintenance checklists cut average preparation time per mission by over 60%. Safety incident rates are reduced by nearly half, ensuring system uptime and mission continuity.</p>
-            </article>
-        </div>
-        <div class="project-image">
-            <img src="images/main_software.png" alt="System Benefits" class="ai-image">
+    <section class="project-section">
+        <div class="project project-reverse">
+            <div class="project-image">
+                <img src="images/main_software.png" alt="System Benefits Dashboard">
+            </div>
+            <div class="project-text">
+                <h2>System Features & Benefits</h2>
+                <article>
+                    <h3>1. Real-Time Fault Detection</h3>
+                    <p>AI/ML algorithms process continuous data streams to identify subtle deviations from normal operation, allowing intervention before faults escalate.</p>
+                </article>
+                <article>
+                    <h3>2. Multi-Subsystem Monitoring</h3>
+                    <p>A.U.R.A. monitors 13+ critical life support subsystems with real-time visualization of all parameters for complete system awareness.</p>
+                </article>
+                <article>
+                    <h3>3. Optimized Maintenance & Resource Efficiency</h3>
+                    <p>Predictive analytics estimate remaining useful life of components, reducing spare part requirements and mission costs.</p>
+                </article>
+                <article>
+                    <h3>4. Digital Twin Simulation</h3>
+                    <p>Interactive digital twin enables operators to visualize system states and test maintenance procedures before implementation.</p>
+                </article>
+                <article>
+                    <h3>5. Advanced Anomaly Detection</h3>
+                    <p>Isolation Forest algorithms identify outliers in sensor readings, ensuring training datasets remain accurate and representative.</p>
+                </article>
+                <article>
+                    <h3>6. Enhanced Crew Safety</h3>
+                    <p>Automated diagnostics and predictive alerts streamline workflows and reduce cognitive load on astronauts.</p>
+                </article>
+                <article>
+                    <h3>7. Role-Based Access Control</h3>
+                    <p>Comprehensive user management system ensures appropriate access to sensitive system data and configuration options.</p>
+                </article>
+                <article>
+                    <h3>8. 60%+ Preparation Time Reduction</h3>
+                    <p>AI-guided troubleshooting reduces maintenance preparation time and safety incident rates by nearly half.</p>
+                </article>
+            </div>
         </div>
     </section>
 
     <!-- Monitored Subsystems -->
     <section class="project-section">
-        <div class="project-text">
-            <h2>Critical Subsystems Monitored</h2>
-            <p>A.U.R.A. provides comprehensive monitoring of the following life support subsystems:</p>
-            <ul style="list-style: none; padding: 0;">
-                <li><strong>Atmosphere Revitalization System</strong> - O₂ and CO₂ pressure, humidity levels</li>
-                <li><strong>Oxygen Generation System</strong> - O₂ output rate and purity</li>
-                <li><strong>Water Recovery System</strong> - Water purity (TOC) and production rate</li>
-                <li><strong>Temperature & Humidity Control</strong> - Cabin temperature and environmental conditions</li>
-                <li><strong>Trace Contaminant Control</strong> - NH₃, H₂, and other gaseous contaminants</li>
-                <li><strong>Waste Management System</strong> - Waste containment monitoring</li>
-                <li><strong>Fire Detection & Suppression</strong> - CO levels and fire hazard detection</li>
-                <li><strong>Air Circulation/Ventilation</strong> - Airflow rate and distribution</li>
-                <li><strong>Pressure Control</strong> - Cabin pressure stability</li>
-                <li><strong>Microbial Monitoring</strong> - Bacterial and fungal count</li>
-                <li><strong>Vacuum System</strong> - External pressure sensors</li>
-                <li><strong>Mass Spectrometer Module</strong> - Atmospheric composition (N₂, O₂, CO₂, CH₄, H₂, H₂O vapor)</li>
-            </ul>
-        </div>
-        <div class="project-image">
-            <img src="images/graph1.png" alt="Real-Time Monitoring Dashboard" class="ai-image">
+        <div class="project">
+            <div class="project-text">
+                <h2>Critical Subsystems Monitored</h2>
+                <p>A.U.R.A. provides comprehensive monitoring of 13+ life support subsystems:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>✓ <strong>Atmosphere Revitalization System</strong> - O₂ and CO₂ pressure, humidity levels</li>
+                    <li>✓ <strong>Oxygen Generation System</strong> - O₂ output rate and purity</li>
+                    <li>✓ <strong>Water Recovery System</strong> - Water purity (TOC) and production rate</li>
+                    <li>✓ <strong>Temperature & Humidity Control</strong> - Cabin temperature and environmental conditions</li>
+                    <li>✓ <strong>Trace Contaminant Control</strong> - NH₃, H₂, and other gaseous contaminants</li>
+                    <li>✓ <strong>Waste Management System</strong> - Waste containment monitoring</li>
+                    <li>✓ <strong>Fire Detection & Suppression</strong> - Fire hazard detection</li>
+                    <li>✓ <strong>Air Circulation/Ventilation</strong> - Airflow rate and distribution</li>
+                    <li>✓ <strong>Pressure Control</strong> - Cabin pressure stability</li>
+                    <li>✓ <strong>Microbial Monitoring</strong> - Bacterial and fungal count</li>
+                    <li>✓ <strong>Vacuum System</strong> - External pressure sensors</li>
+                    <li>✓ <strong>Mass Spectrometer Module</strong> - Atmospheric composition analysis</li>
+                </ul>
+            </div>
+            <div class="project-image">
+                <img src="images/graph1.png" alt="Real-Time Monitoring Dashboard">
+            </div>
         </div>
     </section>
 

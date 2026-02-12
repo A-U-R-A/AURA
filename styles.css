@@ -90,10 +90,32 @@ h2 {
     padding-left: 10px;
 }
 
+h3 {
+    font-size: 1.3rem;
+    color: #c9ba9e;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    padding-left: 10px;
+}
+
 p {
     font-size: 1.1rem;
     padding: 0 10px;
     margin-bottom: 1.5rem;
+}
+
+article {
+    margin: 1.2rem 0;
+}
+
+article h3 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+ul, li {
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 /* =====================================================
@@ -388,7 +410,8 @@ footer {
     transform: scale(1.02);
 }
 
-.project.reverse {
+.project.reverse,
+.project-reverse {
     flex-direction: row-reverse;
 }
 
@@ -453,3 +476,13 @@ footer {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 }
+
+/* =====================================================
+   CONTENT WRAPPER
+===================================================== */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
