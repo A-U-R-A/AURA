@@ -30,32 +30,21 @@
         <div class="center">
             <h1>Contact Us</h1>
             <p class="team-email">
-                Reach our team at 
-                <a href="mailto:team@aurahunch.space">Team@aurahunch.space</a>
+                Send us a message and we'll get back to you soon!
             </p>
         </div>
 
-        <div class="contact-grid">
-            <div class="contact-card">
-                <h3>Ian Barto</h3>
-                <p><a href="mailto:ian@aurahunch.space">Ian@aurahunch.space</a></p>
-            </div>
-
-            <div class="contact-card">
-                <h3>Andrew Wheeler</h3>
-                <p><a href="mailto:andrew@aurahunch.space">Andrew@aurahunch.space</a></p>
-            </div>
-            
-            <div class="contact-card">
-                <h3>Brennon Hill</h3>
-                <p><a href="mailto:brennon@aurahunch.space">Brennon@aurahunch.space</a></p>
-            </div>
-
-            <div class="contact-card">
-                <h3>Reece Leafblad</h3>
-                <p><a href="mailto:reece@aurahunch.space">Reece@aurahunch.space</a></p>
-            </div>
-        </div>
+        <form action="https://formspree.io/f/xwvnlvvr" method="POST" class="contact-form">
+            <label>
+                Your email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Your message:
+                <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
     </main>
 
     <footer>
