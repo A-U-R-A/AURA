@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.U.R.A. | Testing & Validation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="Gold-Icon" href="/icons/logo_gold.png">
+</head>
+<body>
+    <header>
+        <div class="topcorner">A.U.R.A.</div>
+        <div class="head">
+            <a href="index.html"><button class="topbutton">Home</button></a>
+            <a href="features.html"><button class="topbutton">Features</button></a>
+            <a href="testing.html"><button class="topbutton">Testing</button></a>
+            <a href="contact.html"><button class="topbutton">Contact</button></a>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="center">
+            <h1>Testing & Validation</h1>
+            <p>Rigorous testing across every layer of the A.U.R.A. system — from data generation to AI-driven decision-making</p>
+        </div>
+
+        <!-- Login & Access Control -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Login & Access Control</h2>
+                    <p>The application opens on a secure login screen with role-based access control. Three user roles — Administrator, Operator, and Analyst — each unlock different pages and capabilities. Authentication was verified for all three roles to confirm correct permission enforcement and that unauthorized page access is blocked.</p>
+                    <h3>Verified:</h3>
+                    <ul>
+                        <li>✓ Successful login and session handling for all three user roles</li>
+                        <li>✓ Incorrect credentials are rejected cleanly with no crash</li>
+                        <li>✓ Role-based page visibility enforced after login</li>
+                        <li>✓ JSON-based credential storage confirmed secure</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    <img src="TestingImages/Login.jpg" alt="A.U.R.A. Login Screen">
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Twin Dashboard -->
+        <section class="project-section">
+            <div class="project project-reverse">
+                <div class="project-image">
+                    <img src="TestingImages/DigitalTwinDashboard.jpg" alt="A.U.R.A. Digital Twin Dashboard">
+                </div>
+                <div class="project-text">
+                    <h2>Digital Twin Dashboard</h2>
+                    <p>The Digital Twin page displays an SVG-based ISS spacecraft diagram with live, color-coded sensor indicators overlaid at each module location. Green indicators confirm nominal operation; red indicators flag active anomalies. Testing verified all 28 sensor positions render correctly across 7 ISS modules and that indicator colors update in real time as faults are injected and cleared.</p>
+                    <h3>Verified:</h3>
+                    <ul>
+                        <li>✓ All 28 sensor indicators render at correct positions on the ISS diagram</li>
+                        <li>✓ Color changes from green → red upon fault injection, back to green on clearance</li>
+                        <li>✓ Sensors are draggable and save their new positions to <code>locationData.json</code></li>
+                        <li>✓ Clicking a sensor opens the detail view for that location</li>
+                        <li>✓ SVG background scales correctly across window sizes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Critical Alert Testing -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Critical Alert Detection</h2>
+                    <p>When the Isolation Forest or Random Forest classifies incoming sensor data as anomalous, the system raises a critical alert. Testing confirmed that alerts fire correctly for each of the 8 supported fault types, that the alert UI clearly communicates the affected subsystem and location, and that no false alerts are raised during nominal operation.</p>
+                    <h3>Verified:</h3>
+                    <ul>
+                        <li>✓ Critical alerts triggered for all 8 fault types (Cabin Leak, O₂ Generator Failure, CO₂ Scrubber Failure, CHX Failure, Water Processor Failure, Trace Contaminant Filter Saturation, O₂ Leak, NH₃ Coolant Leak)</li>
+                        <li>✓ Alert UI displays fault name, affected location, and severity</li>
+                        <li>✓ No false alerts raised during 1,000 nominal test samples</li>
+                        <li>✓ Alerts clear correctly once fault is resolved</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    <img src="TestingImages/Critical Alert.jpg" alt="A.U.R.A. Critical Alert Screen">
+                </div>
+            </div>
+        </section>
+
+        <!-- Notifications Testing -->
+        <section class="project-section">
+            <div class="project project-reverse">
+                <div class="project-image">
+                    <img src="TestingImages/Notifications(critical&warning).jpg" alt="A.U.R.A. Notifications Panel — Critical and Warning Levels">
+                </div>
+                <div class="project-text">
+                    <h2>Notifications — Critical & Warning Levels</h2>
+                    <p>A.U.R.A. uses a two-tier notification system: <strong>Critical</strong> alerts indicate an active fault requiring immediate action, while <strong>Warning</strong> alerts flag parameters drifting toward out-of-range values before a full fault develops. Testing validated both tiers fire at the correct thresholds and display clearly in the notification panel without overlap or missed alerts.</p>
+                    <h3>Verified:</h3>
+                    <ul>
+                        <li>✓ Critical notifications fire when Isolation Forest labels a reading as anomalous (−1)</li>
+                        <li>✓ Warning notifications fire when parameter values drift outside nominal range but before reaching the critical threshold</li>
+                        <li>✓ Both notification types display simultaneously without UI conflicts</li>
+                        <li>✓ Notification panel scrolls correctly when multiple alerts are active</li>
+                        <li>✓ Notifications dismiss after the fault clears</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Graphing -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Data Graphing & Historical Trends</h2>
+                    <p>The graphing view renders live time-series plots for any selected sensor parameter, pulling from the rolling 10,000-row historical data queue. Testing confirmed graphs update in real time at a 1-second refresh rate, that fault-period spikes are clearly visible in the trend line, and that the axis labels and parameter names render correctly for all 20 monitored parameters.</p>
+                    <h3>Verified:</h3>
+                    <ul>
+                        <li>✓ Real-time graph updates at 1-second intervals across all 20 parameters</li>
+                        <li>✓ Fault-injected anomalies appear as clear spikes or drops in the trend line</li>
+                        <li>✓ Historical data queue retains up to 10,000 rows for long-duration trend analysis</li>
+                        <li>✓ Axis labels, units, and parameter names render correctly</li>
+                        <li>✓ Graphs handle rapid fault injection and clearance without visual glitches</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    <img src="TestingImages/DataGraphing.jpg" alt="A.U.R.A. Data Graphing View">
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Quick Look -->
+        <section class="project-section">
+            <div class="project project-reverse">
+                <div class="project-image">
+                    <img src="TestingImages/dataquicklook.jpg" alt="A.U.R.A. Data Quick Look Dashboard">
+                </div>
+                <div class="project-text">
+                    <h2>Data Quick Look — Main Dashboard</h2>
+                    <p>The Main Dashboard provides an at-a-glance view of all 13 subsystems organized in a grid of live tables. Each table row shows the current sensor value alongside its parameter name, refreshing every second. Testing verified that all 20 parameters populate correctly, values round to 2 decimal places, and clicking any row navigates to the full detail view for that parameter.</p>
+                    <h3>Verified:</h3>
+                    <ul>
+                        <li>✓ All 13 subsystem tables render with correct parameter groupings</li>
+                        <li>✓ Live values refresh every second with no stale data displayed</li>
+                        <li>✓ Values rounded to 2 decimal places for readability</li>
+                        <li>✓ Clicking a parameter row navigates correctly to the detail/graphing view</li>
+                        <li>✓ Layout remains stable under continuous data refresh (no layout shifts)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings & Fault Injection Testing -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Settings & Fault Injection Controls</h2>
+                    <p>The Settings panel gives operators and administrators the ability to start and stop data generation, inject any of the 8 supported fault types at a chosen ISS module location, clear active faults, and wipe stored data. Testing confirmed all controls function correctly and that injected faults are immediately reflected in live sensor readings and alert notifications.</p>
+                    <h3>Verified:</h3>
+                    <ul>
+                        <li>✓ Start/Stop data generation toggles the generator process and updates the button state</li>
+                        <li>✓ Fault injection applies the selected fault to the correct ISS module only — no cross-location leakage</li>
+                        <li>✓ All 8 fault types injectable from the dropdown and immediately detectable by the ML pipeline</li>
+                        <li>✓ Clear Faults resets all active drifts and returns sensor readings to nominal</li>
+                        <li>✓ Clear Data wipes the database cleanly with no application crash</li>
+                        <li>✓ Sensor edit mode allows repositioning indicators on the digital twin with drag-and-drop</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    <img src="TestingImages/Settings.jpg" alt="A.U.R.A. Settings Panel">
+                </div>
+            </div>
+        </section>
+
+        <!-- Isolation Forest Testing -->
+        <section class="project-section">
+            <div class="project project-reverse">
+                <div class="project-image">
+                    <img src="TestingImages/Critical Alert.jpg" alt="Isolation Forest Anomaly Detection in Action">
+                </div>
+                <div class="project-text">
+                    <h2>Isolation Forest — Anomaly Detection Testing</h2>
+                    <p>The Isolation Forest model is trained on 5,000 nominal sensor samples and evaluated on 1,000 freshly generated nominal samples to verify an acceptably low false-positive rate. The live fitness check requires ≥ 90% accuracy before the model is allowed to label production data.</p>
+                    <h3>Test Procedure (<code>testIsolationForest.py</code>):</h3>
+                    <ul>
+                        <li>✓ 1,000 nominal samples generated, scaled, and predicted — anomaly rate and score stats printed</li>
+                        <li>✓ Feature means and standard deviations verified within expected bounds</li>
+                        <li>✓ Model + scaler + parameter order saved together in a single <code>.joblib</code> bundle</li>
+                    </ul>
+                    <h3>Live Fitness Testing (<code>isolationForestWrapper.py</code>):</h3>
+                    <ul>
+                        <li>✓ 300 synthetic mixed samples (90% nominal / 10% anomalous) generated on-the-fly</li>
+                        <li>✓ Model must achieve ≥ 90% accuracy before labeling live data</li>
+                        <li>✓ Fitness re-tested every 30 seconds during operation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Random Forest & DQN Testing -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>Random Forest & Deep Q-Network Testing</h2>
+                    <p>The Random Forest classifier identifies which specific fault is occurring, trained on 5,000 samples per fault class with a stratified 75/25 split. The DQN then takes the augmented state (sensor values + IF anomaly score + RF probabilities) and selects the correct corrective action from 10 maintenance options.</p>
+                    <h3>Random Forest (<code>trainRandomForest.py</code> / <code>test_randomForest.py</code>):</h3>
+                    <ul>
+                        <li>✓ Classification report with precision, recall, and F1-score per fault class</li>
+                        <li>✓ Fault onset detection: 200 nominal steps → fault injected → model confidence rises to match injected fault</li>
+                        <li>✓ 300-estimator ensemble, full tree depth, stratified split</li>
+                    </ul>
+                    <h3>Deep Q-Network (<code>trainAI.py</code> / <code>testAI.py</code>):</h3>
+                    <ul>
+                        <li>✓ 1,000 training episodes, epsilon-greedy exploration (ε: 0.9 → 0.01), replay memory of 10,000</li>
+                        <li>✓ Soft target network updates (τ = 0.005), Huber loss, gradient clipping at 100</li>
+                        <li>✓ 1,000 test episodes — model selects correct action via <code>argmax(Q-values)</code> with no exploration noise</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    <img src="TestingImages/DataGraphing.jpg" alt="Random Forest and DQN model testing">
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="project-section">
+            <div class="center">
+                <h2>Comprehensive Validation Summary</h2>
+                <p>Every layer of the A.U.R.A. system has been independently tested and validated — from the physics-based data generation engine through three ML models to the full-stack desktop application. Our testing ensures that when deployed aboard the ISS, the system will reliably detect anomalies, correctly classify faults, and recommend the right corrective action to keep crews safe.</p>
+                <p style="font-size: 1.3rem; margin-top: 2rem; color: #afa685;">
+                    <strong>Tested. Validated. Mission-Ready.</strong>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 A.U.R.A. | Designed for Intelligent Space Operations
+    </footer>
+</body>
+</html>

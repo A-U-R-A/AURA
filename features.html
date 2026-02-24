@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.U.R.A. | Technical Features</title>
+    <title>A.U.R.A. | Features & Components</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,164 +17,189 @@
         <div class="head">
             <a href="index.html"><button class="topbutton">Home</button></a>
             <a href="features.html"><button class="topbutton">Features</button></a>
-            <a href="projects.html"><button class="topbutton">Projects</button></a>
+            <a href="testing.html"><button class="topbutton">Testing</button></a>
             <a href="contact.html"><button class="topbutton">Contact</button></a>
         </div>
     </header>
 
     <div class="content-wrapper">
         <div class="center">
-            <h1>Technical Features</h1>
-            <p>Comprehensive capabilities built into the A.U.R.A. system</p>
+            <h1>Features & Components</h1>
+            <p>Everything that powers the A.U.R.A. Predictive Maintenance System</p>
         </div>
 
+        <!-- 1. Core Software -->
         <section class="project-section">
             <div class="project">
                 <div class="project-text">
-                    <h2>Real-Time Data Monitoring</h2>
-                    <p>A.U.R.A. continuously ingests sensor data from 28+ environmental sensors distributed across the spacecraft. Data is processed and displayed in real-time with automatic refresh every second, ensuring mission operators always have current system status information at their fingertips.</p>
-                    <h3>Key Capabilities:</h3>
+                    <h2>1. Preventative Maintenance Software</h2>
+                    <p>Our core software analyzes real-time spacecraft data collected by ECLSS sensors, automatically identifying potential system inefficiencies or anomalies and providing early warnings to mission operators. The predictive system enables faster decision-making and ensures optimal mission safety and performance.</p>
+                    <p>The system features role-based access control with three user types: administrators who manage user accounts and system settings, operators who monitor real-time data and respond to alerts, and analysts who review historical data and train machine learning models.</p>
+                    <h3>Key Functions:</h3>
                     <ul>
-                        <li>✓ Parallel data ingestion from multiple sensor streams</li>
-                        <li>✓ Real-time parameter normalization and validation</li>
-                        <li>✓ Historical data queue (10,000+ rows) for trend analysis</li>
-                        <li>✓ Configurable refresh rates for different operational scenarios</li>
-                        <li>✓ Automatic data logging to CSV storage</li>
+                        <li>✓ Real-time sensor data processing from 28+ sensors</li>
+                        <li>✓ Anomaly detection and alerting across 13+ subsystems</li>
+                        <li>✓ Multi-user support with role-based permissions</li>
+                        <li>✓ Historical data storage, retrieval, and trend analysis</li>
+                        <li>✓ Automatic data logging to CSV storage with 1-second refresh</li>
                     </ul>
                 </div>
                 <div class="project-image">
-                    <img src="images/graph1.png" alt="Real-Time Data Monitoring">
+                    <img src="images/main_software.png" alt="Main Software Interface">
                 </div>
             </div>
         </section>
 
+        <!-- 2. Data Ingestion & Visualization -->
         <section class="project-section">
             <div class="project project-reverse">
                 <div class="project-image">
-                    <img src="images/IsolationForest.png" alt="Machine Learning Anomaly Detection">
+                    <img src="images/graph1.png" alt="Data Visualization Dashboards">
                 </div>
                 <div class="project-text">
-                    <h2>Machine Learning & Anomaly Detection</h2>
-                    <p>Advanced ML algorithms automatically detect anomalies and predict maintenance requirements before failures occur. The system uses Isolation Forest for unsupervised anomaly detection and can be extended with supervised learning models.</p>
-                    <h3>ML Components:</h3>
+                    <h2>2. Data Ingestion & Visualization</h2>
+                    <p>The data ingestion module captures vast sensor streams in real time, converting them into clear visual insights. The Main Dashboard displays subsystem parameters from 28+ sensors organized into 13 critical life support categories — atmospheric composition, system output rates, temperatures, pressures, and contamination levels. Auto-refresh every second ensures operators always view the latest data.</p>
+                    <h3>Visualization Capabilities:</h3>
                     <ul>
-                        <li>✓ <strong>Isolation Forest:</strong> Identifies outliers in sensor data with configurable contamination thresholds</li>
-                        <li>✓ <strong>Anomaly Scoring:</strong> Generates anomaly scores for all incoming sensor readings</li>
-                        <li>✓ <strong>Model Training:</strong> Retrainable models that adapt to spacecraft operational patterns</li>
-                        <li>✓ <strong>Predictive Maintenance:</strong> Forecasts remaining useful life for system components</li>
-                        <li>✓ <strong>Pattern Recognition:</strong> Identifies subtle deviations from normal operation</li>
+                        <li>✓ Parallel data ingestion from multiple sensor streams</li>
+                        <li>✓ Real-time parameter graphs and historical trend analysis</li>
+                        <li>✓ Historical data queue (10,000+ rows) for long-term trends</li>
+                        <li>✓ Parameter-specific detail views with drill-down analysis</li>
+                        <li>✓ CSV-based data storage for long-term historical records</li>
+                        <li>✓ Export capabilities for external analysis tools</li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- 3. Isolation Forest -->
         <section class="project-section">
             <div class="project">
                 <div class="project-text">
-                    <h2>Digital Twin Visualization</h2>
-                    <p>An interactive digital representation of the spacecraft enables operators to visualize system states, test maintenance procedures, and validate repairs before implementation. The digital twin uses reinforcement learning models trained on realistic operational scenarios.</p>
-                    <h3>Digital Twin Features:</h3>
+                    <h2>3. Isolation Forest Anomaly Detection</h2>
+                    <p>The Isolation Forest algorithm analyzes and preprocesses sensor data collected from the spacecraft, detecting anomalies or irregular patterns in the sensor readings that may indicate system faults, sensor drift, or unexpected environmental conditions.</p>
+                    <p>By filtering and labeling this data before it is used for model training, the quality and reliability of the dataset is significantly improved. This ensures that the reinforcement learning and other predictive models are trained on accurate, representative information.</p>
+                    <h3>Anomaly Detection Features:</h3>
                     <ul>
-                        <li>✓ SVG-based 3D spacecraft visualization</li>
-                        <li>✓ Interactive sensor location display</li>
-                        <li>✓ Real-time sensor data overlay</li>
-                        <li>✓ Maintenance simulation capabilities</li>
-                        <li>✓ Click-through interface for sensor inspection</li>
-                        <li>✓ Reinforcement learning model integration for decision support</li>
+                        <li>✓ <strong>Unsupervised Outlier Detection:</strong> Identifies outliers in sensor data with configurable contamination thresholds</li>
+                        <li>✓ <strong>Anomaly Scoring:</strong> Generates anomaly scores for all incoming sensor readings</li>
+                        <li>✓ <strong>Retrainable Models:</strong> Adapt to spacecraft operational patterns over time</li>
+                        <li>✓ <strong>Pattern Recognition:</strong> Identifies subtle deviations from normal operation</li>
+                        <li>✓ <strong>Data Quality Improvement:</strong> Filters training data for downstream models</li>
                     </ul>
                 </div>
+                <div class="project-image">
+                    <img src="images/IsolationForest.png" alt="Isolation Forest Anomaly Detection">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Digital Twin & RL -->
+        <section class="project-section">
+            <div class="project project-reverse">
                 <div class="project-image">
                     <img src="images/digital_twin.png" alt="Digital Twin Visualization">
                 </div>
+                <div class="project-text">
+                    <h2>4. Digital Twin & RL Model Training</h2>
+                    <p>An interactive digital representation of the spacecraft enables operators to visualize system states, test maintenance procedures, and validate repairs before implementation. By leveraging the digital twin, a reinforcement learning (RL) model is trained to experience and learn from a wide range of realistic scenarios, including rare or high-risk events — without risking actual hardware or crew safety.</p>
+                    <h3>Digital Twin Features:</h3>
+                    <ul>
+                        <li>✓ SVG-based spacecraft visualization with interactive sensor overlays</li>
+                        <li>✓ Click-through interface for sensor inspection and drill-down</li>
+                        <li>✓ RL model training on realistic fault scenarios</li>
+                        <li>✓ Maintenance simulation and procedure testing</li>
+                        <li>✓ Improved decision-making accuracy through safe virtual testing</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
+        <!-- 5. AI Decision Engine -->
+        <section class="project-section">
+            <div class="project">
+                <div class="project-text">
+                    <h2>5. AI Decision & Predictive Engine</h2>
+                    <p>The AI Decision page integrates all machine learning model outputs and generates predictive maintenance recommendations based on real-time sensor data analysis. It synthesizes information from anomaly detection, remaining useful life predictions, and reinforcement learning models to provide operators with actionable insights.</p>
+                    <p>Recommendations are prioritized by risk level and confidence score, allowing operators to focus on the most critical maintenance actions. The system continuously learns from outcomes, improving prediction accuracy over time.</p>
+                    <h3>AI Engine Capabilities:</h3>
+                    <ul>
+                        <li>✓ Predictive maintenance recommendations with confidence scoring</li>
+                        <li>✓ Risk assessment and prioritization by severity</li>
+                        <li>✓ Continuous model improvement through online learning</li>
+                        <li>✓ Natural-language recommendations via integrated LLM</li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    <img src="images/ai_pipeline.png" alt="AI Pipeline Architecture">
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Application Interface -->
         <section class="project-section">
             <div class="project project-reverse">
                 <div class="project-image">
-                    <img src="images/main_software.png" alt="User Management Dashboard">
+                    <img src="images/graph2.png" alt="Application Interface Pages">
                 </div>
                 <div class="project-text">
-                    <h2>User Management & Access Control</h2>
-                    <p>Comprehensive role-based access control ensures appropriate data visibility and system permissions. The system supports three user roles with different capabilities and data access levels.</p>
+                    <h2>6. Application Interface & User Roles</h2>
+                    <p>The A.U.R.A. system features a comprehensive PyQt5-based user interface with specialized pages for different operational roles:</p>
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li><strong>✓ Login Page:</strong> Secure authentication with role-based user management</li>
+                        <li><strong>✓ Digital Twin Page:</strong> Interactive visualization with clickable, draggable sensors</li>
+                        <li><strong>✓ Main Dashboard:</strong> Real-time monitoring of all 13+ subsystems</li>
+                        <li><strong>✓ Detail View:</strong> Detailed historical data and graphs with trend analysis</li>
+                        <li><strong>✓ AI Decision Page:</strong> ML model outputs and maintenance recommendations</li>
+                        <li><strong>✓ Admin Panel:</strong> User management, system configuration (admin-only)</li>
+                    </ul>
                     <h3>User Roles:</h3>
                     <ul>
                         <li>✓ <strong>Administrator:</strong> Full system access, user management, configuration, model retraining</li>
                         <li>✓ <strong>Operator:</strong> Real-time monitoring, alert response, manual maintenance logging</li>
                         <li>✓ <strong>Analyst:</strong> Historical data analysis, report generation, model evaluation</li>
                     </ul>
-                    <h3>Security Features:</h3>
-                    <ul>
-                        <li>✓ User authentication and login system</li>
-                        <li>✓ JSON-based user credential storage</li>
-                        <li>✓ Role-based page visibility and feature access</li>
-                        <li>✓ Audit logging for administrative actions</li>
-                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- 7. Performance & Tech Stack -->
         <section class="project-section">
             <div class="project">
                 <div class="project-text">
-                    <h2>Data Analysis & Historical Reporting</h2>
-                    <p>The system provides comprehensive tools for analyzing historical sensor data, identifying trends, and generating actionable reports for mission planning and maintenance scheduling.</p>
-                    <h3>Analysis Features:</h3>
-                    <ul>
-                        <li>✓ CSV-based data storage for long-term historical records</li>
-                        <li>✓ Parameter-specific detail views with trend visualization</li>
-                        <li>✓ Configurable data aggregation and statistical analysis</li>
-                        <li>✓ Comparative analysis between operational periods</li>
-                        <li>✓ Export capabilities for external analysis tools</li>
-                        <li>✓ Real-time data generation for testing and validation</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="images/graph2.png" alt="Data Analysis Dashboard">
-                </div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="project project-reverse">
-                <div class="project-image">
-                    <img src="images/ai_pipeline.png" alt="Performance Metrics">
-                </div>
-                <div class="project-text">
-                    <h2>Performance & Efficiency</h2>
+                    <h2>7. Performance & Technology Stack</h2>
                     <p>A.U.R.A. is optimized for real-time operations in the resource-constrained environment of spacecraft systems, with proven performance improvements over traditional reactive maintenance approaches.</p>
                     <h3>Proven Results:</h3>
                     <ul>
                         <li>✓ <strong>60%+ Reduction:</strong> Average maintenance preparation time per mission</li>
                         <li>✓ <strong>45%+ Reduction:</strong> Safety incident rates through early warning detection</li>
                         <li>✓ <strong>1-Second Refresh:</strong> Real-time data update frequency for rapid response</li>
-                        <li>✓ <strong>28+ Sensors:</strong> Simultaneous monitoring capability across spacecraft</li>
+                        <li>✓ <strong>28+ Sensors:</strong> Simultaneous monitoring across 7 ISS modules</li>
                         <li>✓ <strong>13+ Subsystems:</strong> Complete life support system coverage</li>
-                        <li>✓ <strong>99%+ Uptime:</strong> Designed for mission-critical reliability</li>
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>Technology Stack</h2>
-                    <p>A.U.R.A. leverages modern, proven technologies for reliability, maintainability, and extensibility in spacecraft operations.</p>
                     <h3>Core Technologies:</h3>
                     <ul>
                         <li>✓ <strong>Frontend:</strong> PyQt5 (Python GUI framework)</li>
                         <li>✓ <strong>Backend:</strong> Python with modular architecture</li>
-                        <li>✓ <strong>Machine Learning:</strong> Scikit-learn (Isolation Forest, models)</li>
+                        <li>✓ <strong>Machine Learning:</strong> Scikit-learn, PyTorch (DQN), Ollama (Mistral LLM)</li>
                         <li>✓ <strong>Data Processing:</strong> Pandas, NumPy</li>
                         <li>✓ <strong>Visualization:</strong> SVG-based digital twin, real-time graphs</li>
                         <li>✓ <strong>Data Storage:</strong> JSON (user management), CSV (sensor data)</li>
-                        <li>✓ <strong>Modularity:</strong> Core, UI, Data, ML, and Legacy components</li>
                     </ul>
                 </div>
                 <div class="project-image">
                     <img src="icons/hunch.png" alt="Technology Stack Architecture">
                 </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="center">
+                <h2>Integrated System Architecture</h2>
+                <p>All components work together seamlessly to provide a comprehensive predictive maintenance solution that enhances crew safety, reduces operational costs, and improves mission success rates.</p>
+                <p style="font-size: 1.3rem; margin-top: 2rem; color: #afa685;">
+                    <strong>The A.U.R.A. System: From Data to Decisions to Crew Safety</strong>
+                </p>
             </div>
         </section>
     </div>
