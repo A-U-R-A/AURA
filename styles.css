@@ -88,8 +88,9 @@ header {
 
 .nav-logo {
   height: 40px;
-  width: auto;
+  width: 40px;
   display: block;
+  object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(171,163,114,0.4));
   transition: filter 0.2s ease;
 }
@@ -1178,20 +1179,14 @@ footer {
    RESPONSIVE — mobile (≤600px)
 ===================================================== */
 @media (max-width: 600px) {
-  /* ── Nav: stack logo above links ── */
-  header {
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.6rem 1rem 0.5rem;
-    gap: 0.4rem;
-  }
+  /* ── Nav: stay horizontal, tighten sizes ── */
+  header { padding: 0 0.75rem; height: 52px; }
 
-  .nav-logo { height: 34px; }
+  .nav-logo { height: 30px; width: 30px; }
 
-  .head { gap: 2px; flex-wrap: wrap; justify-content: center; }
+  .head { gap: 2px; }
 
-  .topbutton { padding: 5px 10px; font-size: 0.78rem; }
+  .topbutton { padding: 5px 9px; font-size: 0.75rem; }
 
   /* ── Layout ── */
   .section      { padding: 2.5rem 1rem; }
@@ -1238,7 +1233,8 @@ footer {
    RESPONSIVE — very small (≤400px)
 ===================================================== */
 @media (max-width: 400px) {
-  .topbutton { padding: 4px 8px; font-size: 0.72rem; }
+  .nav-logo { height: 26px; width: 26px; }
+  .topbutton { padding: 4px 7px; font-size: 0.68rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .stat-number { font-size: 1.7rem; }
   .hero h1 { letter-spacing: 4px; font-size: clamp(3rem, 18vw, 5rem); }
