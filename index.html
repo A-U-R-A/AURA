@@ -1,104 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.U.R.A. | Home</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="Gold-Icon" href="/icons/logo_gold.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.U.R.A. | AI Predictive Maintenance for ECLSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icons/logo_gold.png">
+  <!-- Three.js importmap for inline ISS twin -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="topcorner">A.U.R.A.</div>
-        <div class="head">
-            <a href="index.html"><button class="topbutton">Home</button></a>
-            <a href="features.html"><button class="topbutton">Features</button></a>
-            <a href="testing.html"><button class="topbutton">Testing</button></a>
-            <a href="contact.html"><button class="topbutton">Contact</button></a>
+<!-- ─────────────────── HEADER ─────────────────── -->
+<header>
+  <div class="topcorner">A.U.R.A.</div>
+  <nav class="head">
+    <a href="index.html"><button class="topbutton active">Home</button></a>
+    <a href="features.html"><button class="topbutton">Features</button></a>
+    <a href="testing.html"><button class="topbutton">Testing</button></a>
+    <a href="contact.html"><button class="topbutton">Contact</button></a>
+  </nav>
+</header>
+
+<!-- ─────────────────── HERO ─────────────────── -->
+<section class="hero">
+  <canvas class="hero-canvas" id="starCanvas"></canvas>
+  <div class="hero-content">
+    <span class="hero-label">Automated User Resource Analyzer</span>
+    <h1>A.U.R.A.</h1>
+    <p class="hero-sub">ECLSS Predictive Maintenance System</p>
+    <p class="hero-desc">
+      AI-powered anomaly detection and predictive maintenance for International Space Station
+      life support systems — keeping crew safe before failures happen.
+    </p>
+    <div class="hero-cta">
+      <a href="features.html" class="btn-primary">Explore Features</a>
+      <a href="testing.html" class="btn-secondary">View Dashboards</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── STATS ─────────────────── -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number" data-target="7">0</span>
+      <span class="stat-label">ISS Modules</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="20">0</span>
+      <span class="stat-label">Sensor Parameters</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="8">0</span>
+      <span class="stat-label">Fault Types Detected</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="4">0</span>
+      <span class="stat-label">ML Models</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="1">0</span>
+      <span class="stat-label">Second Refresh Rate</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── OVERVIEW ─────────────────── -->
+<div class="section fade-in">
+  <div class="section-header">
+    <span class="section-tag">Overview</span>
+    <h2 class="section-title">Mission-Critical Life Support Intelligence</h2>
+    <p class="section-subtitle">
+      As human spaceflight ventures farther from Earth, reactive maintenance is a liability.
+      A.U.R.A. transforms ECLSS from reactive to proactive — predicting failures before they endanger crew.
+    </p>
+  </div>
+
+  <div class="split">
+    <div class="split-text">
+      <h2>Real-Time Web Application</h2>
+      <p>
+        A.U.R.A. is a full-stack web application built on FastAPI with live WebSocket data streaming.
+        Sensor readings from 7 ISS modules update every second across 20 parameters —
+        accessible from any browser, no installation required.
+      </p>
+      <p>
+        Four machine learning models work in concert: Isolation Forest detects anomalies,
+        Random Forest classifies fault type, LSTM predicts remaining useful life,
+        and a Deep Q-Network recommends corrective actions.
+      </p>
+      <h3>ISS Modules Monitored</h3>
+      <div class="location-grid">
+        <span class="location-chip">JLP &amp; JPM</span>
+        <span class="location-chip">Node 2</span>
+        <span class="location-chip">Columbus</span>
+        <span class="location-chip">US Lab</span>
+        <span class="location-chip">Cupola</span>
+        <span class="location-chip">Node 1</span>
+        <span class="location-chip">Joint Airlock</span>
+      </div>
+    </div>
+    <div class="twin-preview-wrap">
+      <div id="twin-preview"></div>
+      <div class="twin-preview-label">
+        <span class="twin-dot nominal"></span> DIGITAL TWIN — LIVE 3D MODEL
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── CAPABILITY CARDS ─────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="section-header">
+      <span class="section-tag">Capabilities</span>
+      <h2 class="section-title">Everything in One Dashboard</h2>
+      <p class="section-subtitle">Eight integrated views give operators complete situational awareness</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <span class="card-icon">🛸</span>
+        <div class="card-title">Digital Twin</div>
+        <div class="card-body">Interactive SVG ISS schematic with live color-coded sensor overlays. Click any module to drill into sensor detail. Fault states light up in real time.</div>
+        <span class="card-tag">WebSocket Live</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">📊</span>
+        <div class="card-title">Dashboard</div>
+        <div class="card-body">20+ sensor readings across 9 ECLSS subsystems in a unified panel. Auto-refreshes every second. Historical queue holds 10,000+ rows for fast lookups.</div>
+        <span class="card-tag">1s Refresh</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">📈</span>
+        <div class="card-title">Sensor Detail &amp; Trends</div>
+        <div class="card-body">Drill into any parameter for historical trend charts. Identify drift, degradation patterns, and approaching thresholds before they trigger alerts.</div>
+        <span class="card-tag">Chart.js</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">🚨</span>
+        <div class="card-title">Alerts System</div>
+        <div class="card-body">Two-tier alert system: Critical (active fault, immediate action) and Warning (parameter drifting toward threshold). Zero false positives in 1,000 nominal samples.</div>
+        <span class="card-tag">2-Tier Alerting</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">🤖</span>
+        <div class="card-title">AI Analyst</div>
+        <div class="card-body">LLM-powered analyst synthesizes all model outputs into natural-language maintenance recommendations. Explains the why, not just the what.</div>
+        <span class="card-tag">LLM Integration</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">🔧</span>
+        <div class="card-title">Maintenance Planner</div>
+        <div class="card-body">DQN-recommended corrective actions mapped to specific faults. 11 action types from seal injection to valve isolation, ranked by confidence and urgency.</div>
+        <span class="card-tag">DQN Recommended</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── ML PIPELINE ─────────────────── -->
+<div class="section fade-in">
+  <div class="section-header">
+    <span class="section-tag">Machine Learning Pipeline</span>
+    <h2 class="section-title">Four Models, One Decision</h2>
+    <p class="section-subtitle">Each model passes its output downstream — raw sensor noise to actionable recommendation in under a second</p>
+  </div>
+  <div class="pipeline">
+    <div class="pipeline-step">
+      <div class="pipeline-step-icon">🌲</div>
+      <div class="pipeline-step-name">Isolation Forest</div>
+      <div class="pipeline-step-desc">Unsupervised anomaly detection. Scores every incoming reading — flags deviations from learned normal operation.</div>
+    </div>
+    <div class="pipeline-arrow">→</div>
+    <div class="pipeline-step">
+      <div class="pipeline-step-icon">🌳</div>
+      <div class="pipeline-step-name">Random Forest</div>
+      <div class="pipeline-step-desc">Classifies the fault type from 8 categories when IF flags an anomaly. Confidence &gt;92% triggers direct bypass to action.</div>
+    </div>
+    <div class="pipeline-arrow">→</div>
+    <div class="pipeline-step">
+      <div class="pipeline-step-icon">🧠</div>
+      <div class="pipeline-step-name">LSTM Predictor</div>
+      <div class="pipeline-step-desc">60-step sliding window with multi-head attention. Predicts failure probability and Remaining Useful Life in hours.</div>
+    </div>
+    <div class="pipeline-arrow">→</div>
+    <div class="pipeline-step">
+      <div class="pipeline-step-icon">🎯</div>
+      <div class="pipeline-step-name">DQN Recommender</div>
+      <div class="pipeline-step-desc">Deep Q-Network maps 32-dim system state to optimal corrective action from 11 remediation procedures.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── FAULT TYPES ─────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="section-header">
+      <span class="section-tag">Fault Detection</span>
+      <h2 class="section-title">8 Critical Fault Types Detected</h2>
+      <p class="section-subtitle">Random Forest classifies each anomaly into one of eight mission-critical fault categories with confidence scoring</p>
+    </div>
+    <div class="fault-grid">
+      <div class="fault-chip">Cabin Leak</div>
+      <div class="fault-chip">O₂ Generator Failure</div>
+      <div class="fault-chip">O₂ Leak</div>
+      <div class="fault-chip">CO₂ Scrubber Failure</div>
+      <div class="fault-chip">CHX Failure</div>
+      <div class="fault-chip">Water Processor Failure</div>
+      <div class="fault-chip">Trace Contaminant Filter Saturation</div>
+      <div class="fault-chip">NH₃ Coolant Leak</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── SCREENSHOTS ─────────────────── -->
+<div class="section fade-in">
+  <div class="section-header">
+    <span class="section-tag">Dashboards</span>
+    <h2 class="section-title">See It in Action</h2>
+    <p class="section-subtitle">Every screen built for clarity under pressure</p>
+  </div>
+  <div class="screenshot-grid">
+
+    <!-- Digital Twin 2D -->
+    <div class="screenshot-card">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">Digital Twin — ISS</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>ALL NOMINAL</span></div>
+        <div class="mk-body" style="padding:6px;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 280 150" style="width:100%;max-height:175px;" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="10" r="0.7" fill="white" opacity="0.5"/><circle cx="55" cy="5" r="0.5" fill="white" opacity="0.4"/><circle cx="200" cy="8" r="0.6" fill="white" opacity="0.5"/><circle cx="262" cy="18" r="0.4" fill="white" opacity="0.4"/><circle cx="240" cy="140" r="0.5" fill="white" opacity="0.3"/>
+            <line x1="42" y1="12" x2="42" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="42" y1="49" x2="42" y2="80" stroke="#686460" stroke-width="1.2"/>
+            <line x1="90" y1="12" x2="90" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="90" y1="49" x2="90" y2="80" stroke="#686460" stroke-width="1.2"/>
+            <line x1="190" y1="12" x2="190" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="190" y1="49" x2="190" y2="80" stroke="#686460" stroke-width="1.2"/>
+            <line x1="238" y1="12" x2="238" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="238" y1="49" x2="238" y2="80" stroke="#686460" stroke-width="1.2"/>
+            <rect x="31" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+            <rect x="79" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+            <rect x="179" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+            <rect x="227" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+            <rect x="31" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+            <rect x="79" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+            <rect x="179" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+            <rect x="227" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+            <rect x="10" y="43" width="260" height="6" rx="2" fill="#686460"/>
+            <rect x="138.5" y="48" width="3" height="88" fill="#a09c90"/>
+            <rect x="148" y="91" width="14" height="2" fill="#a09c90"/>
+            <rect x="114" y="91" width="14" height="2" fill="#a09c90"/>
+            <rect x="148" y="130" width="12" height="2" fill="#a09c90"/>
+            <ellipse cx="140" cy="94" rx="9" ry="9" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
+            <ellipse cx="140" cy="113" rx="11" ry="10" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
+            <ellipse cx="140" cy="133" rx="8" ry="8" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
+            <ellipse cx="171" cy="92" rx="12" ry="6" fill="#c0cce0" stroke="#9aa0b0" stroke-width="0.5"/>
+            <rect x="100" y="86" width="20" height="12" rx="6" fill="#b8c4d8" stroke="#9aa0b0" stroke-width="0.5"/>
+            <ellipse cx="168" cy="131" rx="8" ry="5" fill="#b0bcd0" stroke="#9aa0b0" stroke-width="0.5"/>
+            <ellipse cx="138" cy="143" rx="6" ry="5" fill="#8090a8" stroke="#7080a0" stroke-width="0.5"/>
+            <text x="140" y="97" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">N2</text>
+            <text x="140" y="116" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">LAB</text>
+            <text x="140" y="136" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">N1</text>
+            <text x="171" y="95" text-anchor="middle" fill="#6b6555" font-size="4.5" font-family="monospace">COL</text>
+            <text x="110" y="95" text-anchor="middle" fill="#6b6555" font-size="4.5" font-family="monospace">KIBO</text>
+            <circle cx="140" cy="82" r="3.5" fill="#5fe61f" opacity="0.9"/><circle cx="140" cy="82" r="6" fill="none" stroke="#5fe61f" stroke-width="0.5" opacity="0.25"/>
+            <circle cx="152" cy="106" r="3.5" fill="#5fe61f" opacity="0.9"/>
+            <circle cx="171" cy="82" r="3.5" fill="#5fe61f" opacity="0.9"/>
+            <circle cx="110" cy="82" r="3.5" fill="#5fe61f" opacity="0.9"/>
+            <circle cx="140" cy="122" r="3.5" fill="#5fe61f" opacity="0.9"/>
+            <circle cx="168" cy="122" r="3.5" fill="#5fe61f" opacity="0.9"/>
+            <circle cx="134" cy="138" r="3.5" fill="#5fe61f" opacity="0.9"/>
+          </svg>
         </div>
-    </header>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Digital Twin</strong>
+        <p>Live SVG ISS schematic with color-coded module health overlays. Green = nominal, red = fault active.</p>
+      </div>
+    </div>
 
-    <!-- Hero / Intro Section -->
-    <section class="project-section">
-        <div class="center">
-            <h1>AI Preventive Maintenance System</h1>
-            <p>A.U.R.A. - Automated User Resource Analyzer</p>
+    <!-- Sensor Trends / Graph -->
+    <div class="screenshot-card">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">Trends — O₂ Partial Pressure</span><span class="mk-status">US Lab · 60 ticks</span></div>
+        <div class="mk-body" style="padding:6px 10px;gap:4px;">
+          <div style="display:flex;gap:8px;font-size:8.5px;"><span style="color:#ddd8cc;">20.87 <span style="color:#6b6555;">%vol</span></span><span style="color:#5fe61f;margin-left:auto;">NOMINAL</span><span style="color:#6b6555;">19.5–23.1</span></div>
+          <svg viewBox="0 0 256 95" style="width:100%;" xmlns="http://www.w3.org/2000/svg">
+            <line x1="26" y1="5" x2="26" y2="80" stroke="#2a2a35" stroke-width="1"/>
+            <line x1="26" y1="80" x2="254" y2="80" stroke="#2a2a35" stroke-width="1"/>
+            <text x="0" y="12" fill="#6b6555" font-size="6.5" font-family="monospace">23.1</text>
+            <text x="0" y="45" fill="#6b6555" font-size="6.5" font-family="monospace">21.3</text>
+            <text x="0" y="78" fill="#6b6555" font-size="6.5" font-family="monospace">19.5</text>
+            <rect x="26" y="8" width="228" height="68" fill="rgba(171,163,114,0.04)"/>
+            <line x1="26" y1="8"  x2="254" y2="8"  stroke="#aba372" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.25"/>
+            <line x1="26" y1="76" x2="254" y2="76" stroke="#aba372" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.25"/>
+            <path d="M26,50 C38,47 44,54 56,51 C68,48 76,56 88,52 C100,48 108,53 120,50 C132,47 140,55 152,51 C164,47 172,53 184,50 C196,47 204,52 216,49 C228,46 236,51 248,49 C250,48 252,49 254,50" fill="none" stroke="#5fe61f" stroke-width="1.8" stroke-linejoin="round"/>
+            <text x="26"  y="91" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">0</text>
+            <text x="102" y="91" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">20</text>
+            <text x="178" y="91" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">40</text>
+            <text x="254" y="91" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">60</text>
+          </svg>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;">
+            <span style="background:rgba(171,163,114,0.15);border:1px solid rgba(171,163,114,0.4);color:#aba372;font-size:7.5px;padding:2px 6px;border-radius:3px;">O₂ Partial</span>
+            <span style="color:#6b6555;font-size:7.5px;padding:2px 6px;border:1px solid #2a2a35;border-radius:3px;">CO₂</span>
+            <span style="color:#6b6555;font-size:7.5px;padding:2px 6px;border:1px solid #2a2a35;border-radius:3px;">Humidity</span>
+            <span style="color:#6b6555;font-size:7.5px;padding:2px 6px;border:1px solid #2a2a35;border-radius:3px;">Temp</span>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Sensor Trends</strong>
+        <p>Historical parameter charts with drift detection and nominal range threshold overlays.</p>
+      </div>
+    </div>
 
-    <!-- Executive Summary -->
-    <section class="project-section">
-        <div class="project">
-            <div class="project-text">
-                <h2>Executive Summary</h2>
-                <p>Implementing AI and Machine Learning (ML) for predictive maintenance in off-planet Environmental Control and Life Support Systems (ECLSS) dramatically improves crew safety and operational efficiency, reducing both maintenance preparation time and safety incident rates by over 45%.</p>
+    <!-- Critical Alert -->
+    <div class="screenshot-card">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">Alerts</span><span class="mk-status"><span class="mk-dot mk-dot-r"></span>1 CRITICAL</span></div>
+        <div class="mk-body" style="gap:6px;">
+          <div style="background:rgba(255,61,64,0.08);border:1px solid rgba(255,61,64,0.35);border-radius:5px;padding:9px 11px;">
+            <div style="color:#ff3d40;font-size:8px;letter-spacing:3px;font-weight:700;margin-bottom:3px;">⚠ CRITICAL FAULT ACTIVE</div>
+            <div style="color:#fff;font-size:14px;font-weight:700;margin-bottom:6px;letter-spacing:1px;">CABIN LEAK</div>
+            <div style="display:flex;flex-direction:column;gap:2px;">
+              <div style="display:flex;"><span style="color:#6b6555;font-size:8.5px;flex:1;">LOCATION</span><span style="color:#ddd8cc;font-size:8.5px;">Node 1</span></div>
+              <div style="display:flex;"><span style="color:#6b6555;font-size:8.5px;flex:1;">RF CONFIDENCE</span><span style="color:#ff3d40;font-size:8.5px;">97.3%</span></div>
+              <div style="display:flex;"><span style="color:#6b6555;font-size:8.5px;flex:1;">LSTM RUL</span><span style="color:#ffab00;font-size:8.5px;">4.2 hrs</span></div>
+              <div style="display:flex;"><span style="color:#6b6555;font-size:8.5px;flex:1;">FAIL PROB</span><span style="color:#ff3d40;font-size:8.5px;">94.1%</span></div>
             </div>
-            <div class="project-image">
-                <img src="images/ai_pipeline.png" alt="AI/ML Analysis Pipeline">
-            </div>
+          </div>
+          <div style="background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:4px;padding:6px 10px;">
+            <div style="color:#6b6555;font-size:7.5px;letter-spacing:1.5px;margin-bottom:2px;">DQN RECOMMENDATION</div>
+            <div style="color:#aba372;font-size:9.5px;">Use Sealant to Close Leak</div>
+          </div>
+          <div style="display:flex;gap:5px;">
+            <div style="flex:1;background:#ff3d40;color:#0d0d0d;text-align:center;padding:5px;border-radius:4px;font-size:8.5px;font-weight:700;letter-spacing:1px;">ACKNOWLEDGE</div>
+            <div style="flex:1;border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:5px;border-radius:4px;font-size:8.5px;">DETAILS</div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Critical Alert</strong>
+        <p>Fault name, affected location, and severity displayed the moment anomaly crosses threshold.</p>
+      </div>
+    </div>
 
-    <!-- Overview -->
-    <section class="project-section">
-        <div class="project project-reverse">
-            <div class="project-image">
-                <img src="icons/hunch.png" alt="System Architecture">
-            </div>
-            <div class="project-text">
-                <h2>System Overview</h2>
-                <p>
-                    As human spaceflight ventures farther from Earth, the reliability and autonomy of life support systems become mission-critical. An AI/ML-powered Predictive Maintenance System transforms ECLSS from reactive to proactive safety management, enabling early detection of anomalies and optimized maintenance scheduling.
-                </p>
-                <p>
-                    The A.U.R.A. system processes real-time data from 28+ sensors across 13 critical subsystems including atmosphere revitalization, oxygen generation, water recovery, and temperature/humidity control. Advanced anomaly detection algorithms identify subtle deviations from normal operation, while machine learning models predict component failures before they occur.
-                </p>
-            </div>
+    <!-- Notifications -->
+    <div class="screenshot-card">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">Notifications</span><span class="mk-status"><span class="mk-dot mk-dot-r"></span>2 <span class="mk-dot mk-dot-a" style="margin-left:3px;"></span>3</span></div>
+        <div class="mk-body" style="gap:4px;">
+          <div class="mk-alert-item crit"><div class="mk-alert-level">⬤ CRITICAL</div><div class="mk-alert-msg">Cabin Leak · Node 1</div><div class="mk-alert-meta">14:23:01 · RF 97.3% · RUL 4.2h</div></div>
+          <div class="mk-alert-item crit"><div class="mk-alert-level">⬤ CRITICAL</div><div class="mk-alert-msg">O₂ Generator Failure · US Lab</div><div class="mk-alert-meta">14:20:44 · RF 91.8% · RUL 6.1h</div></div>
+          <div class="mk-alert-item warn"><div class="mk-alert-level">⬤ WARNING</div><div class="mk-alert-msg">CO₂ rising · Columbus</div><div class="mk-alert-meta">14:18:22 · 0.61% atm · limit 0.70%</div></div>
+          <div class="mk-alert-item warn"><div class="mk-alert-level">⬤ WARNING</div><div class="mk-alert-msg">NH₃ elevated · Node 2</div><div class="mk-alert-meta">14:15:07 · 0.89 ppm · limit 1.0</div></div>
         </div>
-    </section>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Notifications Panel</strong>
+        <p>Critical and warning tiers with timestamps and fault context — no missed alerts.</p>
+      </div>
+    </div>
 
-    <!-- Monitored Subsystems -->
-    <section class="project-section">
-        <div class="project">
-            <div class="project-text">
-                <h2>Critical Subsystems Monitored</h2>
-                <p>A.U.R.A. provides comprehensive monitoring of 13+ life support subsystems:</p>
-                <ul style="list-style: none; padding: 0;">
-                    <li>✓ <strong>Atmosphere Revitalization System</strong> - O₂ and CO₂ pressure, humidity levels</li>
-                    <li>✓ <strong>Oxygen Generation System</strong> - O₂ output rate and purity</li>
-                    <li>✓ <strong>Water Recovery System</strong> - Water purity (TOC) and production rate</li>
-                    <li>✓ <strong>Temperature & Humidity Control</strong> - Cabin temperature and environmental conditions</li>
-                    <li>✓ <strong>Trace Contaminant Control</strong> - NH₃, H₂, and other gaseous contaminants</li>
-                    <li>✓ <strong>Waste Management System</strong> - Waste containment monitoring</li>
-                    <li>✓ <strong>Fire Detection & Suppression</strong> - Fire hazard detection</li>
-                    <li>✓ <strong>Air Circulation/Ventilation</strong> - Airflow rate and distribution</li>
-                    <li>✓ <strong>Pressure Control</strong> - Cabin pressure stability</li>
-                    <li>✓ <strong>Microbial Monitoring</strong> - Bacterial and fungal count</li>
-                    <li>✓ <strong>Vacuum System</strong> - External pressure sensors</li>
-                    <li>✓ <strong>Mass Spectrometer Module</strong> - Atmospheric composition analysis</li>
-                </ul>
-            </div>
-            <div class="project-image">
-                <img src="images/graph1.png" alt="Real-Time Monitoring Dashboard">
-            </div>
+    <!-- Quick Look Dashboard -->
+    <div class="screenshot-card">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">Dashboard — US Lab</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>LIVE · 1s</span></div>
+        <div class="mk-body" style="gap:0;padding:8px 10px;">
+          <div class="mk-row"><span class="mk-row-label">O₂ Partial Pressure</span><span class="mk-row-val">20.87</span><span class="mk-row-unit">%vol</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">CO₂ Partial Pressure</span><span class="mk-row-val">0.38</span><span class="mk-row-unit">%atm</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">Humidity</span><span class="mk-row-val">52.1</span><span class="mk-row-unit">%RH</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">Temperature</span><span class="mk-row-val">21.5</span><span class="mk-row-unit">°C</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">Cabin Pressure</span><span class="mk-row-val">14.68</span><span class="mk-row-unit">psia</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">NH₃</span><span class="mk-row-val">0.31</span><span class="mk-row-unit">ppm</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">Airflow Rate</span><span class="mk-row-val">0.19</span><span class="mk-row-unit">m/s</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row" style="border:none;"><span class="mk-row-label">O₂ Output Rate</span><span class="mk-row-val">5.42</span><span class="mk-row-unit">kg/day</span><span class="mk-row-ok">✓</span></div>
         </div>
-    </section>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Quick Look</strong>
+        <p>All 20 sensor parameters across 7 modules — live, at a glance.</p>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        © 2025 A.U.R.A. | Designed for Intelligent Space Operations
-    </footer>
+    <!-- Settings -->
+    <div class="screenshot-card">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">⚙ Settings</span><span class="mk-status">Runtime Config</span></div>
+        <div class="mk-body" style="padding:8px 12px;">
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">Alert Consecutive Ticks</span><span class="mk-setting-val">10</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:45%;"></div><div class="mk-slider-thumb" style="left:45%;"></div></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">Cooldown Seconds</span><span class="mk-setting-val">600</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:60%;"></div><div class="mk-slider-thumb" style="left:60%;"></div></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">RF Confidence Gate</span><span class="mk-setting-val">0.85</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:85%;"></div><div class="mk-slider-thumb" style="left:85%;"></div></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">Latch Threshold</span><span class="mk-setting-val">0.95</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:95%;"></div><div class="mk-slider-thumb" style="left:95%;"></div></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">Latch Min Consecutive</span><span class="mk-setting-val">3</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:20%;"></div><div class="mk-slider-thumb" style="left:20%;"></div></div></div>
+          <div style="display:flex;gap:6px;margin-top:4px;">
+            <div style="background:#aba372;color:#0d0d0d;text-align:center;padding:5px 12px;border-radius:4px;font-size:8.5px;font-weight:700;letter-spacing:1px;">SAVE</div>
+            <div style="border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:5px 10px;border-radius:4px;font-size:8.5px;">RESTORE DEFAULTS</div>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Settings</strong>
+        <p>Configurable alert thresholds, cooldown windows, and ML sensitivity — no restart required.</p>
+      </div>
+    </div>
 
+  </div>
+</div>
+
+<!-- ─────────────────── CTA ─────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner" style="text-align:center; padding-top:4rem; padding-bottom:4rem;">
+    <span class="section-tag">Dive Deeper</span>
+    <h2 class="section-title" style="margin-bottom:1rem;">Ready to See Everything?</h2>
+    <p style="color:var(--text-dim);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;">
+      Explore the full feature breakdown or see rigorous testing validation for every system component.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="features.html" class="btn-primary">Full Feature Breakdown</a>
+      <a href="testing.html" class="btn-secondary">Testing &amp; Validation</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── FOOTER ─────────────────── -->
+<footer>
+  © 2025 A.U.R.A. | Designed for Intelligent Space Operations
+</footer>
+
+<script type="module">
+// ── ISS Digital Twin Preview ──────────────────────
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+(function () {
+  const container = document.getElementById('twin-preview');
+  if (!container) return;
+
+  const CLR = {
+    nominal:    0x5fe61f,
+    module:     0xc8c4b8,
+    moduleDark: 0xa09c90,
+    truss:      0x686460,
+    solar:      0x04080f,
+    solarGlow:  0x010508,
+    mast:       0x888078,
+    sun:        0xfff5e8,
+  };
+
+  function stdMat(color, metalness = 0.65, roughness = 0.35) {
+    return new THREE.MeshStandardMaterial({ color, metalness, roughness });
+  }
+  function cylZ(r, h, color) {
+    const g = new THREE.CylinderGeometry(r, r, h, 20);
+    g.rotateX(Math.PI / 2);
+    return new THREE.Mesh(g, stdMat(color));
+  }
+  function cylX(r, h, color) {
+    const g = new THREE.CylinderGeometry(r, r, h, 20);
+    g.rotateZ(Math.PI / 2);
+    return new THREE.Mesh(g, stdMat(color));
+  }
+  function box(w, h, d, color, m, rr) {
+    return new THREE.Mesh(new THREE.BoxGeometry(w, h, d), stdMat(color, m ?? 0.65, rr ?? 0.35));
+  }
+  function addEndCapsZ(parent, cx, cy, cz, r, h, color) {
+    const geo = new THREE.SphereGeometry(r, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2);
+    const mat = stdMat(color);
+    const fwd = new THREE.Mesh(geo, mat);
+    fwd.rotation.x = Math.PI / 2; fwd.position.set(cx, cy, cz - h / 2); parent.add(fwd);
+    const aft = new THREE.Mesh(geo, mat);
+    aft.rotation.x = -Math.PI / 2; aft.position.set(cx, cy, cz + h / 2); parent.add(aft);
+  }
+  function addEndCapsX(parent, cx, cy, cz, r, h, color) {
+    const geo = new THREE.SphereGeometry(r, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2);
+    const mat = stdMat(color);
+    const pos = new THREE.Mesh(geo, mat);
+    pos.rotation.z = -Math.PI / 2; pos.position.set(cx + h / 2, cy, cz); parent.add(pos);
+    const neg = new THREE.Mesh(geo, mat);
+    neg.rotation.z = Math.PI / 2; neg.position.set(cx - h / 2, cy, cz); parent.add(neg);
+  }
+
+  const W = container.clientWidth  || 600;
+  const H = container.clientHeight || 420;
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(W, H);
+  container.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x000000, 0.0012);
+
+  const camera = new THREE.PerspectiveCamera(42, W / H, 0.5, 2000);
+  camera.position.set(55, 38, 82);
+  camera.lookAt(0, 0, 12);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.target.set(0, 0, 12);
+  controls.enableDamping   = true;
+  controls.dampingFactor   = 0.06;
+  controls.autoRotate      = true;
+  controls.autoRotateSpeed = 0.35;
+  controls.minDistance     = 18;
+  controls.maxDistance     = 250;
+  controls.update();
+
+  // Lighting
+  const sun = new THREE.DirectionalLight(CLR.sun, 4.0);
+  sun.position.set(90, 70, 50);
+  scene.add(sun);
+  const fill = new THREE.DirectionalLight(0x102030, 0.6);
+  fill.position.set(-60, -30, -40);
+  scene.add(fill);
+  scene.add(new THREE.AmbientLight(0x0e0e0e, 1.2));
+
+  // Starfield
+  const starPos = new Float32Array(4000 * 3);
+  for (let i = 0; i < starPos.length; i++) starPos[i] = (Math.random() - 0.5) * 2000;
+  const starGeo = new THREE.BufferGeometry();
+  starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+  scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.55, sizeAttenuation: true })));
+
+  // Earth glow
+  const earth = new THREE.Mesh(
+    new THREE.SphereGeometry(320, 32, 32),
+    new THREE.MeshStandardMaterial({ color: 0x0a1e3a, emissive: 0x071428, emissiveIntensity: 0.6, metalness: 0, roughness: 1, side: THREE.BackSide, depthWrite: false })
+  );
+  earth.position.set(0, -520, 30);
+  scene.add(earth);
+  const earthLight = new THREE.PointLight(0x0a2040, 1.8, 600);
+  earthLight.position.set(0, -180, 30);
+  scene.add(earthLight);
+
+  // ISS
+  const root = new THREE.Group();
+  scene.add(root);
+
+  // Connector
+  const conn = box(2.2, 5, 2.2, CLR.truss); conn.position.set(0, 2.5, 0); root.add(conn);
+  // Main truss
+  const truss = box(112, 2.2, 3, CLR.truss, 0.5, 0.5); truss.position.set(0, 5, 0); root.add(truss);
+  for (let x = -48; x <= 48; x += 12) {
+    const b = box(0.4, 1.8, 2.8, CLR.truss, 0.5, 0.6); b.position.set(x, 5, 0); root.add(b);
+  }
+
+  // Solar arrays
+  const solarMat = new THREE.MeshStandardMaterial({ color: CLR.solar, metalness: 0.85, roughness: 0.12, emissive: CLR.solarGlow, emissiveIntensity: 1 });
+  const mastMat  = stdMat(CLR.mast, 0.7, 0.3);
+  const panelGeo = new THREE.BoxGeometry(0.18, 13, 36);
+  const wireGeo  = new THREE.EdgesGeometry(panelGeo);
+  const wireMat  = new THREE.LineBasicMaterial({ color: 0x0a1428 });
+  [-46, -20, 20, 46].forEach(x => {
+    const mast = new THREE.Mesh(new THREE.BoxGeometry(0.5, 20, 0.5), mastMat);
+    mast.position.set(x, 5, 0); root.add(mast);
+    [14.5, -4.5].forEach(y => {
+      const panel = new THREE.Mesh(panelGeo, solarMat);
+      panel.position.set(x, y, 0); root.add(panel);
+      const wire = new THREE.LineSegments(wireGeo, wireMat);
+      wire.position.set(x, y, 0); root.add(wire);
+    });
+  });
+
+  // Modules — US segment
+  const node2 = cylZ(2.5, 6, CLR.module); node2.position.set(0, 0, 0); root.add(node2); addEndCapsZ(root, 0, 0, 0, 2.5, 6, CLR.module);
+  const lab   = cylZ(3.3, 9, CLR.module); lab.position.set(0, 0, 12);  root.add(lab);   addEndCapsZ(root, 0, 0, 12, 3.3, 9, CLR.module);
+  const tun1  = cylZ(1.8, 3, CLR.moduleDark); tun1.position.set(0, 0, 7.5); root.add(tun1);
+  const node1 = cylZ(2.5, 6, CLR.module); node1.position.set(0, 0, 25); root.add(node1); addEndCapsZ(root, 0, 0, 25, 2.5, 6, CLR.module);
+  const tun2  = cylZ(1.8, 4, CLR.moduleDark); tun2.position.set(0, 0, 19.5); root.add(tun2);
+  // Columbus
+  const columbus = cylX(2.3, 9, 0xc0cce0); columbus.position.set(10, 0, -2); root.add(columbus); addEndCapsX(root, 10, 0, -2, 2.3, 9, 0xc0cce0);
+  const tunCo    = cylX(1.6, 3.5, CLR.moduleDark); tunCo.position.set(4.5, 0, -2); root.add(tunCo);
+  // Kibo
+  const kibo   = box(14, 4.2, 4.5, 0xb8c4d8); kibo.position.set(-12, 0, -5); root.add(kibo);
+  const kiboEF = box(6, 0.8, 4, 0xa0b0c4); kiboEF.position.set(-14, 2.5, -5); root.add(kiboEF);
+  const tunKi  = cylX(1.6, 4.5, CLR.moduleDark); tunKi.position.set(-5.5, 0, -4); root.add(tunKi);
+  // Quest airlock
+  const airlock     = cylX(2.0, 7, 0xb0bcd0); airlock.position.set(9.5, 0, 25); root.add(airlock);
+  const airlockCrew = cylX(1.6, 4, 0xa8b4c8); airlockCrew.position.set(14.5, 0, 25); root.add(airlockCrew);
+  // Cupola
+  const cupBase = new THREE.Mesh(new THREE.CylinderGeometry(2.0, 2.2, 1.8, 12), stdMat(0xb0bcd0));
+  cupBase.position.set(-2, -4.5, 27); root.add(cupBase);
+  const cupDome = new THREE.Mesh(new THREE.SphereGeometry(2.0, 14, 10, 0, Math.PI * 2, 0, Math.PI / 2), new THREE.MeshStandardMaterial({ color: 0x8090a8, metalness: 0.3, roughness: 0.15 }));
+  cupDome.rotation.x = Math.PI; cupDome.position.set(-2, -5.5, 27); root.add(cupDome);
+  // Russian segment
+  const fgb = cylZ(2.1, 10, 0xa8b8c8); fgb.position.set(0, 0, 35); root.add(fgb);
+  const sm  = cylZ(2.2, 13, 0xa0b0c0); sm.position.set(0, 0, 50);  root.add(sm);
+  const tunRus = cylZ(1.6, 4, CLR.moduleDark); tunRus.position.set(0, 0, 30.5); root.add(tunRus);
+  const rusSolarMat = new THREE.MeshStandardMaterial({ color: CLR.solar, metalness: 0.85, roughness: 0.15, emissive: CLR.solarGlow, emissiveIntensity: 1 });
+  [-5, 5].forEach(x => {
+    const rMast = new THREE.Mesh(new THREE.BoxGeometry(0.4, 16, 0.4), mastMat); rMast.position.set(x, 0, 50); root.add(rMast);
+    const rPanZ = new THREE.Mesh(new THREE.BoxGeometry(0.15, 10, 22), rusSolarMat); rPanZ.position.set(x, 9, 50); root.add(rPanZ);
+    const rPanN = rPanZ.clone(); rPanN.position.set(x, -9, 50); root.add(rPanN);
+  });
+
+  // Module indicators — all nominal (green) for the preview
+  const MODULE_POS = {
+    'Node 2':        [0,   0,   0],
+    'US Lab':        [0,   0,  12],
+    'Columbus':      [10,  0,  -2],
+    'JLP & JPM':     [-12, 0,  -5],
+    'Node 1':        [0,   0,  25],
+    'Cupola':        [-3, -5,  27],
+    'Joint Airlock': [10,  0,  25],
+  };
+  const indicators = [];
+  Object.values(MODULE_POS).forEach(([x, y, z]) => {
+    const glow = new THREE.Mesh(
+      new THREE.SphereGeometry(0.85, 16, 16),
+      new THREE.MeshStandardMaterial({ color: CLR.nominal, emissive: CLR.nominal, emissiveIntensity: 1.2, metalness: 0, roughness: 0.2 })
+    );
+    glow.position.set(x, y + 4.2, z);
+    scene.add(glow);
+    const light = new THREE.PointLight(CLR.nominal, 2.0, 18);
+    light.position.copy(glow.position);
+    scene.add(light);
+    indicators.push({ mesh: glow, light });
+  });
+
+  // Resize
+  const ro = new ResizeObserver(() => {
+    const w = container.clientWidth, h = container.clientHeight;
+    if (!w || !h) return;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  });
+  ro.observe(container);
+
+  // Animate
+  let clock = 0;
+  function animate() {
+    requestAnimationFrame(animate);
+    clock += 0.016;
+    indicators.forEach(({ mesh, light }) => {
+      const b = 0.5 + 0.5 * Math.sin(clock * 1.2);
+      mesh.material.emissiveIntensity = 0.8 + 0.4 * b;
+      light.intensity = 1.6 + 0.8 * b;
+    });
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+</script>
+
+<script>
+// ── Starfield ──────────────────────────────────────
+const canvas = document.getElementById('starCanvas');
+const ctx = canvas.getContext('2d');
+let stars = [];
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+function initStars(n = 200) {
+  stars = Array.from({length: n}, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.2 + 0.2,
+    a: Math.random() * Math.PI * 2,
+    speed: Math.random() * 0.003 + 0.001,
+  }));
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  stars.forEach(s => {
+    s.a += s.speed;
+    const alpha = 0.3 + 0.5 * Math.abs(Math.sin(s.a));
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(171,163,114,${alpha})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(drawStars);
+}
+
+resize();
+initStars();
+drawStars();
+window.addEventListener('resize', () => { resize(); initStars(); });
+
+// ── Stat counters ──────────────────────────────────
+function animateCounter(el, target, duration = 1200) {
+  let start = null;
+  const step = ts => {
+    if (!start) start = ts;
+    const progress = Math.min((ts - start) / duration, 1);
+    el.textContent = Math.floor(progress * target);
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = target;
+  };
+  requestAnimationFrame(step);
+}
+
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCounter(e.target, parseInt(e.target.dataset.target, 10));
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+// ── Fade-in on scroll ──────────────────────────────
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+</script>
 </body>
 </html>

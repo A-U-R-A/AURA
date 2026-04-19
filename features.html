@@ -1,211 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.U.R.A. | Features & Components</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="Gold-Icon" href="/icons/logo_gold.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.U.R.A. | Features &amp; Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icons/logo_gold.png">
 </head>
 <body>
-    <header>
-        <div class="topcorner">A.U.R.A.</div>
-        <div class="head">
-            <a href="index.html"><button class="topbutton">Home</button></a>
-            <a href="features.html"><button class="topbutton">Features</button></a>
-            <a href="testing.html"><button class="topbutton">Testing</button></a>
-            <a href="contact.html"><button class="topbutton">Contact</button></a>
-        </div>
-    </header>
 
-    <div class="content-wrapper">
-        <div class="center">
-            <h1>Features & Components</h1>
-            <p>Everything that powers the A.U.R.A. Predictive Maintenance System</p>
-        </div>
+<header>
+  <div class="topcorner">A.U.R.A.</div>
+  <nav class="head">
+    <a href="index.html"><button class="topbutton">Home</button></a>
+    <a href="features.html"><button class="topbutton active">Features</button></a>
+    <a href="testing.html"><button class="topbutton">Testing</button></a>
+    <a href="contact.html"><button class="topbutton">Contact</button></a>
+  </nav>
+</header>
 
-        <!-- 1. Core Software -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>1. Preventative Maintenance Software</h2>
-                    <p>Our core software analyzes real-time spacecraft data collected by ECLSS sensors, automatically identifying potential system inefficiencies or anomalies and providing early warnings to mission operators. The predictive system enables faster decision-making and ensures optimal mission safety and performance.</p>
-                    <p>The system features role-based access control with three user types: administrators who manage user accounts and system settings, operators who monitor real-time data and respond to alerts, and analysts who review historical data and train machine learning models.</p>
-                    <h3>Key Functions:</h3>
-                    <ul>
-                        <li>✓ Real-time sensor data processing from 28+ sensors</li>
-                        <li>✓ Anomaly detection and alerting across 13+ subsystems</li>
-                        <li>✓ Multi-user support with role-based permissions</li>
-                        <li>✓ Historical data storage, retrieval, and trend analysis</li>
-                        <li>✓ Automatic data logging to CSV storage with 1-second refresh</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="images/main_software.png" alt="Main Software Interface">
-                </div>
-            </div>
-        </section>
+<div class="page-hero">
+  <h1>Features &amp; Architecture</h1>
+  <p>Every component of the A.U.R.A. system — from raw sensor ingestion to AI-generated recommendations</p>
+</div>
 
-        <!-- 2. Data Ingestion & Visualization -->
-        <section class="project-section">
-            <div class="project project-reverse">
-                <div class="project-image">
-                    <img src="images/graph1.png" alt="Data Visualization Dashboards">
-                </div>
-                <div class="project-text">
-                    <h2>2. Data Ingestion & Visualization</h2>
-                    <p>The data ingestion module captures vast sensor streams in real time, converting them into clear visual insights. The Main Dashboard displays subsystem parameters from 28+ sensors organized into 13 critical life support categories — atmospheric composition, system output rates, temperatures, pressures, and contamination levels. Auto-refresh every second ensures operators always view the latest data.</p>
-                    <h3>Visualization Capabilities:</h3>
-                    <ul>
-                        <li>✓ Parallel data ingestion from multiple sensor streams</li>
-                        <li>✓ Real-time parameter graphs and historical trend analysis</li>
-                        <li>✓ Historical data queue (10,000+ rows) for long-term trends</li>
-                        <li>✓ Parameter-specific detail views with drill-down analysis</li>
-                        <li>✓ CSV-based data storage for long-term historical records</li>
-                        <li>✓ Export capabilities for external analysis tools</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Isolation Forest -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>3. Isolation Forest Anomaly Detection</h2>
-                    <p>The Isolation Forest algorithm analyzes and preprocesses sensor data collected from the spacecraft, detecting anomalies or irregular patterns in the sensor readings that may indicate system faults, sensor drift, or unexpected environmental conditions.</p>
-                    <p>By filtering and labeling this data before it is used for model training, the quality and reliability of the dataset is significantly improved. This ensures that the reinforcement learning and other predictive models are trained on accurate, representative information.</p>
-                    <h3>Anomaly Detection Features:</h3>
-                    <ul>
-                        <li>✓ <strong>Unsupervised Outlier Detection:</strong> Identifies outliers in sensor data with configurable contamination thresholds</li>
-                        <li>✓ <strong>Anomaly Scoring:</strong> Generates anomaly scores for all incoming sensor readings</li>
-                        <li>✓ <strong>Retrainable Models:</strong> Adapt to spacecraft operational patterns over time</li>
-                        <li>✓ <strong>Pattern Recognition:</strong> Identifies subtle deviations from normal operation</li>
-                        <li>✓ <strong>Data Quality Improvement:</strong> Filters training data for downstream models</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="images/IsolationForest.png" alt="Isolation Forest Anomaly Detection">
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Digital Twin & RL -->
-        <section class="project-section">
-            <div class="project project-reverse">
-                <div class="project-image">
-                    <img src="images/digital_twin.png" alt="Digital Twin Visualization">
-                </div>
-                <div class="project-text">
-                    <h2>4. Digital Twin & RL Model Training</h2>
-                    <p>An interactive digital representation of the spacecraft enables operators to visualize system states, test maintenance procedures, and validate repairs before implementation. By leveraging the digital twin, a reinforcement learning (RL) model is trained to experience and learn from a wide range of realistic scenarios, including rare or high-risk events — without risking actual hardware or crew safety.</p>
-                    <h3>Digital Twin Features:</h3>
-                    <ul>
-                        <li>✓ SVG-based spacecraft visualization with interactive sensor overlays</li>
-                        <li>✓ Click-through interface for sensor inspection and drill-down</li>
-                        <li>✓ RL model training on realistic fault scenarios</li>
-                        <li>✓ Maintenance simulation and procedure testing</li>
-                        <li>✓ Improved decision-making accuracy through safe virtual testing</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. AI Decision Engine -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>5. AI Decision & Predictive Engine</h2>
-                    <p>The AI Decision page integrates all machine learning model outputs and generates predictive maintenance recommendations based on real-time sensor data analysis. It synthesizes information from anomaly detection, remaining useful life predictions, and reinforcement learning models to provide operators with actionable insights.</p>
-                    <p>Recommendations are prioritized by risk level and confidence score, allowing operators to focus on the most critical maintenance actions. The system continuously learns from outcomes, improving prediction accuracy over time.</p>
-                    <h3>AI Engine Capabilities:</h3>
-                    <ul>
-                        <li>✓ Predictive maintenance recommendations with confidence scoring</li>
-                        <li>✓ Risk assessment and prioritization by severity</li>
-                        <li>✓ Continuous model improvement through online learning</li>
-                        <li>✓ Natural-language recommendations via integrated LLM</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="images/ai_pipeline.png" alt="AI Pipeline Architecture">
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. Application Interface -->
-        <section class="project-section">
-            <div class="project project-reverse">
-                <div class="project-image">
-                    <img src="images/graph2.png" alt="Application Interface Pages">
-                </div>
-                <div class="project-text">
-                    <h2>6. Application Interface & User Roles</h2>
-                    <p>The A.U.R.A. system features a comprehensive PyQt5-based user interface with specialized pages for different operational roles:</p>
-                    <ul style="list-style-type: none; padding: 0;">
-                        <li><strong>✓ Login Page:</strong> Secure authentication with role-based user management</li>
-                        <li><strong>✓ Digital Twin Page:</strong> Interactive visualization with clickable, draggable sensors</li>
-                        <li><strong>✓ Main Dashboard:</strong> Real-time monitoring of all 13+ subsystems</li>
-                        <li><strong>✓ Detail View:</strong> Detailed historical data and graphs with trend analysis</li>
-                        <li><strong>✓ AI Decision Page:</strong> ML model outputs and maintenance recommendations</li>
-                        <li><strong>✓ Admin Panel:</strong> User management, system configuration (admin-only)</li>
-                    </ul>
-                    <h3>User Roles:</h3>
-                    <ul>
-                        <li>✓ <strong>Administrator:</strong> Full system access, user management, configuration, model retraining</li>
-                        <li>✓ <strong>Operator:</strong> Real-time monitoring, alert response, manual maintenance logging</li>
-                        <li>✓ <strong>Analyst:</strong> Historical data analysis, report generation, model evaluation</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. Performance & Tech Stack -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>7. Performance & Technology Stack</h2>
-                    <p>A.U.R.A. is optimized for real-time operations in the resource-constrained environment of spacecraft systems, with proven performance improvements over traditional reactive maintenance approaches.</p>
-                    <h3>Proven Results:</h3>
-                    <ul>
-                        <li>✓ <strong>60%+ Reduction:</strong> Average maintenance preparation time per mission</li>
-                        <li>✓ <strong>45%+ Reduction:</strong> Safety incident rates through early warning detection</li>
-                        <li>✓ <strong>1-Second Refresh:</strong> Real-time data update frequency for rapid response</li>
-                        <li>✓ <strong>28+ Sensors:</strong> Simultaneous monitoring across 7 ISS modules</li>
-                        <li>✓ <strong>13+ Subsystems:</strong> Complete life support system coverage</li>
-                    </ul>
-                    <h3>Core Technologies:</h3>
-                    <ul>
-                        <li>✓ <strong>Frontend:</strong> PyQt5 (Python GUI framework)</li>
-                        <li>✓ <strong>Backend:</strong> Python with modular architecture</li>
-                        <li>✓ <strong>Machine Learning:</strong> Scikit-learn, PyTorch (DQN), Ollama (Mistral LLM)</li>
-                        <li>✓ <strong>Data Processing:</strong> Pandas, NumPy</li>
-                        <li>✓ <strong>Visualization:</strong> SVG-based digital twin, real-time graphs</li>
-                        <li>✓ <strong>Data Storage:</strong> JSON (user management), CSV (sensor data)</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="icons/hunch.png" alt="Technology Stack Architecture">
-                </div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="center">
-                <h2>Integrated System Architecture</h2>
-                <p>All components work together seamlessly to provide a comprehensive predictive maintenance solution that enhances crew safety, reduces operational costs, and improves mission success rates.</p>
-                <p style="font-size: 1.3rem; margin-top: 2rem; color: #afa685;">
-                    <strong>The A.U.R.A. System: From Data to Decisions to Crew Safety</strong>
-                </p>
-            </div>
-        </section>
+<!-- ── 1. ARCHITECTURE ─────────────────────────────────── -->
+<div class="section fade-in">
+  <div class="section-header">
+    <span class="section-tag">Architecture</span>
+    <h2 class="section-title">Full-Stack Web Application</h2>
+    <p class="section-subtitle">FastAPI backend + WebSocket streaming + single-page frontend — no installation, browser only</p>
+  </div>
+  <div class="split">
+    <div class="split-text">
+      <h2>Technology Stack</h2>
+      <p>A.U.R.A. runs as a FastAPI web server with an asyncio background loop that generates and ingests sensor data every second, runs the full ML pipeline, and broadcasts results to all connected browsers via WebSocket simultaneously — no polling.</p>
+      <p>Data is persisted to SQLite (WAL journal mode, foreign keys enforced) with a normalized schema: faults → locations → time-series readings. The frontend is a vanilla JS SPA with zero framework overhead.</p>
+      <h3>Backend</h3>
+      <div class="badge-row">
+        <span class="badge">FastAPI</span><span class="badge">WebSocket</span><span class="badge">SQLite WAL</span><span class="badge">scikit-learn</span><span class="badge">PyTorch</span><span class="badge">asyncio</span>
+      </div>
+      <h3>Frontend</h3>
+      <div class="badge-row">
+        <span class="badge">Vanilla JS</span><span class="badge">Chart.js</span><span class="badge">Three.js</span><span class="badge">SVG</span><span class="badge">CSS Custom Properties</span>
+      </div>
     </div>
+    <!-- Architecture mock screen -->
+    <div class="split-image">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">System Architecture</span><span class="mk-status">FastAPI · WS · SQLite</span></div>
+        <div class="mk-body" style="gap:6px;justify-content:center;">
+          <!-- Sensors layer -->
+          <div style="font-size:7.5px;color:#6b6555;letter-spacing:2px;text-align:center;">SENSOR INPUTS (7 ISS MODULES · 20 PARAMS)</div>
+          <div style="display:flex;gap:4px;justify-content:center;flex-wrap:wrap;">
+            <span style="border:1px solid #2a2a35;border-radius:3px;padding:3px 6px;font-size:7.5px;color:#8c8470;">JLP&amp;JPM</span>
+            <span style="border:1px solid #2a2a35;border-radius:3px;padding:3px 6px;font-size:7.5px;color:#8c8470;">Node 2</span>
+            <span style="border:1px solid #2a2a35;border-radius:3px;padding:3px 6px;font-size:7.5px;color:#8c8470;">Columbus</span>
+            <span style="border:1px solid #2a2a35;border-radius:3px;padding:3px 6px;font-size:7.5px;color:#8c8470;">US Lab</span>
+            <span style="border:1px solid #2a2a35;border-radius:3px;padding:3px 6px;font-size:7.5px;color:#8c8470;">Node 1</span>
+            <span style="border:1px solid #2a2a35;border-radius:3px;padding:3px 6px;font-size:7.5px;color:#8c8470;">Cupola</span>
+            <span style="border:1px solid #2a2a35;border-radius:3px;padding:3px 6px;font-size:7.5px;color:#8c8470;">Airlock</span>
+          </div>
+          <div style="text-align:center;color:#6b6555;font-size:11px;">↓</div>
+          <!-- Backend -->
+          <div style="background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:5px;padding:8px 12px;text-align:center;">
+            <div style="color:#aba372;font-size:9.5px;font-weight:700;letter-spacing:1.5px;">FASTAPI BACKEND</div>
+            <div style="color:#6b6555;font-size:8px;margin-top:2px;">asyncio · WebSocket broadcast · SQLite WAL</div>
+          </div>
+          <div style="text-align:center;color:#6b6555;font-size:11px;">↓</div>
+          <!-- ML pipeline -->
+          <div style="font-size:7.5px;color:#6b6555;letter-spacing:2px;text-align:center;">ML PIPELINE</div>
+          <div style="display:flex;gap:3px;align-items:center;">
+            <div style="flex:1;border:1px solid rgba(95,230,31,0.25);border-radius:4px;padding:5px 4px;text-align:center;background:rgba(95,230,31,0.04);">
+              <div style="color:#5fe61f;font-size:7.5px;font-weight:700;">ISO FOREST</div>
+              <div style="color:#6b6555;font-size:6.5px;">Anomaly Score</div>
+            </div>
+            <span style="color:#6b6555;font-size:9px;">→</span>
+            <div style="flex:1;border:1px solid rgba(95,230,31,0.25);border-radius:4px;padding:5px 4px;text-align:center;background:rgba(95,230,31,0.04);">
+              <div style="color:#5fe61f;font-size:7.5px;font-weight:700;">RAND FOREST</div>
+              <div style="color:#6b6555;font-size:6.5px;">Fault Class</div>
+            </div>
+            <span style="color:#6b6555;font-size:9px;">→</span>
+            <div style="flex:1;border:1px solid rgba(95,230,31,0.25);border-radius:4px;padding:5px 4px;text-align:center;background:rgba(95,230,31,0.04);">
+              <div style="color:#5fe61f;font-size:7.5px;font-weight:700;">LSTM</div>
+              <div style="color:#6b6555;font-size:6.5px;">RUL · Prob</div>
+            </div>
+            <span style="color:#6b6555;font-size:9px;">→</span>
+            <div style="flex:1;border:1px solid rgba(95,230,31,0.25);border-radius:4px;padding:5px 4px;text-align:center;background:rgba(95,230,31,0.04);">
+              <div style="color:#5fe61f;font-size:7.5px;font-weight:700;">DQN</div>
+              <div style="color:#6b6555;font-size:6.5px;">Action Rec.</div>
+            </div>
+          </div>
+          <div style="text-align:center;color:#6b6555;font-size:11px;">↓</div>
+          <!-- Frontend tabs -->
+          <div style="background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:5px;padding:6px 12px;">
+            <div style="color:#aba372;font-size:8px;font-weight:700;letter-spacing:1px;margin-bottom:4px;">BROWSER FRONTEND (WebSocket)</div>
+            <div style="display:flex;gap:3px;flex-wrap:wrap;">
+              <span style="border:1px solid #2a2a35;border-radius:2px;padding:2px 5px;font-size:7px;color:#8c8470;">Twin</span>
+              <span style="border:1px solid #2a2a35;border-radius:2px;padding:2px 5px;font-size:7px;color:#8c8470;">Dashboard</span>
+              <span style="border:1px solid #2a2a35;border-radius:2px;padding:2px 5px;font-size:7px;color:#8c8470;">Trends</span>
+              <span style="border:1px solid #2a2a35;border-radius:2px;padding:2px 5px;font-size:7px;color:#8c8470;">Alerts</span>
+              <span style="border:1px solid #2a2a35;border-radius:2px;padding:2px 5px;font-size:7px;color:#8c8470;">AI Analyst</span>
+              <span style="border:1px solid #2a2a35;border-radius:2px;padding:2px 5px;font-size:7px;color:#8c8470;">Maintenance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <footer>
-        © 2025 A.U.R.A. | Designed for Intelligent Space Operations
-    </footer>
+<!-- ── 2. DIGITAL TWIN ─────────────────────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="split split-reverse">
+      <!-- ISS 2D schematic mock -->
+      <div class="split-image">
+        <div class="mock-screen">
+          <div class="mk-bar"><span class="mk-title">Digital Twin — ISS Overview</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>7/7 NOMINAL</span></div>
+          <div class="mk-body" style="padding:8px;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 280 175" style="width:100%;max-height:290px;" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15" cy="10" r="0.7" fill="white" opacity="0.5"/><circle cx="55" cy="5" r="0.5" fill="white" opacity="0.4"/><circle cx="200" cy="8" r="0.6" fill="white" opacity="0.5"/><circle cx="262" cy="18" r="0.4" fill="white" opacity="0.4"/><circle cx="240" cy="165" r="0.5" fill="white" opacity="0.3"/>
+              <line x1="42" y1="12" x2="42" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="42" y1="49" x2="42" y2="80" stroke="#686460" stroke-width="1.2"/>
+              <line x1="90" y1="12" x2="90" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="90" y1="49" x2="90" y2="80" stroke="#686460" stroke-width="1.2"/>
+              <line x1="190" y1="12" x2="190" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="190" y1="49" x2="190" y2="80" stroke="#686460" stroke-width="1.2"/>
+              <line x1="238" y1="12" x2="238" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="238" y1="49" x2="238" y2="80" stroke="#686460" stroke-width="1.2"/>
+              <rect x="31" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+              <rect x="79" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+              <rect x="179" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+              <rect x="227" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+              <rect x="31" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+              <rect x="79" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+              <rect x="179" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+              <rect x="227" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
+              <line x1="37" y1="7" x2="37" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="43" y1="7" x2="43" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="48" y1="7" x2="48" y2="43" stroke="#0d1828" stroke-width="0.4"/>
+              <line x1="85" y1="7" x2="85" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="91" y1="7" x2="91" y2="43" stroke="#0d1828" stroke-width="0.4"/>
+              <line x1="185" y1="7" x2="185" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="191" y1="7" x2="191" y2="43" stroke="#0d1828" stroke-width="0.4"/>
+              <line x1="233" y1="7" x2="233" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="239" y1="7" x2="239" y2="43" stroke="#0d1828" stroke-width="0.4"/>
+              <line x1="37" y1="49" x2="37" y2="85" stroke="#0d1828" stroke-width="0.4"/><line x1="43" y1="49" x2="43" y2="85" stroke="#0d1828" stroke-width="0.4"/>
+              <line x1="85" y1="49" x2="85" y2="85" stroke="#0d1828" stroke-width="0.4"/><line x1="91" y1="49" x2="91" y2="85" stroke="#0d1828" stroke-width="0.4"/>
+              <line x1="185" y1="49" x2="185" y2="85" stroke="#0d1828" stroke-width="0.4"/><line x1="191" y1="49" x2="191" y2="85" stroke="#0d1828" stroke-width="0.4"/>
+              <line x1="233" y1="49" x2="233" y2="85" stroke="#0d1828" stroke-width="0.4"/><line x1="239" y1="49" x2="239" y2="85" stroke="#0d1828" stroke-width="0.4"/>
+              <rect x="10" y="43" width="260" height="6" rx="2" fill="#686460"/>
+              <rect x="138.5" y="48" width="3" height="110" fill="#a09c90"/>
+              <rect x="148" y="100" width="14" height="2" fill="#a09c90"/><rect x="114" y="100" width="14" height="2" fill="#a09c90"/>
+              <rect x="148" y="142" width="12" height="2" fill="#a09c90"/>
+              <ellipse cx="140" cy="103" rx="9" ry="9" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
+              <ellipse cx="140" cy="124" rx="11" ry="11" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
+              <ellipse cx="140" cy="145" rx="9" ry="9" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
+              <ellipse cx="172" cy="101" rx="13" ry="7" fill="#c0cce0" stroke="#9aa0b0" stroke-width="0.5"/>
+              <rect x="100" y="95" width="22" height="14" rx="7" fill="#b8c4d8" stroke="#9aa0b0" stroke-width="0.5"/>
+              <ellipse cx="170" cy="143" rx="9" ry="5" fill="#b0bcd0" stroke="#9aa0b0" stroke-width="0.5"/>
+              <line x1="140" y1="154" x2="138" y2="165" stroke="#a09c90" stroke-width="1.5"/>
+              <ellipse cx="137" cy="169" rx="6" ry="5" fill="#8090a8" stroke="#7080a0" stroke-width="0.5"/>
+              <text x="140" y="106" text-anchor="middle" fill="#6b6555" font-size="5.5" font-family="monospace">N2</text>
+              <text x="140" y="127" text-anchor="middle" fill="#6b6555" font-size="5.5" font-family="monospace">LAB</text>
+              <text x="140" y="148" text-anchor="middle" fill="#6b6555" font-size="5.5" font-family="monospace">N1</text>
+              <text x="172" y="104" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">COL</text>
+              <text x="111" y="104" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">KIBO</text>
+              <circle cx="140" cy="91" r="3.5" fill="#5fe61f" opacity="0.9"/><circle cx="140" cy="91" r="6" fill="none" stroke="#5fe61f" stroke-width="0.5" opacity="0.25"/>
+              <circle cx="152" cy="115" r="3.5" fill="#5fe61f" opacity="0.9"/>
+              <circle cx="172" cy="90" r="3.5" fill="#5fe61f" opacity="0.9"/>
+              <circle cx="111" cy="90" r="3.5" fill="#5fe61f" opacity="0.9"/>
+              <circle cx="140" cy="133" r="3.5" fill="#5fe61f" opacity="0.9"/>
+              <circle cx="170" cy="132" r="3.5" fill="#5fe61f" opacity="0.9"/>
+              <circle cx="133" cy="162" r="3.5" fill="#5fe61f" opacity="0.9"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="split-text">
+        <span class="section-tag">Tab 1</span>
+        <h2>Digital Twin</h2>
+        <p>An SVG-based schematic of the International Space Station rendered live in the browser. Each of the 7 modules displays a color-coded health indicator driven by real-time WebSocket data: green = nominal, amber = warning, red = critical fault active.</p>
+        <p>Clicking any module navigates to Sensor Detail pre-filtered to that location. A Three.js 3D mode provides an alternative spatial view of the ISS structure.</p>
+        <h3>Capabilities</h3>
+        <ul class="checklist">
+          <li>SVG ISS schematic scales across all window sizes</li>
+          <li>Module health indicators update via WebSocket — no page reload</li>
+          <li>Click-through to per-location sensor detail</li>
+          <li>Fault latch display — active fault name shown at affected module</li>
+          <li>Three.js 3D mode alongside the 2D schematic</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 3. DASHBOARD ─────────────────────────────────── -->
+<div class="section fade-in">
+  <div class="split">
+    <div class="split-text">
+      <span class="section-tag">Tab 2</span>
+      <h2>Real-Time Dashboard</h2>
+      <p>The Dashboard aggregates all 20 sensor parameters from all 7 ISS locations into a unified view, organized by ECLSS subsystem so operators can scan by system rather than raw parameter name.</p>
+      <p>Each cell displays the current value, unit, nominal range, and a status indicator. The historical queue buffers 10,000+ rows for fast trend lookups without database round-trips.</p>
+      <h3>Subsystems Covered</h3>
+      <ul class="checklist">
+        <li>Atmosphere Revitalization System (O₂, CO₂, Humidity)</li>
+        <li>Oxygen Generation System (output rate, purity)</li>
+        <li>Water Recovery System (TOC purity, production rate)</li>
+        <li>Temperature &amp; Humidity Control</li>
+        <li>Trace Contaminant Control (NH₃, H₂, CO)</li>
+        <li>Air Circulation / Ventilation (airflow rate)</li>
+        <li>Pressure Control (cabin pressure)</li>
+        <li>Microbial Monitoring (bacterial/fungal count)</li>
+        <li>Mass Spectrometer Module (N₂, O₂, CO₂, CH₄, H₂O)</li>
+      </ul>
+    </div>
+    <!-- Dashboard mock -->
+    <div class="split-image">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">Dashboard</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>LIVE · 1s REFRESH</span></div>
+        <div style="display:flex;gap:4px;padding:5px 10px;background:#0d0d10;border-bottom:1px solid #1e1f28;flex-shrink:0;flex-wrap:wrap;">
+          <span style="background:rgba(171,163,114,0.15);border:1px solid rgba(171,163,114,0.4);color:#aba372;font-size:7.5px;padding:2px 7px;border-radius:3px;">US Lab</span>
+          <span style="color:#6b6555;font-size:7.5px;padding:2px 7px;border:1px solid #2a2a35;border-radius:3px;">Node 2</span>
+          <span style="color:#6b6555;font-size:7.5px;padding:2px 7px;border:1px solid #2a2a35;border-radius:3px;">Columbus</span>
+          <span style="color:#6b6555;font-size:7.5px;padding:2px 7px;border:1px solid #2a2a35;border-radius:3px;">Node 1</span>
+          <span style="color:#6b6555;font-size:7.5px;padding:2px 7px;border:1px solid #2a2a35;border-radius:3px;">Cupola</span>
+        </div>
+        <div style="padding:4px 10px;background:#0a0a0e;font-size:7.5px;color:#6b6555;letter-spacing:2px;border-bottom:1px solid #1e1f28;flex-shrink:0;">ATMOSPHERE REVITALIZATION SYSTEM</div>
+        <div class="mk-body" style="gap:0;padding:0 10px;">
+          <div class="mk-row"><span class="mk-row-label">O₂ Partial Pressure</span><span class="mk-row-val">20.87</span><span class="mk-row-unit">%vol</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">CO₂ Partial Pressure</span><span class="mk-row-val">0.38</span><span class="mk-row-unit">%atm</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">Humidity</span><span class="mk-row-val">52.1</span><span class="mk-row-unit">%RH</span><span class="mk-row-ok">✓</span></div>
+        </div>
+        <div style="padding:4px 10px;background:#0a0a0e;font-size:7.5px;color:#6b6555;letter-spacing:2px;border-top:1px solid #1e1f28;border-bottom:1px solid #1e1f28;flex-shrink:0;">OXYGEN GENERATION SYSTEM</div>
+        <div class="mk-body" style="gap:0;padding:0 10px;">
+          <div class="mk-row"><span class="mk-row-label">O₂ Output Rate</span><span class="mk-row-val">5.42</span><span class="mk-row-unit">kg/day</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">O₂ Purity</span><span class="mk-row-val">99.7</span><span class="mk-row-unit">%</span><span class="mk-row-ok">✓</span></div>
+        </div>
+        <div style="padding:4px 10px;background:#0a0a0e;font-size:7.5px;color:#6b6555;letter-spacing:2px;border-top:1px solid #1e1f28;border-bottom:1px solid #1e1f28;flex-shrink:0;">PRESSURE &amp; ENVIRONMENT</div>
+        <div class="mk-body" style="gap:0;padding:0 10px;">
+          <div class="mk-row"><span class="mk-row-label">Cabin Pressure</span><span class="mk-row-val">14.68</span><span class="mk-row-unit">psia</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">Temperature</span><span class="mk-row-val">21.5</span><span class="mk-row-unit">°C</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row"><span class="mk-row-label">Airflow Rate</span><span class="mk-row-val">0.19</span><span class="mk-row-unit">m/s</span><span class="mk-row-ok">✓</span></div>
+          <div class="mk-row" style="border:none;"><span class="mk-row-label">NH₃</span><span class="mk-row-val">0.31</span><span class="mk-row-unit">ppm</span><span class="mk-row-ok">✓</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 4. SENSOR DETAIL & TRENDS ─────────────────────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="split split-reverse">
+      <!-- Trend chart mock -->
+      <div class="split-image">
+        <div class="mock-screen">
+          <div class="mk-bar"><span class="mk-title">Trends — Sensor Detail</span><span class="mk-status">US Lab</span></div>
+          <div style="display:flex;gap:0;border-bottom:1px solid #1e1f28;flex-shrink:0;">
+            <span style="padding:5px 10px;font-size:8px;color:#aba372;border-bottom:2px solid #aba372;">O₂ Partial</span>
+            <span style="padding:5px 10px;font-size:8px;color:#6b6555;border-bottom:2px solid transparent;">CO₂ Partial</span>
+            <span style="padding:5px 10px;font-size:8px;color:#6b6555;border-bottom:2px solid transparent;">Humidity</span>
+            <span style="padding:5px 10px;font-size:8px;color:#6b6555;border-bottom:2px solid transparent;">Temp</span>
+          </div>
+          <div class="mk-body" style="padding:8px 10px;gap:6px;">
+            <div style="display:flex;gap:10px;font-size:8.5px;align-items:baseline;">
+              <span style="color:#ddd8cc;font-size:14px;font-weight:700;">20.87</span><span style="color:#6b6555;">%vol</span>
+              <span style="color:#5fe61f;margin-left:auto;">● NOMINAL</span>
+              <span style="color:#6b6555;font-size:8px;">range 19.5–23.1</span>
+            </div>
+            <div style="display:flex;gap:10px;font-size:8px;">
+              <span style="color:#6b6555;">IF SCORE <span style="color:#ddd8cc;">0.08</span></span>
+              <span style="color:#6b6555;">FAIL PROB <span style="color:#5fe61f;">2.1%</span></span>
+              <span style="color:#6b6555;">RUL <span style="color:#5fe61f;">— hrs</span></span>
+            </div>
+            <svg viewBox="0 0 256 110" style="width:100%;" xmlns="http://www.w3.org/2000/svg">
+              <line x1="26" y1="5" x2="26" y2="95" stroke="#2a2a35" stroke-width="1"/>
+              <line x1="26" y1="95" x2="254" y2="95" stroke="#2a2a35" stroke-width="1"/>
+              <line x1="26" y1="18" x2="254" y2="18" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.6"/>
+              <line x1="26" y1="55" x2="254" y2="55" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.6"/>
+              <text x="0" y="10" fill="#6b6555" font-size="6" font-family="monospace">23.1</text>
+              <text x="0" y="47" fill="#6b6555" font-size="6" font-family="monospace">21.3</text>
+              <text x="0" y="88" fill="#6b6555" font-size="6" font-family="monospace">19.5</text>
+              <rect x="26" y="12" width="228" height="80" fill="rgba(171,163,114,0.04)"/>
+              <line x1="26" y1="12"  x2="254" y2="12"  stroke="#aba372" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.2"/>
+              <line x1="26" y1="92"  x2="254" y2="92"  stroke="#aba372" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.2"/>
+              <path d="M26,58 C36,55 44,62 56,59 C68,56 76,64 90,60 C102,56 112,62 126,58 C140,54 148,61 162,57 C176,53 184,60 198,56 C212,52 220,58 234,55 C242,53 248,56 254,57" fill="none" stroke="#5fe61f" stroke-width="2" stroke-linejoin="round"/>
+              <text x="26" y="107" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">0</text>
+              <text x="102" y="107" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">20</text>
+              <text x="178" y="107" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">40</text>
+              <text x="254" y="107" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">60</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="split-text">
+        <span class="section-tag">Tabs 3 &amp; 4</span>
+        <h2>Sensor Detail &amp; Trends</h2>
+        <p>Sensor Detail provides a deep-dive into a single location: all 20 parameters with current value, nominal range, deviation score, and ML classification confidence. The Trends tab plots parameter history as interactive Chart.js line charts with nominal range overlays.</p>
+        <h3>Analysis Capabilities</h3>
+        <ul class="checklist">
+          <li>Per-parameter historical charts (up to 10,000 data points)</li>
+          <li>Nominal range band overlay on all trend charts</li>
+          <li>Isolation Forest anomaly score displayed per reading</li>
+          <li>LSTM failure probability and Remaining Useful Life (hours)</li>
+          <li>Export to CSV for external analysis tools</li>
+          <li>Auto-selects most anomalous parameter on fault detection</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 5. ALERTS ─────────────────────────────────── -->
+<div class="section fade-in">
+  <div class="split">
+    <div class="split-text">
+      <span class="section-tag">Tab 5</span>
+      <h2>Two-Tier Alert System</h2>
+      <p>A.U.R.A. uses two distinct alert levels to prevent alarm fatigue. Critical alerts fire only when the ML pipeline is highly confident (Random Forest confidence &gt;85%, sustained for configurable consecutive ticks). Warning alerts fire when parameters drift toward limits.</p>
+      <div class="alert-levels" style="margin:1.5rem 0;">
+        <div class="alert-card critical"><div class="alert-card-label">⬤ Critical</div><p>Active fault detected. RF confidence above threshold for N consecutive readings. Immediate action required.</p></div>
+        <div class="alert-card warning"><div class="alert-card-label">⬤ Warning</div><p>Parameter approaching limit. Fault not yet confirmed. Monitor closely, schedule inspection.</p></div>
+      </div>
+      <h3>Alert Features</h3>
+      <ul class="checklist">
+        <li>Configurable cooldown window (default 600 s) prevents alert spam</li>
+        <li>Alert badge on nav tab shows unacknowledged count</li>
+        <li>Fault latch — clears only after sustained nominal readings resume</li>
+        <li>All 8 fault types verified — zero false positives in 1,000 nominal samples</li>
+      </ul>
+    </div>
+    <!-- Alert mock -->
+    <div class="split-image">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">Alerts</span><span class="mk-status"><span class="mk-dot mk-dot-r"></span>1 CRITICAL · <span class="mk-dot mk-dot-a" style="margin-left:2px;"></span>2 WARNING</span></div>
+        <div class="mk-body" style="gap:6px;">
+          <div style="background:rgba(255,61,64,0.08);border:1px solid rgba(255,61,64,0.35);border-radius:5px;padding:10px 12px;">
+            <div style="color:#ff3d40;font-size:8px;letter-spacing:3px;font-weight:700;margin-bottom:4px;">⚠ CRITICAL FAULT ACTIVE</div>
+            <div style="color:#fff;font-size:15px;font-weight:700;margin-bottom:7px;letter-spacing:1px;">CABIN LEAK</div>
+            <div style="display:flex;flex-direction:column;gap:3px;">
+              <div style="display:flex;"><span style="color:#6b6555;font-size:9px;flex:1;">LOCATION</span><span style="color:#ddd8cc;font-size:9px;">Node 1</span></div>
+              <div style="display:flex;"><span style="color:#6b6555;font-size:9px;flex:1;">RF CONFIDENCE</span><span style="color:#ff3d40;font-size:9px;">97.3%</span></div>
+              <div style="display:flex;"><span style="color:#6b6555;font-size:9px;flex:1;">LSTM RUL</span><span style="color:#ffab00;font-size:9px;">4.2 hrs</span></div>
+              <div style="display:flex;"><span style="color:#6b6555;font-size:9px;flex:1;">FAILURE PROB</span><span style="color:#ff3d40;font-size:9px;">94.1%</span></div>
+            </div>
+          </div>
+          <div style="background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:4px;padding:7px 10px;">
+            <div style="color:#6b6555;font-size:7.5px;letter-spacing:1.5px;margin-bottom:2px;">DQN RECOMMENDATION</div>
+            <div style="color:#aba372;font-size:10px;">Use Sealant to Close Leak</div>
+          </div>
+          <div style="display:flex;gap:6px;">
+            <div style="flex:1;background:#ff3d40;color:#0d0d0d;text-align:center;padding:6px;border-radius:4px;font-size:8.5px;font-weight:700;letter-spacing:1px;">ACKNOWLEDGE</div>
+            <div style="flex:1;border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:6px;border-radius:4px;font-size:8.5px;">DETAILS</div>
+          </div>
+          <div style="border-top:1px solid #1e1f28;padding-top:5px;">
+            <div class="mk-alert-item warn" style="margin-bottom:4px;"><div class="mk-alert-level">⬤ WARNING</div><div class="mk-alert-msg">CO₂ rising · Columbus · 0.61% atm</div></div>
+            <div class="mk-alert-item warn"><div class="mk-alert-level">⬤ WARNING</div><div class="mk-alert-msg">NH₃ elevated · Node 2 · 0.89 ppm</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 6. AI ANALYST ─────────────────────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="split split-reverse">
+      <!-- AI analyst mock -->
+      <div class="split-image">
+        <div class="mock-screen">
+          <div class="mk-bar"><span class="mk-title">🤖 AI Analyst</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>LLM ONLINE</span></div>
+          <div class="mk-body" style="padding:8px 12px;gap:6px;">
+            <div style="background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:4px;padding:7px 10px;flex-shrink:0;">
+              <div style="color:#6b6555;font-size:7.5px;letter-spacing:2px;margin-bottom:4px;">SYSTEM SNAPSHOT</div>
+              <div style="display:flex;gap:14px;">
+                <div><span style="color:#6b6555;font-size:7.5px;display:block;">STATUS</span><span style="color:#5fe61f;font-size:10px;">NOMINAL</span></div>
+                <div><span style="color:#6b6555;font-size:7.5px;display:block;">IF SCORE</span><span style="color:#ddd8cc;font-size:10px;">0.08</span></div>
+                <div><span style="color:#6b6555;font-size:7.5px;display:block;">FAIL PROB</span><span style="color:#ddd8cc;font-size:10px;">2.1%</span></div>
+                <div><span style="color:#6b6555;font-size:7.5px;display:block;">RUL</span><span style="color:#5fe61f;font-size:10px;">— hrs</span></div>
+              </div>
+            </div>
+            <div class="mk-ai-label">AI ANALYST</div>
+            <div class="mk-ai-msg">All 7 ISS modules operating within nominal bounds. O₂ partial pressure in US Lab trending toward upper threshold at 21.2% — limit 23.1%. No action required; recommend monitoring over next 30 ticks.</div>
+            <div class="mk-user-msg">What should I watch for in Node 1?</div>
+            <div class="mk-ai-msg">Node 1 (Unity) shows nominal readings across all parameters. Cabin pressure stable at 14.71 psia. Anomaly scores below 0.05. DQN recommendation: No Action Needed (confidence 96.4%).</div>
+          </div>
+        </div>
+      </div>
+      <div class="split-text">
+        <span class="section-tag">Tab 6</span>
+        <h2>AI Analyst</h2>
+        <p>The AI Analyst integrates a large language model to synthesize all model outputs — Isolation Forest scores, Random Forest classification and confidence, LSTM failure probability, LSTM Remaining Useful Life, and DQN action recommendation — into natural-language situational reports.</p>
+        <p>Operators get a plain-English explanation of what's wrong, why the system believes it, and what to do next. The analyst can be queried interactively for deeper investigation.</p>
+        <h3>What the Analyst Reports</h3>
+        <ul class="checklist">
+          <li>Active faults with confidence scores from each model</li>
+          <li>Predicted time to failure — LSTM RUL in hours</li>
+          <li>Top recommended corrective action from the DQN</li>
+          <li>Which parameters are most anomalous and by how much</li>
+          <li>Historical context: has this fault pattern appeared before?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 7. MAINTENANCE ─────────────────────────────────── -->
+<div class="section fade-in">
+  <div class="split">
+    <div class="split-text">
+      <span class="section-tag">Tab 7</span>
+      <h2>Maintenance Planner</h2>
+      <p>The Maintenance tab surfaces the DQN Recommender's output: a ranked list of corrective actions for the current system state. Each recommendation includes the target fault, the suggested procedure, and the model's confidence score.</p>
+      <p>When Random Forest confidence exceeds 92%, the system bypasses the DQN and applies the direct fault-to-action mapping from the knowledge base — highest-confidence path first.</p>
+      <h3>Supported Remediation Actions</h3>
+      <ul class="checklist">
+        <li>No Action Needed (nominal state confirmed)</li>
+        <li>Use Sealant to Close Leak</li>
+        <li>Remove gas bubbles from O₂ generator</li>
+        <li>Close Oxygen Isolation Valve</li>
+        <li>Remove and Replace Air Selector Valves</li>
+        <li>Flush and replace water processor filter</li>
+        <li>Replace trace contaminant filter cartridge</li>
+        <li>Inspect and reseal NH₃ coolant lines</li>
+        <li>3 additional fault-specific procedures</li>
+      </ul>
+    </div>
+    <!-- Maintenance mock -->
+    <div class="split-image">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">🔧 Maintenance Planner</span><span class="mk-status">DQN Recommended</span></div>
+        <div class="mk-body" style="padding:8px 12px;gap:5px;">
+          <div style="font-size:8px;letter-spacing:2px;color:#6b6555;margin-bottom:3px;">RECOMMENDED ACTIONS — ALL MODULES NOMINAL</div>
+          <div class="mk-action-item">
+            <span class="mk-action-num">①</span>
+            <div><div class="mk-action-name">No Action Needed</div><div class="mk-action-conf">Confidence: 96.4% · System nominal</div></div>
+            <span class="mk-action-check">✓</span>
+          </div>
+          <div class="mk-action-item" style="opacity:0.55;">
+            <span class="mk-action-num">②</span>
+            <div><div class="mk-action-name">Monitor O₂ Levels — US Lab</div><div class="mk-action-conf">Confidence: 2.1% · Low priority</div></div>
+          </div>
+          <div class="mk-action-item" style="opacity:0.4;">
+            <span class="mk-action-num">③</span>
+            <div><div class="mk-action-name">Use Sealant to Close Leak</div><div class="mk-action-conf">Confidence: 0.8% · Not applicable</div></div>
+          </div>
+          <div class="mk-action-item" style="opacity:0.3;">
+            <span class="mk-action-num">④</span>
+            <div><div class="mk-action-name">Remove gas bubbles from O₂ generator</div><div class="mk-action-conf">Confidence: 0.4% · Not applicable</div></div>
+          </div>
+          <div style="margin-top:4px;padding:5px 8px;background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:3px;">
+            <span style="color:#6b6555;font-size:7.5px;">RF bypass active at &gt;92% — direct fault→action mapping enabled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 8. ML MODELS ─────────────────────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="section-header">
+      <span class="section-tag">Machine Learning</span>
+      <h2 class="section-title">Four-Model Pipeline</h2>
+      <p class="section-subtitle">Each model passes its output downstream — raw sensor noise becomes an actionable recommendation in under a second</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <span class="card-icon">🌲</span>
+        <div class="card-title">Isolation Forest</div>
+        <div class="card-body">Unsupervised outlier detection on scaled sensor vectors. Assigns an anomaly score to every incoming reading. Trained with configurable contamination threshold. Retrainable as spacecraft operational patterns evolve. Output feeds the Random Forest classifier.</div>
+        <div class="badge-row"><span class="badge">scikit-learn</span><span class="badge">StandardScaler</span><span class="badge">Unsupervised</span></div>
+      </div>
+      <div class="card">
+        <span class="card-icon">🌳</span>
+        <div class="card-title">Random Forest Classifier</div>
+        <div class="card-body">Multi-class classifier: input = anomalous sensor vector, output = one of 8 fault types plus confidence score. When confidence exceeds 92%, result maps directly to remediation action without DQN inference.</div>
+        <div class="badge-row"><span class="badge">scikit-learn</span><span class="badge">8 classes</span><span class="badge">Supervised</span></div>
+      </div>
+      <div class="card">
+        <span class="card-icon">🧠</span>
+        <div class="card-title">LSTM Predictor</div>
+        <div class="card-body">3-layer LSTM with multi-head self-attention. Input: 60-step sliding window of 20 parameters. Dual output heads: <code>failure_prob</code> (0–1) and <code>rul</code> (remaining useful life in hours). Enables proactive scheduling.</div>
+        <div class="badge-row"><span class="badge">PyTorch</span><span class="badge">Attention</span><span class="badge">seq_len=60</span></div>
+      </div>
+      <div class="card">
+        <span class="card-icon">🎯</span>
+        <div class="card-title">DQN Recommender</div>
+        <div class="card-body">Deep Q-Network: state = 32-dimensional vector (20 sensor params + 8 fault one-hots + 4 scalar ML outputs). Action space = 11 corrective procedures. Trained via reinforcement learning on simulated fault episodes.</div>
+        <div class="badge-row"><span class="badge">PyTorch</span><span class="badge">Reinforcement Learning</span><span class="badge">11 actions</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 9. SETTINGS ─────────────────────────────────── -->
+<div class="section fade-in">
+  <div class="split">
+    <div class="split-text">
+      <span class="section-tag">Tab 8</span>
+      <h2>Settings &amp; Configuration</h2>
+      <p>Every threshold that drives alert behavior is configurable at runtime through the Settings page. Changes persist to a JSON config file and take effect on the next server tick — no restart needed.</p>
+      <h3>Configurable Parameters</h3>
+      <ul class="checklist">
+        <li><code>alert_min_consecutive</code> — ticks of anomaly before alert fires (default: 10)</li>
+        <li><code>alert_cooldown_seconds</code> — minimum time between repeat alerts (default: 600)</li>
+        <li><code>alert_critical_rf_gate</code> — RF confidence threshold for critical alert (default: 0.85)</li>
+        <li><code>latch_threshold</code> — RF confidence to latch fault state (default: 0.95)</li>
+        <li><code>latch_min_consecutive</code> — ticks to confirm fault latch (default: 3)</li>
+        <li>Data generation interval and random seed for reproducible scenarios</li>
+      </ul>
+    </div>
+    <!-- Settings mock -->
+    <div class="split-image">
+      <div class="mock-screen">
+        <div class="mk-bar"><span class="mk-title">⚙ Settings</span><span class="mk-status">Runtime Config · JSON</span></div>
+        <div class="mk-body" style="padding:10px 14px;gap:2px;">
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">alert_min_consecutive</span><span class="mk-setting-val">10</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:45%;"></div><div class="mk-slider-thumb" style="left:45%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>1</span><span>30</span></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">alert_cooldown_seconds</span><span class="mk-setting-val">600</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:60%;"></div><div class="mk-slider-thumb" style="left:60%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>0</span><span>1800</span></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">alert_critical_rf_gate</span><span class="mk-setting-val">0.85</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:85%;"></div><div class="mk-slider-thumb" style="left:85%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>0.5</span><span>1.0</span></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">latch_threshold</span><span class="mk-setting-val">0.95</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:95%;"></div><div class="mk-slider-thumb" style="left:95%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>0.5</span><span>1.0</span></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">latch_min_consecutive</span><span class="mk-setting-val">3</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:20%;"></div><div class="mk-slider-thumb" style="left:20%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>1</span><span>20</span></div></div>
+          <div style="display:flex;gap:6px;margin-top:8px;">
+            <div style="background:#aba372;color:#0d0d0d;text-align:center;padding:6px 14px;border-radius:4px;font-size:9px;font-weight:700;letter-spacing:1px;">SAVE</div>
+            <div style="border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:6px 12px;border-radius:4px;font-size:9px;">RESTORE DEFAULTS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 A.U.R.A. | Designed for Intelligent Space Operations
+</footer>
+
+<script>
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+</script>
 </body>
 </html>

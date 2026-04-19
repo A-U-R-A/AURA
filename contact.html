@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A.U.R.A. | Contact</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
-
-    <!-- Favicon + Styles -->
-    <link rel="icon" type="Gold-Icon" href="/icons/logo_gold.png">
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.U.R.A. | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="icons/logo_gold.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <div class="topcorner">A.U.R.A.</div>
-        <div class="head">
-            <a href="index.html"><button class="topbutton">Home</button></a>
-            <a href="features.html"><button class="topbutton">Features</button></a>
-            <a href="testing.html"><button class="topbutton">Testing</button></a>
-            <a href="contact.html"><button class="topbutton">Contact</button></a>
-        </div>
-    </header>
 
-    <main class="contact-section">
-        <div class="center">
-            <h1>Contact Us</h1>
-            <p class="team-email">
-                Send us a message and we'll get back to you soon!
-            </p>
-        </div>
+<header>
+  <div class="topcorner">A.U.R.A.</div>
+  <nav class="head">
+    <a href="index.html"><button class="topbutton">Home</button></a>
+    <a href="features.html"><button class="topbutton">Features</button></a>
+    <a href="testing.html"><button class="topbutton">Testing</button></a>
+    <a href="contact.html"><button class="topbutton active">Contact</button></a>
+  </nav>
+</header>
 
-        <form action="https://formspree.io/f/xwvnlvvr" method="POST" class="contact-form">
-            <label>
-                Your email:
-                <input type="email" name="email" required>
-            </label>
-            <label>
-                Your message:
-                <textarea name="message" required></textarea>
-            </label>
-            <button type="submit">Send</button>
-        </form>
-    </main>
+<div class="page-hero">
+  <h1>Contact</h1>
+  <p>Send us a message and we'll get back to you soon</p>
+</div>
 
-    <footer>
-        © 2025 A.U.R.A. | Designed for Intelligent Space Operations
-    </footer>
+<main class="contact-section">
+  <form action="https://formspree.io/f/xwvnlvvr" method="POST" class="contact-form">
+    <label>
+      Your email
+      <input type="email" name="email" required>
+    </label>
+    <label>
+      Your message
+      <textarea name="message" required></textarea>
+    </label>
+    <button type="submit">Send</button>
+  </form>
+</main>
+
+<footer>
+  © 2025 A.U.R.A. | Designed for Intelligent Space Operations
+</footer>
 </body>
 </html>

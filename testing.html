@@ -1,243 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.U.R.A. | Testing & Validation</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="Gold-Icon" href="/icons/logo_gold.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.U.R.A. | Testing &amp; Validation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icons/logo_gold.png">
 </head>
 <body>
-    <header>
-        <div class="topcorner">A.U.R.A.</div>
-        <div class="head">
-            <a href="index.html"><button class="topbutton">Home</button></a>
-            <a href="features.html"><button class="topbutton">Features</button></a>
-            <a href="testing.html"><button class="topbutton">Testing</button></a>
-            <a href="contact.html"><button class="topbutton">Contact</button></a>
-        </div>
-    </header>
 
-    <div class="content-wrapper">
-        <div class="center">
-            <h1>Testing & Validation</h1>
-            <p>Rigorous testing across every layer of the A.U.R.A. system — from data generation to AI-driven decision-making</p>
-        </div>
+<!-- ─────────────────── HEADER ─────────────────── -->
+<header>
+  <div class="topcorner">A.U.R.A.</div>
+  <nav class="head">
+    <a href="index.html"><button class="topbutton">Home</button></a>
+    <a href="features.html"><button class="topbutton">Features</button></a>
+    <a href="testing.html"><button class="topbutton active">Testing</button></a>
+    <a href="contact.html"><button class="topbutton">Contact</button></a>
+  </nav>
+</header>
 
-        <!-- Login & Access Control -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>Login & Access Control</h2>
-                    <p>The application opens on a secure login screen with role-based access control. Three user roles — Administrator, Operator, and Analyst — each unlock different pages and capabilities. Authentication was verified for all three roles to confirm correct permission enforcement and that unauthorized page access is blocked.</p>
-                    <h3>Verified:</h3>
-                    <ul>
-                        <li>✓ Successful login and session handling for all three user roles</li>
-                        <li>✓ Incorrect credentials are rejected cleanly with no crash</li>
-                        <li>✓ Role-based page visibility enforced after login</li>
-                        <li>✓ JSON-based credential storage confirmed secure</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="TestingImages/Login.jpg" alt="A.U.R.A. Login Screen">
-                </div>
-            </div>
-        </section>
+<!-- ─────────────────── PAGE HERO ─────────────────── -->
+<div class="page-hero">
+  <h1>Testing &amp; Validation</h1>
+  <p>Rigorous verification across every system layer — authentication, real-time data, ML detection, and alert accuracy</p>
+</div>
 
-        <!-- Digital Twin Dashboard -->
-        <section class="project-section">
-            <div class="project project-reverse">
-                <div class="project-image">
-                    <img src="TestingImages/DigitalTwinDashboard.jpg" alt="A.U.R.A. Digital Twin Dashboard">
-                </div>
-                <div class="project-text">
-                    <h2>Digital Twin Dashboard</h2>
-                    <p>The Digital Twin page displays an SVG-based ISS spacecraft diagram with live, color-coded sensor indicators overlaid at each module location. Green indicators confirm nominal operation; red indicators flag active anomalies. Testing verified all 28 sensor positions render correctly across 7 ISS modules and that indicator colors update in real time as faults are injected and cleared.</p>
-                    <h3>Verified:</h3>
-                    <ul>
-                        <li>✓ All 28 sensor indicators render at correct positions on the ISS diagram</li>
-                        <li>✓ Color changes from green → red upon fault injection, back to green on clearance</li>
-                        <li>✓ Sensors are draggable and save their new positions to <code>locationData.json</code></li>
-                        <li>✓ Clicking a sensor opens the detail view for that location</li>
-                        <li>✓ SVG background scales correctly across window sizes</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Critical Alert Testing -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>Critical Alert Detection</h2>
-                    <p>When the Isolation Forest or Random Forest classifies incoming sensor data as anomalous, the system raises a critical alert. Testing confirmed that alerts fire correctly for each of the 8 supported fault types, that the alert UI clearly communicates the affected subsystem and location, and that no false alerts are raised during nominal operation.</p>
-                    <h3>Verified:</h3>
-                    <ul>
-                        <li>✓ Critical alerts triggered for all 8 fault types (Cabin Leak, O₂ Generator Failure, CO₂ Scrubber Failure, CHX Failure, Water Processor Failure, Trace Contaminant Filter Saturation, O₂ Leak, NH₃ Coolant Leak)</li>
-                        <li>✓ Alert UI displays fault name, affected location, and severity</li>
-                        <li>✓ No false alerts raised during 1,000 nominal test samples</li>
-                        <li>✓ Alerts clear correctly once fault is resolved</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="TestingImages/Critical Alert.jpg" alt="A.U.R.A. Critical Alert Screen">
-                </div>
-            </div>
-        </section>
-
-        <!-- Notifications Testing -->
-        <section class="project-section">
-            <div class="project project-reverse">
-                <div class="project-image">
-                    <img src="TestingImages/Notifications(critical&warning).jpg" alt="A.U.R.A. Notifications Panel — Critical and Warning Levels">
-                </div>
-                <div class="project-text">
-                    <h2>Notifications — Critical & Warning Levels</h2>
-                    <p>A.U.R.A. uses a two-tier notification system: <strong>Critical</strong> alerts indicate an active fault requiring immediate action, while <strong>Warning</strong> alerts flag parameters drifting toward out-of-range values before a full fault develops. Testing validated both tiers fire at the correct thresholds and display clearly in the notification panel without overlap or missed alerts.</p>
-                    <h3>Verified:</h3>
-                    <ul>
-                        <li>✓ Critical notifications fire when Isolation Forest labels a reading as anomalous (−1)</li>
-                        <li>✓ Warning notifications fire when parameter values drift outside nominal range but before reaching the critical threshold</li>
-                        <li>✓ Both notification types display simultaneously without UI conflicts</li>
-                        <li>✓ Notification panel scrolls correctly when multiple alerts are active</li>
-                        <li>✓ Notifications dismiss after the fault clears</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Data Graphing -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>Data Graphing & Historical Trends</h2>
-                    <p>The graphing view renders live time-series plots for any selected sensor parameter, pulling from the rolling 10,000-row historical data queue. Testing confirmed graphs update in real time at a 1-second refresh rate, that fault-period spikes are clearly visible in the trend line, and that the axis labels and parameter names render correctly for all 20 monitored parameters.</p>
-                    <h3>Verified:</h3>
-                    <ul>
-                        <li>✓ Real-time graph updates at 1-second intervals across all 20 parameters</li>
-                        <li>✓ Fault-injected anomalies appear as clear spikes or drops in the trend line</li>
-                        <li>✓ Historical data queue retains up to 10,000 rows for long-duration trend analysis</li>
-                        <li>✓ Axis labels, units, and parameter names render correctly</li>
-                        <li>✓ Graphs handle rapid fault injection and clearance without visual glitches</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="TestingImages/DataGraphing.jpg" alt="A.U.R.A. Data Graphing View">
-                </div>
-            </div>
-        </section>
-
-        <!-- Data Quick Look -->
-        <section class="project-section">
-            <div class="project project-reverse">
-                <div class="project-image">
-                    <img src="TestingImages/dataquicklook.jpg" alt="A.U.R.A. Data Quick Look Dashboard">
-                </div>
-                <div class="project-text">
-                    <h2>Data Quick Look — Main Dashboard</h2>
-                    <p>The Main Dashboard provides an at-a-glance view of all 13 subsystems organized in a grid of live tables. Each table row shows the current sensor value alongside its parameter name, refreshing every second. Testing verified that all 20 parameters populate correctly, values round to 2 decimal places, and clicking any row navigates to the full detail view for that parameter.</p>
-                    <h3>Verified:</h3>
-                    <ul>
-                        <li>✓ All 13 subsystem tables render with correct parameter groupings</li>
-                        <li>✓ Live values refresh every second with no stale data displayed</li>
-                        <li>✓ Values rounded to 2 decimal places for readability</li>
-                        <li>✓ Clicking a parameter row navigates correctly to the detail/graphing view</li>
-                        <li>✓ Layout remains stable under continuous data refresh (no layout shifts)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Settings & Fault Injection Testing -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>Settings & Fault Injection Controls</h2>
-                    <p>The Settings panel gives operators and administrators the ability to start and stop data generation, inject any of the 8 supported fault types at a chosen ISS module location, clear active faults, and wipe stored data. Testing confirmed all controls function correctly and that injected faults are immediately reflected in live sensor readings and alert notifications.</p>
-                    <h3>Verified:</h3>
-                    <ul>
-                        <li>✓ Start/Stop data generation toggles the generator process and updates the button state</li>
-                        <li>✓ Fault injection applies the selected fault to the correct ISS module only — no cross-location leakage</li>
-                        <li>✓ All 8 fault types injectable from the dropdown and immediately detectable by the ML pipeline</li>
-                        <li>✓ Clear Faults resets all active drifts and returns sensor readings to nominal</li>
-                        <li>✓ Clear Data wipes the database cleanly with no application crash</li>
-                        <li>✓ Sensor edit mode allows repositioning indicators on the digital twin with drag-and-drop</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="TestingImages/Settings.jpg" alt="A.U.R.A. Settings Panel">
-                </div>
-            </div>
-        </section>
-
-        <!-- Isolation Forest Testing -->
-        <section class="project-section">
-            <div class="project project-reverse">
-                <div class="project-image">
-                    <img src="TestingImages/Critical Alert.jpg" alt="Isolation Forest Anomaly Detection in Action">
-                </div>
-                <div class="project-text">
-                    <h2>Isolation Forest — Anomaly Detection Testing</h2>
-                    <p>The Isolation Forest model is trained on 5,000 nominal sensor samples and evaluated on 1,000 freshly generated nominal samples to verify an acceptably low false-positive rate. The live fitness check requires ≥ 90% accuracy before the model is allowed to label production data.</p>
-                    <h3>Test Procedure (<code>testIsolationForest.py</code>):</h3>
-                    <ul>
-                        <li>✓ 1,000 nominal samples generated, scaled, and predicted — anomaly rate and score stats printed</li>
-                        <li>✓ Feature means and standard deviations verified within expected bounds</li>
-                        <li>✓ Model + scaler + parameter order saved together in a single <code>.joblib</code> bundle</li>
-                    </ul>
-                    <h3>Live Fitness Testing (<code>isolationForestWrapper.py</code>):</h3>
-                    <ul>
-                        <li>✓ 300 synthetic mixed samples (90% nominal / 10% anomalous) generated on-the-fly</li>
-                        <li>✓ Model must achieve ≥ 90% accuracy before labeling live data</li>
-                        <li>✓ Fitness re-tested every 30 seconds during operation</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Random Forest & DQN Testing -->
-        <section class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h2>Random Forest & Deep Q-Network Testing</h2>
-                    <p>The Random Forest classifier identifies which specific fault is occurring, trained on 5,000 samples per fault class with a stratified 75/25 split. The DQN then takes the augmented state (sensor values + IF anomaly score + RF probabilities) and selects the correct corrective action from 10 maintenance options.</p>
-                    <h3>Random Forest (<code>trainRandomForest.py</code> / <code>test_randomForest.py</code>):</h3>
-                    <ul>
-                        <li>✓ Classification report with precision, recall, and F1-score per fault class</li>
-                        <li>✓ Fault onset detection: 200 nominal steps → fault injected → model confidence rises to match injected fault</li>
-                        <li>✓ 300-estimator ensemble, full tree depth, stratified split</li>
-                    </ul>
-                    <h3>Deep Q-Network (<code>trainAI.py</code> / <code>testAI.py</code>):</h3>
-                    <ul>
-                        <li>✓ 1,000 training episodes, epsilon-greedy exploration (ε: 0.9 → 0.01), replay memory of 10,000</li>
-                        <li>✓ Soft target network updates (τ = 0.005), Huber loss, gradient clipping at 100</li>
-                        <li>✓ 1,000 test episodes — model selects correct action via <code>argmax(Q-values)</code> with no exploration noise</li>
-                    </ul>
-                </div>
-                <div class="project-image">
-                    <img src="TestingImages/DataGraphing.jpg" alt="Random Forest and DQN model testing">
-                </div>
-            </div>
-        </section>
-
-        <!-- Summary -->
-        <section class="project-section">
-            <div class="center">
-                <h2>Comprehensive Validation Summary</h2>
-                <p>Every layer of the A.U.R.A. system has been independently tested and validated — from the physics-based data generation engine through three ML models to the full-stack desktop application. Our testing ensures that when deployed aboard the ISS, the system will reliably detect anomalies, correctly classify faults, and recommend the right corrective action to keep crews safe.</p>
-                <p style="font-size: 1.3rem; margin-top: 2rem; color: #afa685;">
-                    <strong>Tested. Validated. Mission-Ready.</strong>
-                </p>
-            </div>
-        </section>
+<!-- ─────────────────── LOGIN ─────────────────── -->
+<div class="section fade-in">
+  <div class="split">
+    <div class="split-text">
+      <span class="section-tag">Authentication</span>
+      <h2>Login &amp; Session Management</h2>
+      <p>
+        The application opens on a secure login screen. Credentials are validated against
+        a hashed JSON credential store. Failed attempts are rejected cleanly with no crash
+        or information leak. Three distinct roles unlock different pages and capabilities.
+      </p>
+      <h3>Verified</h3>
+      <ul class="verified-list">
+        <li>Successful login for all three roles (Administrator, Operator, Analyst)</li>
+        <li>Incorrect credentials rejected — no crash, no stack trace exposed</li>
+        <li>Session token issued on login, cleared on logout</li>
+        <li>Credential store uses hashed values — no plaintext passwords at rest</li>
+        <li>Role-based page visibility enforced after login</li>
+      </ul>
     </div>
+    <div class="split-image">
+      <div class="mock-screen" style="min-height:260px;justify-content:center;align-items:center;">
+        <div class="mk-bar"><span class="mk-title">A.U.R.A.</span><span class="mk-status">Secure Login</span></div>
+        <div class="mk-body" style="align-items:center;justify-content:center;padding:24px 20px;gap:14px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:1.4rem;color:#aba372;letter-spacing:0.18em;font-weight:700;margin-bottom:6px;">A.U.R.A.</div>
+          <div style="font-size:0.65rem;color:#6b6555;letter-spacing:0.12em;margin-bottom:16px;">AUTONOMOUS UTILITY &amp; RESPONSE AGENT</div>
+          <div style="width:100%;max-width:220px;display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <div style="font-size:0.6rem;color:#aba372;letter-spacing:0.08em;">USERNAME</div>
+              <div style="background:#12121a;border:1px solid #2a2a35;border-radius:4px;padding:7px 10px;font-size:0.72rem;color:#e0d9c8;font-family:'JetBrains Mono',monospace;">operator_01</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <div style="font-size:0.6rem;color:#aba372;letter-spacing:0.08em;">PASSWORD</div>
+              <div style="background:#12121a;border:1px solid #2a2a35;border-radius:4px;padding:7px 10px;font-size:0.72rem;color:#e0d9c8;font-family:'JetBrains Mono',monospace;">••••••••••</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:3px;">
+              <div style="font-size:0.6rem;color:#aba372;letter-spacing:0.08em;">ROLE</div>
+              <div style="background:#12121a;border:1px solid #2a2a35;border-radius:4px;padding:7px 10px;font-size:0.72rem;color:#e0d9c8;font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;align-items:center;">
+                <span>Operator</span><span style="color:#aba372;font-size:0.6rem;">▾</span>
+              </div>
+            </div>
+            <div style="background:#aba372;color:#0d0d0d;border-radius:4px;padding:8px;text-align:center;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;margin-top:4px;font-family:'JetBrains Mono',monospace;">LOGIN</div>
+          </div>
+          <div style="margin-top:8px;background:#1a1a10;border:1px solid #3a3a00;border-radius:4px;padding:5px 12px;font-size:0.6rem;color:#aba372;font-family:'JetBrains Mono',monospace;">✓ Session authenticated · token issued</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <footer>
-        © 2025 A.U.R.A. | Designed for Intelligent Space Operations
-    </footer>
+<!-- ─────────────────── DIGITAL TWIN ─────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="split split-reverse">
+      <div class="split-image">
+        <div class="mock-screen" style="min-height:270px;">
+          <div class="mk-bar"><span class="mk-title">⬡ Digital Twin</span><span class="mk-status">ISS · Live Telemetry</span></div>
+          <div class="mk-body" style="padding:10px 12px;gap:6px;">
+            <!-- ISS top-down SVG -->
+            <svg viewBox="0 0 280 175" style="width:100%;max-height:160px;" xmlns="http://www.w3.org/2000/svg">
+              <rect width="280" height="175" fill="#0d0d0d"/>
+              <!-- Truss -->
+              <rect x="20" y="84" width="240" height="7" rx="2" fill="#2a2a35"/>
+              <!-- Solar arrays left -->
+              <rect x="22" y="52" width="44" height="10" rx="2" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="0.5"/>
+              <rect x="22" y="65" width="44" height="10" rx="2" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="0.5"/>
+              <rect x="22" y="113" width="44" height="10" rx="2" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="0.5"/>
+              <rect x="22" y="126" width="44" height="10" rx="2" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="0.5"/>
+              <!-- Solar arrays right -->
+              <rect x="214" y="52" width="44" height="10" rx="2" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="0.5"/>
+              <rect x="214" y="65" width="44" height="10" rx="2" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="0.5"/>
+              <rect x="214" y="113" width="44" height="10" rx="2" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="0.5"/>
+              <rect x="214" y="126" width="44" height="10" rx="2" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="0.5"/>
+              <!-- Modules -->
+              <ellipse cx="140" cy="87" rx="26" ry="12" fill="#1e1e2a" stroke="#3a3a4a" stroke-width="1"/>
+              <text x="140" y="90" text-anchor="middle" fill="#aba372" font-size="5.5" font-family="JetBrains Mono,monospace">US Lab</text>
+              <ellipse cx="100" cy="87" rx="18" ry="10" fill="#1e1e2a" stroke="#3a3a4a" stroke-width="1"/>
+              <text x="100" y="90" text-anchor="middle" fill="#aba372" font-size="5" font-family="JetBrains Mono,monospace">Node 1</text>
+              <ellipse cx="180" cy="87" rx="18" ry="10" fill="#1e1e2a" stroke="#3a3a4a" stroke-width="1"/>
+              <text x="180" y="90" text-anchor="middle" fill="#aba372" font-size="5" font-family="JetBrains Mono,monospace">Node 2</text>
+              <ellipse cx="215" cy="87" rx="16" ry="9" fill="#1e1e2a" stroke="#3a3a4a" stroke-width="1"/>
+              <text x="215" y="90" text-anchor="middle" fill="#aba372" font-size="4.5" font-family="JetBrains Mono,monospace">Columbus</text>
+              <ellipse cx="66" cy="87" rx="16" ry="9" fill="#1e1e2a" stroke="#3a3a4a" stroke-width="1"/>
+              <text x="66" y="90" text-anchor="middle" fill="#aba372" font-size="4.5" font-family="JetBrains Mono,monospace">Airlock</text>
+              <ellipse cx="140" cy="110" rx="12" ry="7" fill="#1e1e2a" stroke="#3a3a4a" stroke-width="1"/>
+              <text x="140" y="113" text-anchor="middle" fill="#aba372" font-size="4.5" font-family="JetBrains Mono,monospace">Cupola</text>
+              <ellipse cx="180" cy="65" rx="15" ry="8" fill="#1e1e2a" stroke="#3a3a4a" stroke-width="1"/>
+              <text x="180" y="68" text-anchor="middle" fill="#aba372" font-size="4.5" font-family="JetBrains Mono,monospace">JLP/JPM</text>
+              <!-- Health indicators -->
+              <circle cx="140" cy="78" r="4" fill="#00e676" opacity="0.9"/>
+              <circle cx="140" cy="78" r="6" fill="none" stroke="#00e676" stroke-width="0.8" opacity="0.4"/>
+              <circle cx="100" cy="79" r="4" fill="#00e676" opacity="0.9"/>
+              <circle cx="100" cy="79" r="6" fill="none" stroke="#00e676" stroke-width="0.8" opacity="0.4"/>
+              <circle cx="180" cy="79" r="4" fill="#00e676" opacity="0.9"/>
+              <circle cx="180" cy="79" r="6" fill="none" stroke="#00e676" stroke-width="0.8" opacity="0.4"/>
+              <circle cx="215" cy="79" r="4" fill="#ff1744" opacity="0.9"/>
+              <circle cx="215" cy="79" r="6" fill="none" stroke="#ff1744" stroke-width="0.8" opacity="0.5"/>
+              <circle cx="66" cy="79" r="4" fill="#00e676" opacity="0.9"/>
+              <circle cx="66" cy="79" r="6" fill="none" stroke="#00e676" stroke-width="0.8" opacity="0.4"/>
+              <circle cx="140" cy="103" r="4" fill="#00e676" opacity="0.9"/>
+              <circle cx="180" cy="57" r="4" fill="#00e676" opacity="0.9"/>
+              <!-- Fault label -->
+              <rect x="195" y="58" width="52" height="12" rx="2" fill="#1a0505" stroke="#ff1744" stroke-width="0.8"/>
+              <text x="221" y="67" text-anchor="middle" fill="#ff1744" font-size="5" font-family="JetBrains Mono,monospace">⚠ CO₂ FAULT</text>
+            </svg>
+            <div style="display:flex;gap:6px;font-size:0.58rem;font-family:'JetBrains Mono',monospace;flex-wrap:wrap;">
+              <span style="color:#00e676;">● Nominal ×6</span>
+              <span style="color:#ff1744;">● Fault ×1 — Columbus</span>
+              <span style="color:#6b6555;margin-left:auto;">WS tick: 1s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="split-text">
+        <span class="section-tag">Digital Twin</span>
+        <h2>ISS Schematic &amp; Live Overlays</h2>
+        <p>
+          The Digital Twin page renders an SVG ISS diagram with color-coded health indicators
+          at all 7 module locations. Testing confirmed all indicators update in real time as
+          fault states are injected and cleared via the data generator.
+        </p>
+        <h3>Verified</h3>
+        <ul class="verified-list">
+          <li>All 7 module indicators render at correct pixel positions on the SVG</li>
+          <li>Color transitions: green → red on fault injection, back on clearance</li>
+          <li>Clicking a module navigates to Sensor Detail for that location</li>
+          <li>SVG schematic scales correctly across all tested window sizes</li>
+          <li>WebSocket updates received and rendered within 1 second of server tick</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── DATA GRAPHING ─────────────────── -->
+<div class="section fade-in">
+  <div class="split">
+    <div class="split-text">
+      <span class="section-tag">Data Visualization</span>
+      <h2>Sensor Trend Graphs</h2>
+      <p>
+        Historical sensor data is plotted as interactive Chart.js line charts.
+        Each parameter shows its nominal range as a reference, and anomaly-flagged
+        readings are visually distinguished from nominal data.
+        Testing confirmed data integrity across full historical queues.
+      </p>
+      <h3>Verified</h3>
+      <ul class="verified-list">
+        <li>Charts render correctly for all 20 sensor parameters</li>
+        <li>Nominal range reference accurate per parameter</li>
+        <li>Historical queue loads 10,000+ rows without performance degradation</li>
+        <li>Anomaly-flagged points visually distinct from nominal readings</li>
+        <li>Charts update live as new WebSocket data arrives each second</li>
+        <li>Export to CSV produces valid, complete files</li>
+      </ul>
+    </div>
+    <div class="split-image">
+      <div class="mock-screen" style="min-height:270px;">
+        <div class="mk-bar"><span class="mk-title">📈 Sensor Trends</span><span class="mk-status">US Lab · CO₂ Partial Pressure</span></div>
+        <div class="mk-body" style="padding:10px 14px;gap:6px;">
+          <div style="display:flex;gap:8px;font-size:0.6rem;font-family:'JetBrains Mono',monospace;margin-bottom:2px;">
+            <span style="color:#aba372;">■ Nominal</span>
+            <span style="color:#ff1744;">■ Anomaly</span>
+            <span style="color:#2a3a2a;margin-left:auto;">Range band</span>
+          </div>
+          <svg viewBox="0 0 240 110" style="width:100%;background:#0d0d0d;border-radius:4px;" xmlns="http://www.w3.org/2000/svg">
+            <!-- Grid -->
+            <line x1="30" y1="10" x2="30" y2="95" stroke="#1e1e2a" stroke-width="0.8"/>
+            <line x1="30" y1="95" x2="235" y2="95" stroke="#1e1e2a" stroke-width="0.8"/>
+            <line x1="30" y1="70" x2="235" y2="70" stroke="#1e1e2a" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <line x1="30" y1="50" x2="235" y2="50" stroke="#1e1e2a" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <line x1="30" y1="30" x2="235" y2="30" stroke="#1e1e2a" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <!-- Y labels -->
+            <text x="26" y="98" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">0.0</text>
+            <text x="26" y="73" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">0.4</text>
+            <text x="26" y="53" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">0.8</text>
+            <text x="26" y="33" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">1.2</text>
+            <!-- Nominal band -->
+            <rect x="30" y="45" width="205" height="30" fill="#00e676" opacity="0.06"/>
+            <!-- Nominal line -->
+            <polyline points="30,68 55,66 80,67 105,65 130,66 155,64 180,63 205,65 230,64" fill="none" stroke="#aba372" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- Anomaly spike -->
+            <polyline points="180,63 193,55 205,42 218,30 230,22" fill="none" stroke="#ff1744" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="4,2"/>
+            <!-- Anomaly dots -->
+            <circle cx="205" cy="42" r="3" fill="#ff1744" opacity="0.9"/>
+            <circle cx="218" cy="30" r="3" fill="#ff1744" opacity="0.9"/>
+            <circle cx="230" cy="22" r="3" fill="#ff1744" opacity="0.9"/>
+            <!-- X labels -->
+            <text x="30" y="103" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">-120s</text>
+            <text x="130" y="103" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">-60s</text>
+            <text x="230" y="103" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">now</text>
+          </svg>
+          <div style="display:flex;gap:8px;font-size:0.6rem;font-family:'JetBrains Mono',monospace;margin-top:2px;">
+            <span style="color:#e0d9c8;">Current: <span style="color:#ff1744;">1.31 mmHg</span></span>
+            <span style="color:#6b6555;">Nominal: 0.30–0.70</span>
+            <div style="margin-left:auto;background:#1a1a10;border:1px solid #3a3a00;border-radius:3px;padding:2px 7px;color:#aba372;cursor:pointer;">CSV ↓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── QUICK LOOK ─────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="split split-reverse">
+      <div class="split-image">
+        <div class="mock-screen" style="min-height:270px;">
+          <div class="mk-bar"><span class="mk-title">⚡ Quick Look</span><span class="mk-status">All Modules · 20 Parameters</span></div>
+          <div class="mk-body" style="padding:8px 12px;gap:3px;">
+            <!-- Module group header -->
+            <div style="font-size:0.55rem;color:#6b6555;letter-spacing:0.1em;border-bottom:1px solid #1e1e2a;padding-bottom:3px;margin-bottom:2px;">US LAB</div>
+            <div class="mk-row" style="justify-content:space-between;">
+              <span style="color:#a0a0b0;font-size:0.62rem;">Cabin Pressure</span>
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.6rem;padding:1px 7px;border-radius:3px;font-family:'JetBrains Mono',monospace;">14.70 psia ●</span>
+            </div>
+            <div class="mk-row" style="justify-content:space-between;">
+              <span style="color:#a0a0b0;font-size:0.62rem;">O₂ Partial Pressure</span>
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.6rem;padding:1px 7px;border-radius:3px;font-family:'JetBrains Mono',monospace;">3.09 psia ●</span>
+            </div>
+            <div class="mk-row" style="justify-content:space-between;">
+              <span style="color:#a0a0b0;font-size:0.62rem;">CO₂ Partial Pressure</span>
+              <span style="background:#1a0a0a;border:1px solid #ff1744;color:#ff1744;font-size:0.6rem;padding:1px 7px;border-radius:3px;font-family:'JetBrains Mono',monospace;">1.31 mmHg ●</span>
+            </div>
+            <div class="mk-row" style="justify-content:space-between;">
+              <span style="color:#a0a0b0;font-size:0.62rem;">Humidity</span>
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.6rem;padding:1px 7px;border-radius:3px;font-family:'JetBrains Mono',monospace;">52.3 % ●</span>
+            </div>
+            <div style="font-size:0.55rem;color:#6b6555;letter-spacing:0.1em;border-bottom:1px solid #1e1e2a;padding-bottom:3px;margin:4px 0 2px;">COLUMBUS</div>
+            <div class="mk-row" style="justify-content:space-between;">
+              <span style="color:#a0a0b0;font-size:0.62rem;">Temperature</span>
+              <span style="background:#1a1200;border:1px solid #ffab00;color:#ffab00;font-size:0.6rem;padding:1px 7px;border-radius:3px;font-family:'JetBrains Mono',monospace;">24.8 °C ▲</span>
+            </div>
+            <div class="mk-row" style="justify-content:space-between;">
+              <span style="color:#a0a0b0;font-size:0.62rem;">Cabin Pressure</span>
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.6rem;padding:1px 7px;border-radius:3px;font-family:'JetBrains Mono',monospace;">14.68 psia ●</span>
+            </div>
+            <div style="font-size:0.55rem;color:#6b6555;letter-spacing:0.1em;border-bottom:1px solid #1e1e2a;padding-bottom:3px;margin:4px 0 2px;">NODE 1 / NODE 2 / CUPOLA / AIRLOCK / JLP</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:2px;">
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.55rem;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;">●</span>
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.55rem;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;">●</span>
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.55rem;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;">●</span>
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.55rem;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;">●</span>
+              <span style="background:#0a1a0a;border:1px solid #00e676;color:#00e676;font-size:0.55rem;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;">●</span>
+              <span style="font-size:0.55rem;color:#6b6555;align-self:center;">all nominal</span>
+            </div>
+            <div style="margin-top:6px;font-size:0.58rem;font-family:'JetBrains Mono',monospace;color:#6b6555;border-top:1px solid #1e1e2a;padding-top:4px;">20 params · 7 modules · tick 00:04:12</div>
+          </div>
+        </div>
+      </div>
+      <div class="split-text">
+        <span class="section-tag">Dashboard</span>
+        <h2>Quick Look — All Sensors</h2>
+        <p>
+          The Quick Look view surfaces all 20 sensor readings across all 7 modules simultaneously.
+          Operators can scan the entire system state at a glance without navigating between locations.
+          Parameter status indicators update in sync with the 1-second WebSocket tick.
+        </p>
+        <h3>Verified</h3>
+        <ul class="verified-list">
+          <li>All 20 parameters displayed with current value and engineering unit</li>
+          <li>Status indicators (nominal / warning / critical) accurate for all parameter ranges</li>
+          <li>No stale data — all cells update on each WebSocket tick</li>
+          <li>Layout remains stable across browser window sizes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── CRITICAL ALERT ─────────────────── -->
+<div class="section fade-in">
+  <div class="split">
+    <div class="split-text">
+      <span class="section-tag">Fault Detection</span>
+      <h2>Critical Alert Detection</h2>
+      <p>
+        When the Isolation Forest + Random Forest pipeline classifies incoming sensor data
+        as an active fault, the system fires a critical alert. Testing validated all 8
+        fault types trigger correctly with zero false positives during nominal operation.
+      </p>
+      <h3>All 8 Fault Types Verified</h3>
+      <ul class="verified-list">
+        <li>Cabin Leak — pressure drop cascade across N₂, O₂, CO₂ channels</li>
+        <li>O₂ Generator Failure — output rate and purity collapse</li>
+        <li>O₂ Leak — O₂ partial pressure drop without generator fault pattern</li>
+        <li>CO₂ Scrubber Failure — CO₂ partial pressure rise above limit</li>
+        <li>CHX Failure — temperature and humidity excursions</li>
+        <li>Water Processor Failure — TOC and production rate degradation</li>
+        <li>Trace Contaminant Filter Saturation — NH₃, H₂, CO elevation</li>
+        <li>NH₃ Coolant Leak — NH₃ spike with pressure and temperature effects</li>
+      </ul>
+      <p style="margin-top:1rem;font-size:0.85rem;color:var(--text-dim);">
+        Zero false alerts raised during 1,000 consecutive nominal samples.
+      </p>
+    </div>
+    <div class="split-image">
+      <div class="mock-screen" style="min-height:270px;">
+        <div class="mk-bar" style="background:#1a0505;border-bottom:1px solid #ff1744;">
+          <span class="mk-title" style="color:#ff1744;">⚠ CRITICAL ALERT</span>
+          <span class="mk-status" style="color:#ff4444;">ACTIVE FAULT</span>
+        </div>
+        <div class="mk-body" style="padding:12px 14px;gap:8px;">
+          <div style="background:#1a0505;border:1px solid #ff1744;border-radius:6px;padding:12px 14px;">
+            <div style="font-size:0.65rem;color:#ff1744;letter-spacing:0.12em;font-family:'JetBrains Mono',monospace;margin-bottom:6px;">CO₂ SCRUBBER FAILURE</div>
+            <div style="font-size:0.75rem;color:#e0d9c8;margin-bottom:8px;">CO₂ Partial Pressure critical exceedance detected in <strong style="color:#aba372;">US Lab</strong></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:0.62rem;font-family:'JetBrains Mono',monospace;">
+              <div style="background:#0d0d0d;border-radius:3px;padding:5px 8px;">
+                <div style="color:#6b6555;font-size:0.55rem;">CO₂ PP</div>
+                <div style="color:#ff1744;">1.31 mmHg</div>
+              </div>
+              <div style="background:#0d0d0d;border-radius:3px;padding:5px 8px;">
+                <div style="color:#6b6555;font-size:0.55rem;">LIMIT</div>
+                <div style="color:#aba372;">0.70 mmHg</div>
+              </div>
+              <div style="background:#0d0d0d;border-radius:3px;padding:5px 8px;">
+                <div style="color:#6b6555;font-size:0.55rem;">RF CONFIDENCE</div>
+                <div style="color:#ff1744;">97.2%</div>
+              </div>
+              <div style="background:#0d0d0d;border-radius:3px;padding:5px 8px;">
+                <div style="color:#6b6555;font-size:0.55rem;">TICKS ACTIVE</div>
+                <div style="color:#ff4444;">8 / 5 gate</div>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;font-size:0.6rem;font-family:'JetBrains Mono',monospace;">
+            <div style="background:#ff1744;color:#0d0d0d;padding:5px 14px;border-radius:4px;font-weight:700;">ACKNOWLEDGE</div>
+            <div style="border:1px solid #2a2a35;color:#a0a0b0;padding:5px 14px;border-radius:4px;">VIEW DETAIL</div>
+          </div>
+          <div style="font-size:0.55rem;color:#6b6555;font-family:'JetBrains Mono',monospace;margin-top:2px;">0 false positives · 1,000 nominal samples tested</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── NOTIFICATIONS ─────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner fade-in">
+    <div class="split split-reverse">
+      <div class="split-image">
+        <div class="mock-screen" style="min-height:270px;">
+          <div class="mk-bar"><span class="mk-title">🔔 Notifications</span><span class="mk-status">2 Critical · 3 Warning</span></div>
+          <div class="mk-body" style="padding:8px 12px;gap:4px;">
+            <!-- Critical items -->
+            <div class="mk-alert-item" style="border-left:3px solid #ff1744;background:#1a0505;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+                <span style="font-size:0.62rem;color:#ff1744;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;">⬤ CRITICAL</span>
+                <span style="font-size:0.55rem;color:#6b6555;font-family:'JetBrains Mono',monospace;">04:12:38</span>
+              </div>
+              <div style="font-size:0.68rem;color:#e0d9c8;font-weight:600;">CO₂ Scrubber Failure</div>
+              <div style="font-size:0.6rem;color:#a0a0b0;">US Lab · RF 97.2% · 8 consecutive ticks</div>
+            </div>
+            <div class="mk-alert-item" style="border-left:3px solid #ff1744;background:#1a0505;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+                <span style="font-size:0.62rem;color:#ff1744;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;">⬤ CRITICAL</span>
+                <span style="font-size:0.55rem;color:#6b6555;font-family:'JetBrains Mono',monospace;">03:58:11</span>
+              </div>
+              <div style="font-size:0.68rem;color:#e0d9c8;font-weight:600;">NH₃ Coolant Leak</div>
+              <div style="font-size:0.6rem;color:#a0a0b0;">Node 2 · RF 91.5% · confirmed, latched</div>
+            </div>
+            <!-- Warning items -->
+            <div class="mk-alert-item" style="border-left:3px solid #ffab00;background:#1a1200;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+                <span style="font-size:0.62rem;color:#ffab00;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;">⬤ WARNING</span>
+                <span style="font-size:0.55rem;color:#6b6555;font-family:'JetBrains Mono',monospace;">04:09:04</span>
+              </div>
+              <div style="font-size:0.68rem;color:#e0d9c8;font-weight:600;">Humidity Approaching Limit</div>
+              <div style="font-size:0.6rem;color:#a0a0b0;">Columbus · 68.2% / limit 70%</div>
+            </div>
+            <div class="mk-alert-item" style="border-left:3px solid #ffab00;background:#1a1200;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+                <span style="font-size:0.62rem;color:#ffab00;font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;">⬤ WARNING</span>
+                <span style="font-size:0.55rem;color:#6b6555;font-family:'JetBrains Mono',monospace;">04:02:17</span>
+              </div>
+              <div style="font-size:0.68rem;color:#e0d9c8;font-weight:600;">NH₃ Concentration Drift</div>
+              <div style="font-size:0.6rem;color:#a0a0b0;">Node 2 · 0.18 ppm / limit 0.25 ppm</div>
+            </div>
+            <div style="font-size:0.55rem;color:#6b6555;font-family:'JetBrains Mono',monospace;border-top:1px solid #1e1e2a;padding-top:4px;margin-top:2px;">Cooldown: 60s · Latch clears after 5 nominal ticks</div>
+          </div>
+        </div>
+      </div>
+      <div class="split-text">
+        <span class="section-tag">Alerts</span>
+        <h2>Two-Tier Notification System</h2>
+        <p>
+          A.U.R.A. distinguishes Critical alerts (active fault confirmed by ML pipeline)
+          from Warning alerts (parameter drifting toward out-of-range). Both tiers were
+          validated independently for threshold accuracy and display correctness.
+        </p>
+        <div class="alert-levels" style="margin:1.2rem 0;">
+          <div class="alert-card critical">
+            <div class="alert-card-label">⬤ Critical</div>
+            <p>Active fault. RF confidence above gate. Fires after N consecutive anomalous ticks.</p>
+          </div>
+          <div class="alert-card warning">
+            <div class="alert-card-label">⬤ Warning</div>
+            <p>Parameter approaching limit. Pre-fault indicator. Fires before Critical triggers.</p>
+          </div>
+        </div>
+        <h3>Verified</h3>
+        <ul class="verified-list">
+          <li>Critical and Warning tiers fire at correct, distinct thresholds</li>
+          <li>No overlap — fault clears warning and elevates to critical correctly</li>
+          <li>Cooldown timer prevents duplicate alerts within configured window</li>
+          <li>Fault latch clears only after sustained nominal readings resume</li>
+          <li>Alert badge count on nav tab stays accurate throughout test runs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── SETTINGS ─────────────────── -->
+<div class="section fade-in">
+  <div class="split">
+    <div class="split-text">
+      <span class="section-tag">Configuration</span>
+      <h2>Settings &amp; Runtime Config</h2>
+      <p>
+        Alert thresholds, cooldown windows, and ML gate values are configurable at runtime.
+        Changes persist to disk and take effect on the next server tick without restart.
+      </p>
+      <h3>Verified</h3>
+      <ul class="verified-list">
+        <li>All configurable parameters render correctly with current values</li>
+        <li>Changes saved to config file and confirmed present on re-read</li>
+        <li>Threshold changes take effect within one server tick (1 second)</li>
+        <li>Invalid values rejected with a clear validation message</li>
+        <li>Default values restore correctly via the reset function</li>
+      </ul>
+    </div>
+    <div class="split-image">
+      <div class="mock-screen" style="min-height:270px;">
+        <div class="mk-bar"><span class="mk-title">⚙ Settings</span><span class="mk-status">Runtime Config · JSON</span></div>
+        <div class="mk-body" style="padding:10px 14px;gap:10px;">
+          <!-- Setting rows -->
+          <div class="mk-setting-row">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+              <span style="font-size:0.62rem;color:#e0d9c8;">Alert Min Consecutive</span>
+              <span style="font-size:0.62rem;color:#aba372;font-family:'JetBrains Mono',monospace;">5</span>
+            </div>
+            <div class="mk-slider-track"><div class="mk-slider-fill" style="width:50%"></div><div class="mk-slider-thumb" style="left:50%"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.52rem;color:#6b6555;margin-top:2px;"><span>1</span><span>10</span></div>
+          </div>
+          <div class="mk-setting-row">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+              <span style="font-size:0.62rem;color:#e0d9c8;">Alert Cooldown (seconds)</span>
+              <span style="font-size:0.62rem;color:#aba372;font-family:'JetBrains Mono',monospace;">60</span>
+            </div>
+            <div class="mk-slider-track"><div class="mk-slider-fill" style="width:30%"></div><div class="mk-slider-thumb" style="left:30%"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.52rem;color:#6b6555;margin-top:2px;"><span>10</span><span>300</span></div>
+          </div>
+          <div class="mk-setting-row">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+              <span style="font-size:0.62rem;color:#e0d9c8;">Critical RF Gate</span>
+              <span style="font-size:0.62rem;color:#aba372;font-family:'JetBrains Mono',monospace;">0.85</span>
+            </div>
+            <div class="mk-slider-track"><div class="mk-slider-fill" style="width:85%"></div><div class="mk-slider-thumb" style="left:85%"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.52rem;color:#6b6555;margin-top:2px;"><span>0.5</span><span>1.0</span></div>
+          </div>
+          <div class="mk-setting-row">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+              <span style="font-size:0.62rem;color:#e0d9c8;">Latch Threshold</span>
+              <span style="font-size:0.62rem;color:#aba372;font-family:'JetBrains Mono',monospace;">0.30</span>
+            </div>
+            <div class="mk-slider-track"><div class="mk-slider-fill" style="width:30%"></div><div class="mk-slider-thumb" style="left:30%"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.52rem;color:#6b6555;margin-top:2px;"><span>0.0</span><span>1.0</span></div>
+          </div>
+          <div class="mk-setting-row">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+              <span style="font-size:0.62rem;color:#e0d9c8;">Latch Min Consecutive</span>
+              <span style="font-size:0.62rem;color:#aba372;font-family:'JetBrains Mono',monospace;">5</span>
+            </div>
+            <div class="mk-slider-track"><div class="mk-slider-fill" style="width:50%"></div><div class="mk-slider-thumb" style="left:50%"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.52rem;color:#6b6555;margin-top:2px;"><span>1</span><span>10</span></div>
+          </div>
+          <div style="display:flex;gap:6px;margin-top:4px;">
+            <div style="background:#aba372;color:#0d0d0d;border-radius:4px;padding:5px 14px;font-size:0.62rem;font-weight:700;font-family:'JetBrains Mono',monospace;">SAVE</div>
+            <div style="border:1px solid #2a2a35;color:#a0a0b0;border-radius:4px;padding:5px 12px;font-size:0.62rem;font-family:'JetBrains Mono',monospace;">RESTORE DEFAULTS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── SUMMARY STATS ─────────────────── -->
+<div class="section-alt">
+  <div class="section-alt-inner" style="text-align:center; padding-top:4rem; padding-bottom:4rem;">
+    <span class="section-tag">Summary</span>
+    <h2 class="section-title" style="margin-bottom:2.5rem;">Validation at a Glance</h2>
+    <div class="stats-grid" style="max-width:800px; margin:0 auto;">
+      <div class="stat-item">
+        <span class="stat-number">8</span>
+        <span class="stat-label">Fault Types Verified</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">0</span>
+        <span class="stat-label">False Positives (1,000 samples)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">7</span>
+        <span class="stat-label">ISS Modules Confirmed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">1s</span>
+        <span class="stat-label">Max Update Latency</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────── FOOTER ─────────────────── -->
+<footer>
+  © 2025 A.U.R.A. | Designed for Intelligent Space Operations
+</footer>
+
+<script>
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+</script>
 </body>
 </html>
