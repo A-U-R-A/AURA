@@ -80,12 +80,22 @@ header {
 }
 
 .topcorner {
-  font-family: var(--font-mono);
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  color: var(--gold);
-  text-shadow: 0 0 12px rgba(171,163,114,0.4);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(171,163,114,0.4));
+  transition: filter 0.2s ease;
+}
+
+.nav-logo:hover {
+  filter: drop-shadow(0 0 18px rgba(171,163,114,0.65));
 }
 
 .head {
@@ -1130,7 +1140,7 @@ footer {
 }
 
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE — tablet (≤900px)
 ===================================================== */
 @media (max-width: 900px) {
   #twin-preview { height: 300px; }
@@ -1153,13 +1163,84 @@ footer {
   }
 
   .alert-levels { grid-template-columns: 1fr; }
+
+  .screenshot-grid { grid-template-columns: 1fr; }
+
+  .cards-grid { grid-template-columns: 1fr; }
+
+  .fault-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .section      { padding: 3.5rem 1.5rem; }
+  .section-alt-inner { padding: 3.5rem 1.5rem; }
 }
 
+/* =====================================================
+   RESPONSIVE — mobile (≤600px)
+===================================================== */
 @media (max-width: 600px) {
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  header { padding: 0 1rem; }
-  .head { gap: 4px; }
-  .topbutton { padding: 6px 12px; font-size: 0.8rem; }
+  /* ── Nav: stack logo above links ── */
+  header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6rem 1rem 0.5rem;
+    gap: 0.4rem;
+  }
+
+  .nav-logo { height: 34px; }
+
+  .head { gap: 2px; flex-wrap: wrap; justify-content: center; }
+
+  .topbutton { padding: 5px 10px; font-size: 0.78rem; }
+
+  /* ── Layout ── */
+  .section      { padding: 2.5rem 1rem; }
+  .section-alt-inner { padding: 2.5rem 1rem; }
+  .stats-bar    { padding: 2rem 1rem; }
+
+  /* ── Stats: 2-col on mobile ── */
+  .stats-grid   { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .stat-number  { font-size: 2rem; }
+
+  /* ── Hero ── */
+  .hero { padding: 5rem 1.25rem 3rem; }
   .hero h1 { letter-spacing: 6px; }
-  .hero-cta { flex-direction: column; align-items: center; }
+  .hero-desc { font-size: 1rem; }
+  .hero-cta  { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
+
+  /* ── Cards / grids ── */
+  .fault-grid { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .screenshot-grid { grid-template-columns: 1fr; }
+
+  /* ── Split ── */
+  .split { gap: 1.5rem; }
+
+  /* ── Alert cards ── */
+  .alert-levels { grid-template-columns: 1fr; }
+
+  /* ── Page hero ── */
+  .page-hero { padding: 3.5rem 1.25rem 2.5rem; }
+
+  /* ── Contact ── */
+  .contact-section { margin: 3rem auto; padding: 0 1rem; }
+  .contact-form { padding: 1.75rem 1.25rem; }
+
+  /* ── Mock screens: smaller font on narrow screens ── */
+  .mock-screen { font-size: 9.5px; }
+
+  /* ── 3D twin ── */
+  #twin-preview { height: 240px; }
+}
+
+/* =====================================================
+   RESPONSIVE — very small (≤400px)
+===================================================== */
+@media (max-width: 400px) {
+  .topbutton { padding: 4px 8px; font-size: 0.72rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .stat-number { font-size: 1.7rem; }
+  .hero h1 { letter-spacing: 4px; font-size: clamp(3rem, 18vw, 5rem); }
+  .split-text h2 { font-size: 1.4rem; }
 }
