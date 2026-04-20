@@ -233,181 +233,301 @@
   </div>
   <div class="screenshot-grid">
 
-    <!-- Digital Twin 2D -->
+    <!-- Digital Twin -->
     <div class="screenshot-card">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">Digital Twin — ISS</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>ALL NOMINAL</span></div>
-        <div class="mk-body" style="padding:6px;align-items:center;justify-content:center;">
-          <svg viewBox="0 0 280 150" style="width:100%;max-height:175px;" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15" cy="10" r="0.7" fill="white" opacity="0.5"/><circle cx="55" cy="5" r="0.5" fill="white" opacity="0.4"/><circle cx="200" cy="8" r="0.6" fill="white" opacity="0.5"/><circle cx="262" cy="18" r="0.4" fill="white" opacity="0.4"/><circle cx="240" cy="140" r="0.5" fill="white" opacity="0.3"/>
-            <line x1="42" y1="12" x2="42" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="42" y1="49" x2="42" y2="80" stroke="#686460" stroke-width="1.2"/>
-            <line x1="90" y1="12" x2="90" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="90" y1="49" x2="90" y2="80" stroke="#686460" stroke-width="1.2"/>
-            <line x1="190" y1="12" x2="190" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="190" y1="49" x2="190" y2="80" stroke="#686460" stroke-width="1.2"/>
-            <line x1="238" y1="12" x2="238" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="238" y1="49" x2="238" y2="80" stroke="#686460" stroke-width="1.2"/>
-            <rect x="31" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-            <rect x="79" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-            <rect x="179" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-            <rect x="227" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-            <rect x="31" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-            <rect x="79" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-            <rect x="179" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-            <rect x="227" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-            <rect x="10" y="43" width="260" height="6" rx="2" fill="#686460"/>
-            <rect x="138.5" y="48" width="3" height="88" fill="#a09c90"/>
-            <rect x="148" y="91" width="14" height="2" fill="#a09c90"/>
-            <rect x="114" y="91" width="14" height="2" fill="#a09c90"/>
-            <rect x="148" y="130" width="12" height="2" fill="#a09c90"/>
-            <ellipse cx="140" cy="94" rx="9" ry="9" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
-            <ellipse cx="140" cy="113" rx="11" ry="10" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
-            <ellipse cx="140" cy="133" rx="8" ry="8" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
-            <ellipse cx="171" cy="92" rx="12" ry="6" fill="#c0cce0" stroke="#9aa0b0" stroke-width="0.5"/>
-            <rect x="100" y="86" width="20" height="12" rx="6" fill="#b8c4d8" stroke="#9aa0b0" stroke-width="0.5"/>
-            <ellipse cx="168" cy="131" rx="8" ry="5" fill="#b0bcd0" stroke="#9aa0b0" stroke-width="0.5"/>
-            <ellipse cx="138" cy="143" rx="6" ry="5" fill="#8090a8" stroke="#7080a0" stroke-width="0.5"/>
-            <text x="140" y="97" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">N2</text>
-            <text x="140" y="116" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">LAB</text>
-            <text x="140" y="136" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">N1</text>
-            <text x="171" y="95" text-anchor="middle" fill="#6b6555" font-size="4.5" font-family="monospace">COL</text>
-            <text x="110" y="95" text-anchor="middle" fill="#6b6555" font-size="4.5" font-family="monospace">KIBO</text>
-            <circle cx="140" cy="82" r="3.5" fill="#5fe61f" opacity="0.9"/><circle cx="140" cy="82" r="6" fill="none" stroke="#5fe61f" stroke-width="0.5" opacity="0.25"/>
-            <circle cx="152" cy="106" r="3.5" fill="#5fe61f" opacity="0.9"/>
-            <circle cx="171" cy="82" r="3.5" fill="#5fe61f" opacity="0.9"/>
-            <circle cx="110" cy="82" r="3.5" fill="#5fe61f" opacity="0.9"/>
-            <circle cx="140" cy="122" r="3.5" fill="#5fe61f" opacity="0.9"/>
-            <circle cx="168" cy="122" r="3.5" fill="#5fe61f" opacity="0.9"/>
-            <circle cx="134" cy="138" r="3.5" fill="#5fe61f" opacity="0.9"/>
-          </svg>
+      <div class="mock-screen" style="min-height:220px;background:#0e0e0e;">
+        <!-- App topbar -->
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;letter-spacing:.4px;">Digital Twin</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Dashboard</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Sensor Detail</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
+          </div>
+          <span style="font-size:6px;color:#aba372;border:1px solid #383838;padding:1px 5px;border-radius:10px;white-space:nowrap;font-family:'JetBrains Mono',monospace;">● NOMINAL</span>
+        </div>
+        <!-- Twin layout: 3D canvas + sidebar -->
+        <div style="flex:1;display:grid;grid-template-columns:1fr 72px;gap:5px;padding:5px;overflow:hidden;min-height:0;">
+          <div id="twin-ss" style="background:#000;border:1px solid #2a2a2a;border-radius:4px;overflow:hidden;min-height:0;"></div>
+          <div style="background:#161616;border:1px solid #2a2a2a;border-radius:4px;padding:5px;display:flex;flex-direction:column;gap:2px;overflow:hidden;">
+            <div style="font-size:5.5px;font-weight:600;color:#8c8470;text-transform:uppercase;letter-spacing:.8px;padding-bottom:3px;border-bottom:1px solid #2a2a2a;margin-bottom:1px;">Module Status</div>
+            <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;box-shadow:0 0 3px #aba37280;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">US Lab</span></div>
+            <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;box-shadow:0 0 3px #aba37280;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Node 1</span></div>
+            <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;box-shadow:0 0 3px #aba37280;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Node 2</span></div>
+            <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#ff3d40;box-shadow:0 0 3px #ff3d4080;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ff3d40;font-family:'JetBrains Mono',monospace;font-style:italic;">Columbus</span></div>
+            <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Cupola</span></div>
+            <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Airlock</span></div>
+            <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">JLP&amp;JPM</span></div>
+          </div>
         </div>
       </div>
       <div class="screenshot-caption">
         <strong>Digital Twin</strong>
-        <p>Live SVG ISS schematic with color-coded module health overlays. Green = nominal, red = fault active.</p>
+        <p>Live 3D ISS model in Three.js with color-coded module health indicators and interactive orbit controls.</p>
       </div>
     </div>
 
-    <!-- Sensor Trends / Graph -->
+    <!-- Dashboard -->
     <div class="screenshot-card">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">Trends — O₂ Partial Pressure</span><span class="mk-status">US Lab · 60 ticks</span></div>
-        <div class="mk-body" style="padding:6px 10px;gap:4px;">
-          <div style="display:flex;gap:8px;font-size:8.5px;"><span style="color:#ddd8cc;">20.87 <span style="color:#6b6555;">%vol</span></span><span style="color:#5fe61f;margin-left:auto;">NOMINAL</span><span style="color:#6b6555;">19.5–23.1</span></div>
-          <svg viewBox="0 0 256 95" style="width:100%;" xmlns="http://www.w3.org/2000/svg">
-            <line x1="26" y1="5" x2="26" y2="80" stroke="#2a2a35" stroke-width="1"/>
-            <line x1="26" y1="80" x2="254" y2="80" stroke="#2a2a35" stroke-width="1"/>
-            <text x="0" y="12" fill="#6b6555" font-size="6.5" font-family="monospace">23.1</text>
-            <text x="0" y="45" fill="#6b6555" font-size="6.5" font-family="monospace">21.3</text>
-            <text x="0" y="78" fill="#6b6555" font-size="6.5" font-family="monospace">19.5</text>
-            <rect x="26" y="8" width="228" height="68" fill="rgba(171,163,114,0.04)"/>
-            <line x1="26" y1="8"  x2="254" y2="8"  stroke="#aba372" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.25"/>
-            <line x1="26" y1="76" x2="254" y2="76" stroke="#aba372" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.25"/>
-            <path d="M26,50 C38,47 44,54 56,51 C68,48 76,56 88,52 C100,48 108,53 120,50 C132,47 140,55 152,51 C164,47 172,53 184,50 C196,47 204,52 216,49 C228,46 236,51 248,49 C250,48 252,49 254,50" fill="none" stroke="#5fe61f" stroke-width="1.8" stroke-linejoin="round"/>
-            <text x="26"  y="91" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">0</text>
-            <text x="102" y="91" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">20</text>
-            <text x="178" y="91" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">40</text>
-            <text x="254" y="91" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">60</text>
-          </svg>
-          <div style="display:flex;gap:4px;flex-wrap:wrap;">
-            <span style="background:rgba(171,163,114,0.15);border:1px solid rgba(171,163,114,0.4);color:#aba372;font-size:7.5px;padding:2px 6px;border-radius:3px;">O₂ Partial</span>
-            <span style="color:#6b6555;font-size:7.5px;padding:2px 6px;border:1px solid #2a2a35;border-radius:3px;">CO₂</span>
-            <span style="color:#6b6555;font-size:7.5px;padding:2px 6px;border:1px solid #2a2a35;border-radius:3px;">Humidity</span>
-            <span style="color:#6b6555;font-size:7.5px;padding:2px 6px;border:1px solid #2a2a35;border-radius:3px;">Temp</span>
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Digital Twin</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">Dashboard</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Sensor Detail</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
           </div>
+          <span style="font-size:6px;color:#ff3d40;border:1px solid #7a1d1f;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">⚠ FAULT</span>
         </div>
-      </div>
-      <div class="screenshot-caption">
-        <strong>Sensor Trends</strong>
-        <p>Historical parameter charts with drift detection and nominal range threshold overlays.</p>
-      </div>
-    </div>
-
-    <!-- Critical Alert -->
-    <div class="screenshot-card">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">Alerts</span><span class="mk-status"><span class="mk-dot mk-dot-r"></span>1 CRITICAL</span></div>
-        <div class="mk-body" style="gap:6px;">
-          <div style="background:rgba(255,61,64,0.08);border:1px solid rgba(255,61,64,0.35);border-radius:5px;padding:9px 11px;">
-            <div style="color:#ff3d40;font-size:8px;letter-spacing:3px;font-weight:700;margin-bottom:3px;">⚠ CRITICAL FAULT ACTIVE</div>
-            <div style="color:#fff;font-size:14px;font-weight:700;margin-bottom:6px;letter-spacing:1px;">CABIN LEAK</div>
-            <div style="display:flex;flex-direction:column;gap:2px;">
-              <div style="display:flex;"><span style="color:#6b6555;font-size:8.5px;flex:1;">LOCATION</span><span style="color:#ddd8cc;font-size:8.5px;">Node 1</span></div>
-              <div style="display:flex;"><span style="color:#6b6555;font-size:8.5px;flex:1;">RF CONFIDENCE</span><span style="color:#ff3d40;font-size:8.5px;">97.3%</span></div>
-              <div style="display:flex;"><span style="color:#6b6555;font-size:8.5px;flex:1;">LSTM RUL</span><span style="color:#ffab00;font-size:8.5px;">4.2 hrs</span></div>
-              <div style="display:flex;"><span style="color:#6b6555;font-size:8.5px;flex:1;">FAIL PROB</span><span style="color:#ff3d40;font-size:8.5px;">94.1%</span></div>
+        <div style="padding:4px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2a2a2a;flex-shrink:0;">
+          <span style="font-size:7.5px;font-weight:600;color:#fff;">ECLSS System Overview</span>
+          <span style="font-size:6px;color:#8c8470;border:1px solid #383838;padding:1px 6px;border-radius:4px;cursor:pointer;">Refresh</span>
+        </div>
+        <div class="mk-body" style="gap:5px;padding:6px;">
+          <!-- US Lab card - nominal -->
+          <div style="background:#161616;border:1px solid #2a2a2a;border-radius:5px;overflow:hidden;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:4px 8px;background:#1e1e1e;border-bottom:1px solid #2a2a2a;">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;font-weight:700;color:#fff;">US LAB</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:6px;font-weight:700;padding:1px 5px;border-radius:3px;background:rgba(0,200,83,.1);color:#aba372;">NOMINAL</span>
+            </div>
+            <div style="padding:4px 8px;display:flex;flex-direction:column;gap:3px;">
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">O2 PP</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:62%;background:#aba372;border-radius:2px;"></div></div><span style="font-size:6px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;text-align:right;">20.87</span></div>
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">CO2 PP</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:35%;background:#aba372;border-radius:2px;"></div></div><span style="font-size:6px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;text-align:right;">0.38</span></div>
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Humidity</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:55%;background:#aba372;border-radius:2px;"></div></div><span style="font-size:6px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;text-align:right;">52.1%</span></div>
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Temp</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:48%;background:#aba372;border-radius:2px;"></div></div><span style="font-size:6px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;text-align:right;">21.5°C</span></div>
+            </div>
+            <div style="padding:3px 8px;border-top:1px solid #2a2a2a;background:#1e1e1e;display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:6px;font-family:'JetBrains Mono',monospace;font-weight:600;color:#aba372;">DQN: No Action Needed (96%)</span>
+              <span style="font-size:5.5px;font-family:'JetBrains Mono',monospace;color:#aba372;">LSTM: NOMINAL</span>
             </div>
           </div>
-          <div style="background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:4px;padding:6px 10px;">
-            <div style="color:#6b6555;font-size:7.5px;letter-spacing:1.5px;margin-bottom:2px;">DQN RECOMMENDATION</div>
-            <div style="color:#aba372;font-size:9.5px;">Use Sealant to Close Leak</div>
-          </div>
-          <div style="display:flex;gap:5px;">
-            <div style="flex:1;background:#ff3d40;color:#0d0d0d;text-align:center;padding:5px;border-radius:4px;font-size:8.5px;font-weight:700;letter-spacing:1px;">ACKNOWLEDGE</div>
-            <div style="flex:1;border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:5px;border-radius:4px;font-size:8.5px;">DETAILS</div>
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-caption">
-        <strong>Critical Alert</strong>
-        <p>Fault name, affected location, and severity displayed the moment anomaly crosses threshold.</p>
-      </div>
-    </div>
-
-    <!-- Notifications -->
-    <div class="screenshot-card">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">Notifications</span><span class="mk-status"><span class="mk-dot mk-dot-r"></span>2 <span class="mk-dot mk-dot-a" style="margin-left:3px;"></span>3</span></div>
-        <div class="mk-body" style="gap:4px;">
-          <div class="mk-alert-item crit"><div class="mk-alert-level">⬤ CRITICAL</div><div class="mk-alert-msg">Cabin Leak · Node 1</div><div class="mk-alert-meta">14:23:01 · RF 97.3% · RUL 4.2h</div></div>
-          <div class="mk-alert-item crit"><div class="mk-alert-level">⬤ CRITICAL</div><div class="mk-alert-msg">O₂ Generator Failure · US Lab</div><div class="mk-alert-meta">14:20:44 · RF 91.8% · RUL 6.1h</div></div>
-          <div class="mk-alert-item warn"><div class="mk-alert-level">⬤ WARNING</div><div class="mk-alert-msg">CO₂ rising · Columbus</div><div class="mk-alert-meta">14:18:22 · 0.61% atm · limit 0.70%</div></div>
-          <div class="mk-alert-item warn"><div class="mk-alert-level">⬤ WARNING</div><div class="mk-alert-msg">NH₃ elevated · Node 2</div><div class="mk-alert-meta">14:15:07 · 0.89 ppm · limit 1.0</div></div>
-        </div>
-      </div>
-      <div class="screenshot-caption">
-        <strong>Notifications Panel</strong>
-        <p>Critical and warning tiers with timestamps and fault context — no missed alerts.</p>
-      </div>
-    </div>
-
-    <!-- Quick Look Dashboard -->
-    <div class="screenshot-card">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">Dashboard — US Lab</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>LIVE · 1s</span></div>
-        <div class="mk-body" style="gap:0;padding:8px 10px;">
-          <div class="mk-row"><span class="mk-row-label">O₂ Partial Pressure</span><span class="mk-row-val">20.87</span><span class="mk-row-unit">%vol</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">CO₂ Partial Pressure</span><span class="mk-row-val">0.38</span><span class="mk-row-unit">%atm</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">Humidity</span><span class="mk-row-val">52.1</span><span class="mk-row-unit">%RH</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">Temperature</span><span class="mk-row-val">21.5</span><span class="mk-row-unit">°C</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">Cabin Pressure</span><span class="mk-row-val">14.68</span><span class="mk-row-unit">psia</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">NH₃</span><span class="mk-row-val">0.31</span><span class="mk-row-unit">ppm</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">Airflow Rate</span><span class="mk-row-val">0.19</span><span class="mk-row-unit">m/s</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row" style="border:none;"><span class="mk-row-label">O₂ Output Rate</span><span class="mk-row-val">5.42</span><span class="mk-row-unit">kg/day</span><span class="mk-row-ok">✓</span></div>
-        </div>
-      </div>
-      <div class="screenshot-caption">
-        <strong>Quick Look</strong>
-        <p>All 20 sensor parameters across 7 modules — live, at a glance.</p>
-      </div>
-    </div>
-
-    <!-- Settings -->
-    <div class="screenshot-card">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">⚙ Settings</span><span class="mk-status">Runtime Config</span></div>
-        <div class="mk-body" style="padding:8px 12px;">
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">Alert Consecutive Ticks</span><span class="mk-setting-val">10</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:45%;"></div><div class="mk-slider-thumb" style="left:45%;"></div></div></div>
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">Cooldown Seconds</span><span class="mk-setting-val">600</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:60%;"></div><div class="mk-slider-thumb" style="left:60%;"></div></div></div>
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">RF Confidence Gate</span><span class="mk-setting-val">0.85</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:85%;"></div><div class="mk-slider-thumb" style="left:85%;"></div></div></div>
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">Latch Threshold</span><span class="mk-setting-val">0.95</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:95%;"></div><div class="mk-slider-thumb" style="left:95%;"></div></div></div>
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">Latch Min Consecutive</span><span class="mk-setting-val">3</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:20%;"></div><div class="mk-slider-thumb" style="left:20%;"></div></div></div>
-          <div style="display:flex;gap:6px;margin-top:4px;">
-            <div style="background:#aba372;color:#0d0d0d;text-align:center;padding:5px 12px;border-radius:4px;font-size:8.5px;font-weight:700;letter-spacing:1px;">SAVE</div>
-            <div style="border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:5px 10px;border-radius:4px;font-size:8.5px;">RESTORE DEFAULTS</div>
+          <!-- Columbus card - fault active -->
+          <div style="background:#161616;border:1px solid #7a1d1f;border-radius:5px;overflow:hidden;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:4px 8px;background:rgba(229,57,53,.12);border-bottom:1px solid #7a1d1f;">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;font-weight:700;color:#fff;">COLUMBUS</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:6px;font-weight:700;padding:1px 5px;border-radius:3px;background:rgba(229,57,53,.2);color:#ff3d40;">FAULT</span>
+            </div>
+            <div style="padding:3px 8px;background:rgba(255,171,0,.07);border-bottom:1px solid #2a2a2a;font-size:6px;color:#ffab00;font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:4px;">⚠ Detected: CO₂ Scrubber Failure</div>
+            <div style="padding:4px 8px;display:flex;flex-direction:column;gap:3px;">
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;">CO2 PP</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:90%;background:#ff3d40;border-radius:2px;"></div></div><span style="font-size:6px;color:#ff3d40;font-family:'JetBrains Mono',monospace;text-align:right;">1.31</span></div>
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;">Temp</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:72%;background:#ffab00;border-radius:2px;"></div></div><span style="font-size:6px;color:#ffab00;font-family:'JetBrains Mono',monospace;text-align:right;">24.8°C</span></div>
+            </div>
+            <div style="padding:3px 8px;border-top:1px solid #7a1d1f;background:#1e1e1e;display:flex;justify-content:space-between;">
+              <span style="font-size:6px;font-family:'JetBrains Mono',monospace;font-weight:600;color:#ff3d40;">DQN: Replace CO₂ Filter (89%)</span>
+              <span style="font-size:5.5px;font-family:'JetBrains Mono',monospace;color:#ff3d40;">LSTM: CRITICAL</span>
+            </div>
           </div>
         </div>
       </div>
       <div class="screenshot-caption">
-        <strong>Settings</strong>
-        <p>Configurable alert thresholds, cooldown windows, and ML sensitivity — no restart required.</p>
+        <strong>Dashboard</strong>
+        <p>All locations with live sensor bars, fault banners, and DQN + LSTM status footers.</p>
+      </div>
+    </div>
+
+    <!-- Sensor Detail -->
+    <div class="screenshot-card">
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Dashboard</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">Sensor Detail</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">AI Analyst</span>
+          </div>
+          <span style="font-size:6px;color:#ff3d40;border:1px solid #7a1d1f;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">⚠ FAULT</span>
+        </div>
+        <!-- Controls -->
+        <div style="display:flex;align-items:flex-end;gap:5px;padding:5px 8px;border-bottom:1px solid #2a2a2a;flex-shrink:0;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Location</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:2px 6px;font-size:6.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Columbus ▾</div></div>
+          <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Parameter</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:2px 6px;font-size:6.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">CO₂ Partial Pressure ▾</div></div>
+          <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Points</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:2px 6px;font-size:6.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">100 ▾</div></div>
+          <div style="background:#272214;border:1px solid #4d4530;border-radius:4px;padding:3px 8px;font-size:6px;color:#c9bc8a;margin-bottom:0;">Load</div>
+        </div>
+        <!-- Chart + table -->
+        <div class="mk-body" style="padding:6px 8px;gap:4px;">
+          <div style="display:flex;align-items:baseline;gap:5px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#ff3d40;">1.31</span>
+            <span style="font-size:7px;color:#8c8470;">mmHg</span>
+            <span style="margin-left:auto;font-size:6.5px;color:#ff3d40;font-weight:700;">ANOMALOUS</span>
+            <span style="font-size:6.5px;color:#8c8470;">limit 0.70</span>
+          </div>
+          <div style="background:#161616;border:1px solid #2a2a2a;border-radius:4px;padding:6px;">
+            <svg viewBox="0 0 240 82" style="width:100%;" xmlns="http://www.w3.org/2000/svg">
+              <line x1="26" y1="5" x2="26" y2="70" stroke="#2a2a2a" stroke-width="0.8"/>
+              <line x1="26" y1="70" x2="238" y2="70" stroke="#2a2a2a" stroke-width="0.8"/>
+              <line x1="26" y1="20" x2="238" y2="20" stroke="#2a2a2a" stroke-width="0.4" stroke-dasharray="3,3"/>
+              <line x1="26" y1="40" x2="238" y2="40" stroke="#2a2a2a" stroke-width="0.4" stroke-dasharray="3,3"/>
+              <line x1="26" y1="58" x2="238" y2="58" stroke="#2a2a2a" stroke-width="0.4" stroke-dasharray="3,3"/>
+              <text x="22" y="8" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">1.4</text>
+              <text x="22" y="24" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">1.0</text>
+              <text x="22" y="44" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">0.6</text>
+              <text x="22" y="62" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">0.2</text>
+              <!-- Nominal band -->
+              <rect x="26" y="34" width="212" height="28" fill="rgba(171,163,114,.05)"/>
+              <line x1="26" y1="34" x2="238" y2="34" stroke="#aba372" stroke-width="0.4" stroke-dasharray="3,2" opacity="0.3"/>
+              <line x1="26" y1="62" x2="238" y2="62" stroke="#aba372" stroke-width="0.4" stroke-dasharray="3,2" opacity="0.3"/>
+              <!-- Nominal data (green #00e676) -->
+              <path d="M26,55 C42,53 56,56 70,54 C84,52 98,55 112,53 C126,51 140,54 154,52 C168,50 178,49 186,46" fill="none" stroke="#00e676" stroke-width="1.5" stroke-linejoin="round"/>
+              <!-- Anomaly spike -->
+              <path d="M186,46 C196,38 206,26 218,16 C226,9 232,7 238,6" fill="none" stroke="#ff3d40" stroke-width="1.8" stroke-linejoin="round"/>
+              <circle cx="218" cy="16" r="2.5" fill="#ff3d40"/>
+              <circle cx="238" cy="6" r="2.5" fill="#ff3d40"/>
+              <text x="26" y="78" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">-100</text>
+              <text x="132" y="78" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">-50</text>
+              <text x="238" y="78" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">now</text>
+            </svg>
+          </div>
+          <!-- Data table -->
+          <div style="border:1px solid #2a2a2a;border-radius:4px;overflow:hidden;">
+            <div style="display:grid;grid-template-columns:1fr 80px;padding:3px 7px;background:#1e1e1e;border-bottom:1px solid #2a2a2a;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Timestamp</span><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Value</span></div>
+            <div style="display:grid;grid-template-columns:1fr 80px;padding:2px 7px;border-bottom:1px solid #1e1e1e;background:rgba(255,61,64,.05);"><span style="font-size:5.5px;color:#8c8470;font-family:'JetBrains Mono',monospace;">2025-01-01 14:23:02</span><span style="font-size:5.5px;color:#ff3d40;font-family:'JetBrains Mono',monospace;">1.31 mmHg ⚠</span></div>
+            <div style="display:grid;grid-template-columns:1fr 80px;padding:2px 7px;"><span style="font-size:5.5px;color:#8c8470;font-family:'JetBrains Mono',monospace;">2025-01-01 14:23:01</span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">0.68 mmHg</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Sensor Detail</strong>
+        <p>Historical Chart.js line charts with anomaly-flagged points, nominal band overlays, and data table.</p>
+      </div>
+    </div>
+
+    <!-- Trends -->
+    <div class="screenshot-card">
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Dashboard</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Sensor Detail</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">Trends</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">AI Analyst</span>
+          </div>
+          <span style="font-size:6px;color:#aba372;border:1px solid #383838;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">● NOMINAL</span>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:5px;padding:5px 8px;border-bottom:1px solid #2a2a2a;flex-shrink:0;">
+          <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Location</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:2px 6px;font-size:6.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">US Lab ▾</div></div>
+          <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Readings</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:2px 6px;font-size:6.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">100 ▾</div></div>
+          <div style="background:#272214;border:1px solid #4d4530;border-radius:4px;padding:3px 8px;font-size:6px;color:#c9bc8a;">Analyze</div>
+        </div>
+        <div class="mk-body" style="gap:4px;padding:6px 8px;">
+          <!-- Critical trend card -->
+          <div style="background:rgba(255,61,64,.05);border:1px solid #7a1d1f;border-radius:5px;padding:7px 8px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;"><span style="font-size:7.5px;font-weight:600;color:#ddd8cc;">CO₂ Partial Pressure</span><span style="font-size:5.5px;font-weight:700;padding:1px 5px;border-radius:10px;background:#7a1d1f;color:#ff3d40;text-transform:uppercase;letter-spacing:.5px;">CRITICAL</span></div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#fff;margin-bottom:2px;">1.31 <span style="font-size:8px;color:#8c8470;">mmHg</span></div>
+            <div style="display:flex;gap:8px;font-size:6.5px;color:#8c8470;flex-wrap:wrap;margin-bottom:3px;"><span>τ: <strong style="color:#ddd8cc;">0.78</strong></span><span>p: <strong style="color:#ddd8cc;">&lt;0.001</strong></span><span>slope: <strong style="color:#ff3d40;">+0.12/tick</strong></span></div>
+            <span style="display:inline-block;font-size:6px;padding:1px 5px;border-radius:3px;background:rgba(255,61,64,.15);color:#ff3d40;">↑ increasing</span>
+            <div style="font-size:6px;color:#8c8470;border-top:1px solid #2a2a2a;padding-top:3px;margin-top:4px;">Immediate action recommended — CO₂ scrubber saturation.</div>
+          </div>
+          <!-- Warning trend card -->
+          <div style="background:rgba(255,171,0,.05);border:1px solid #604000;border-radius:5px;padding:7px 8px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;"><span style="font-size:7.5px;font-weight:600;color:#ddd8cc;">Temperature</span><span style="font-size:5.5px;font-weight:700;padding:1px 5px;border-radius:10px;background:#3a2800;color:#ffab00;text-transform:uppercase;letter-spacing:.5px;">WARNING</span></div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#fff;margin-bottom:2px;">24.8 <span style="font-size:8px;color:#8c8470;">°C</span></div>
+            <span style="display:inline-block;font-size:6px;padding:1px 5px;border-radius:3px;background:rgba(255,171,0,.15);color:#ffab00;">↑ increasing</span>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Trends</strong>
+        <p>Mann-Kendall trend analysis with severity-coded cards showing τ, p-value, slope, and recommendations.</p>
+      </div>
+    </div>
+
+    <!-- Alerts -->
+    <div class="screenshot-card">
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Sensor Detail</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">Alerts <span style="background:#ff3d40;color:#fff;font-size:5px;padding:0 3px;border-radius:6px;margin-left:1px;vertical-align:middle;">2</span></span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">AI Analyst</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Maintenance</span>
+          </div>
+          <span style="font-size:6px;color:#ff3d40;border:1px solid #7a1d1f;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">⚠ FAULT</span>
+        </div>
+        <div style="padding:4px 8px;display:flex;align-items:center;gap:5px;border-bottom:1px solid #2a2a2a;flex-shrink:0;">
+          <span style="font-size:7px;font-weight:600;color:#fff;">Alert History</span>
+          <span style="font-size:6px;color:#8c8470;border:1px solid #383838;padding:1px 6px;border-radius:4px;margin-left:auto;">Refresh</span>
+          <span style="font-size:6px;color:#8c8470;border:1px solid #383838;padding:1px 6px;border-radius:4px;">Ack All</span>
+        </div>
+        <div class="mk-body" style="gap:4px;padding:6px 8px;">
+          <!-- Critical alert item -->
+          <div style="background:#161616;border:1px solid #7a1d1f;border-radius:5px;padding:6px 8px;display:grid;grid-template-columns:46px 1fr auto;gap:5px;align-items:center;">
+            <span style="font-size:5.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 4px;border-radius:8px;text-align:center;background:#7a1d1f;color:#ff3d40;line-height:1.4;">CRITICAL</span>
+            <div><div style="font-size:7.5px;color:#ddd8cc;">CO₂ Scrubber Failure (97.2%) — Columbus</div><div style="font-size:6px;color:#6b6555;font-family:'JetBrains Mono',monospace;margin-top:1px;">2025-01-01 14:23:01</div></div>
+            <span style="font-size:6px;color:#c9bc8a;border:1px solid #4d4530;padding:1px 5px;border-radius:4px;white-space:nowrap;">Ack</span>
+          </div>
+          <!-- Critical alert item 2 - acked -->
+          <div style="background:#161616;border:1px solid #7a1d1f;border-radius:5px;padding:6px 8px;display:grid;grid-template-columns:46px 1fr auto;gap:5px;align-items:center;opacity:.5;">
+            <span style="font-size:5.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 4px;border-radius:8px;text-align:center;background:#7a1d1f;color:#ff3d40;line-height:1.4;">CRITICAL</span>
+            <div><div style="font-size:7.5px;color:#ddd8cc;">NH₃ Coolant Leak (91.5%) — Node 2</div><div style="font-size:6px;color:#6b6555;font-family:'JetBrains Mono',monospace;margin-top:1px;">2025-01-01 14:18:44</div></div>
+            <span style="font-size:6px;color:#6b6555;border:1px solid #383838;padding:1px 5px;border-radius:4px;white-space:nowrap;">Acked</span>
+          </div>
+          <!-- Warning alert item -->
+          <div style="background:#161616;border:1px solid #604000;border-radius:5px;padding:6px 8px;display:grid;grid-template-columns:46px 1fr auto;gap:5px;align-items:center;">
+            <span style="font-size:5.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 4px;border-radius:8px;text-align:center;background:#3a2800;color:#ffab00;line-height:1.4;">WARNING</span>
+            <div><div style="font-size:7.5px;color:#ddd8cc;">Humidity Drift — Columbus</div><div style="font-size:6px;color:#6b6555;font-family:'JetBrains Mono',monospace;margin-top:1px;">2025-01-01 14:09:04</div></div>
+            <span style="font-size:6px;color:#c9bc8a;border:1px solid #4d4530;padding:1px 5px;border-radius:4px;white-space:nowrap;">Ack</span>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-caption">
+        <strong>Alerts</strong>
+        <p>Two-tier alert log with severity badges, confidence scores, timestamps, and per-alert acknowledgement.</p>
+      </div>
+    </div>
+
+    <!-- AI Analyst -->
+    <div class="screenshot-card">
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">AI Analyst</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Maintenance</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">⚙ Settings</span>
+          </div>
+          <span style="font-size:6px;color:#aba372;border:1px solid #383838;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">● NOMINAL</span>
+        </div>
+        <div style="flex:1;display:flex;gap:5px;padding:5px;overflow:hidden;min-height:0;">
+          <!-- Sidebar -->
+          <div style="width:68px;flex-shrink:0;background:#161616;border:1px solid #2a2a2a;border-radius:4px;padding:5px;display:flex;flex-direction:column;gap:3px;overflow:hidden;">
+            <span style="font-size:6.5px;font-weight:600;color:#ddd8cc;border-bottom:1px solid #2a2a2a;padding-bottom:3px;margin-bottom:1px;">AI Analyst</span>
+            <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Scope</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:3px;padding:2px 4px;font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">All Locs ▾</div></div>
+            <div style="display:flex;align-items:center;gap:3px;margin-top:1px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;box-shadow:0 0 3px #aba37280;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#8c8470;">Ollama (local)</span></div>
+            <div style="border-top:1px solid #2a2a2a;padding-top:3px;margin-top:1px;"><span style="font-size:5.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#8c8470;">Live Anomalies</span></div>
+            <div style="background:rgba(255,61,64,.08);border:1px solid #7a1d1f;border-radius:3px;padding:3px 4px;"><span style="font-size:5px;color:#8c8470;font-family:'JetBrains Mono',monospace;display:block;">14:23:02</span><span style="font-size:5.5px;color:#ff3d40;font-weight:700;display:block;">ANOMALOUS</span><span style="font-size:5px;color:#ffab00;font-family:'JetBrains Mono',monospace;display:block;">CO₂ (97%)</span></div>
+          </div>
+          <!-- Chat -->
+          <div style="flex:1;background:#161616;border:1px solid #2a2a2a;border-radius:4px;display:flex;flex-direction:column;overflow:hidden;">
+            <div style="flex:1;padding:8px;display:flex;flex-direction:column;gap:8px;overflow:hidden;">
+              <div style="align-self:flex-end;max-width:85%;"><div style="background:#1e1e1e;border:1px solid #383838;border-radius:8px 3px 8px 8px;padding:5px 8px;font-size:7px;color:#ddd8cc;">What's wrong in Columbus?</div></div>
+              <div style="display:flex;gap:5px;align-self:flex-start;max-width:92%;">
+                <div style="width:16px;height:16px;border-radius:4px;background:#1e1e1e;border:1px solid #383838;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:8px;color:#aba372;">◈</div>
+                <div style="font-size:7px;color:#ddd8cc;line-height:1.6;"><strong style="color:#fff;">CO₂ Scrubber Failure</strong> confirmed. RF <span style="color:#ff3d40;">97.2%</span> confidence. CO₂ PP at <span style="color:#ff3d40;">1.31 mmHg</span> — limit 0.70. LSTM RUL: <span style="color:#ffab00;">4.2 hrs</span>. DQN: <em style="color:#c9bc8a;">Replace CO₂ filter cartridge.</em></div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:4px;padding:5px;border-top:1px solid #2a2a2a;flex-shrink:0;">
+              <div style="flex:1;background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:3px 7px;font-size:6.5px;color:#6b6555;">Ask about anomalies, faults…</div>
+              <div style="width:20px;height:20px;border-radius:4px;background:#4d4933;border:1px solid #4d4933;display:flex;align-items:center;justify-content:center;font-size:8px;color:#aba372;">➤</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-caption">
+        <strong>AI Analyst</strong>
+        <p>LLM chat with sidebar showing live anomalies — synthesizes all four model outputs into plain-English analysis.</p>
       </div>
     </div>
 

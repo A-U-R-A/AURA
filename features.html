@@ -9,6 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="icons/logo_gold.png">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -117,58 +125,32 @@
 <div class="section-alt">
   <div class="section-alt-inner fade-in">
     <div class="split split-reverse">
-      <!-- ISS 2D schematic mock -->
+      <!-- Digital Twin mock — actual app layout: 3D canvas + module sidebar -->
       <div class="split-image">
-        <div class="mock-screen">
-          <div class="mk-bar"><span class="mk-title">Digital Twin — ISS Overview</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>7/7 NOMINAL</span></div>
-          <div class="mk-body" style="padding:8px;align-items:center;justify-content:center;">
-            <svg viewBox="0 0 280 175" style="width:100%;max-height:290px;" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="15" cy="10" r="0.7" fill="white" opacity="0.5"/><circle cx="55" cy="5" r="0.5" fill="white" opacity="0.4"/><circle cx="200" cy="8" r="0.6" fill="white" opacity="0.5"/><circle cx="262" cy="18" r="0.4" fill="white" opacity="0.4"/><circle cx="240" cy="165" r="0.5" fill="white" opacity="0.3"/>
-              <line x1="42" y1="12" x2="42" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="42" y1="49" x2="42" y2="80" stroke="#686460" stroke-width="1.2"/>
-              <line x1="90" y1="12" x2="90" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="90" y1="49" x2="90" y2="80" stroke="#686460" stroke-width="1.2"/>
-              <line x1="190" y1="12" x2="190" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="190" y1="49" x2="190" y2="80" stroke="#686460" stroke-width="1.2"/>
-              <line x1="238" y1="12" x2="238" y2="43" stroke="#686460" stroke-width="1.2"/><line x1="238" y1="49" x2="238" y2="80" stroke="#686460" stroke-width="1.2"/>
-              <rect x="31" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-              <rect x="79" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-              <rect x="179" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-              <rect x="227" y="7" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-              <rect x="31" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-              <rect x="79" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-              <rect x="179" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-              <rect x="227" y="49" width="22" height="36" rx="1" fill="#04080f" stroke="#0d1828" stroke-width="0.8"/>
-              <line x1="37" y1="7" x2="37" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="43" y1="7" x2="43" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="48" y1="7" x2="48" y2="43" stroke="#0d1828" stroke-width="0.4"/>
-              <line x1="85" y1="7" x2="85" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="91" y1="7" x2="91" y2="43" stroke="#0d1828" stroke-width="0.4"/>
-              <line x1="185" y1="7" x2="185" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="191" y1="7" x2="191" y2="43" stroke="#0d1828" stroke-width="0.4"/>
-              <line x1="233" y1="7" x2="233" y2="43" stroke="#0d1828" stroke-width="0.4"/><line x1="239" y1="7" x2="239" y2="43" stroke="#0d1828" stroke-width="0.4"/>
-              <line x1="37" y1="49" x2="37" y2="85" stroke="#0d1828" stroke-width="0.4"/><line x1="43" y1="49" x2="43" y2="85" stroke="#0d1828" stroke-width="0.4"/>
-              <line x1="85" y1="49" x2="85" y2="85" stroke="#0d1828" stroke-width="0.4"/><line x1="91" y1="49" x2="91" y2="85" stroke="#0d1828" stroke-width="0.4"/>
-              <line x1="185" y1="49" x2="185" y2="85" stroke="#0d1828" stroke-width="0.4"/><line x1="191" y1="49" x2="191" y2="85" stroke="#0d1828" stroke-width="0.4"/>
-              <line x1="233" y1="49" x2="233" y2="85" stroke="#0d1828" stroke-width="0.4"/><line x1="239" y1="49" x2="239" y2="85" stroke="#0d1828" stroke-width="0.4"/>
-              <rect x="10" y="43" width="260" height="6" rx="2" fill="#686460"/>
-              <rect x="138.5" y="48" width="3" height="110" fill="#a09c90"/>
-              <rect x="148" y="100" width="14" height="2" fill="#a09c90"/><rect x="114" y="100" width="14" height="2" fill="#a09c90"/>
-              <rect x="148" y="142" width="12" height="2" fill="#a09c90"/>
-              <ellipse cx="140" cy="103" rx="9" ry="9" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
-              <ellipse cx="140" cy="124" rx="11" ry="11" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
-              <ellipse cx="140" cy="145" rx="9" ry="9" fill="#c8c4b8" stroke="#9a9690" stroke-width="0.5"/>
-              <ellipse cx="172" cy="101" rx="13" ry="7" fill="#c0cce0" stroke="#9aa0b0" stroke-width="0.5"/>
-              <rect x="100" y="95" width="22" height="14" rx="7" fill="#b8c4d8" stroke="#9aa0b0" stroke-width="0.5"/>
-              <ellipse cx="170" cy="143" rx="9" ry="5" fill="#b0bcd0" stroke="#9aa0b0" stroke-width="0.5"/>
-              <line x1="140" y1="154" x2="138" y2="165" stroke="#a09c90" stroke-width="1.5"/>
-              <ellipse cx="137" cy="169" rx="6" ry="5" fill="#8090a8" stroke="#7080a0" stroke-width="0.5"/>
-              <text x="140" y="106" text-anchor="middle" fill="#6b6555" font-size="5.5" font-family="monospace">N2</text>
-              <text x="140" y="127" text-anchor="middle" fill="#6b6555" font-size="5.5" font-family="monospace">LAB</text>
-              <text x="140" y="148" text-anchor="middle" fill="#6b6555" font-size="5.5" font-family="monospace">N1</text>
-              <text x="172" y="104" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">COL</text>
-              <text x="111" y="104" text-anchor="middle" fill="#6b6555" font-size="5" font-family="monospace">KIBO</text>
-              <circle cx="140" cy="91" r="3.5" fill="#5fe61f" opacity="0.9"/><circle cx="140" cy="91" r="6" fill="none" stroke="#5fe61f" stroke-width="0.5" opacity="0.25"/>
-              <circle cx="152" cy="115" r="3.5" fill="#5fe61f" opacity="0.9"/>
-              <circle cx="172" cy="90" r="3.5" fill="#5fe61f" opacity="0.9"/>
-              <circle cx="111" cy="90" r="3.5" fill="#5fe61f" opacity="0.9"/>
-              <circle cx="140" cy="133" r="3.5" fill="#5fe61f" opacity="0.9"/>
-              <circle cx="170" cy="132" r="3.5" fill="#5fe61f" opacity="0.9"/>
-              <circle cx="133" cy="162" r="3.5" fill="#5fe61f" opacity="0.9"/>
-            </svg>
+        <div class="mock-screen" style="min-height:300px;background:#0e0e0e;">
+          <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+            <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+              <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;letter-spacing:.4px;">Digital Twin</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Dashboard</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Sensor Detail</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
+            </div>
+            <span style="font-size:6px;color:#aba372;border:1px solid #383838;padding:1px 5px;border-radius:10px;white-space:nowrap;font-family:'JetBrains Mono',monospace;">● NOMINAL</span>
+          </div>
+          <div style="flex:1;display:grid;grid-template-columns:1fr 72px;gap:5px;padding:5px;overflow:hidden;min-height:0;">
+            <div id="twin-feat" style="background:#000;border:1px solid #2a2a2a;border-radius:4px;overflow:hidden;min-height:200px;"></div>
+            <div style="background:#161616;border:1px solid #2a2a2a;border-radius:4px;padding:5px;display:flex;flex-direction:column;gap:2px;overflow:hidden;">
+              <div style="font-size:5.5px;font-weight:600;color:#8c8470;text-transform:uppercase;letter-spacing:.8px;padding-bottom:3px;border-bottom:1px solid #2a2a2a;margin-bottom:1px;">Module Status</div>
+              <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;box-shadow:0 0 3px #aba37280;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">US Lab</span></div>
+              <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;box-shadow:0 0 3px #aba37280;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Node 1</span></div>
+              <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;box-shadow:0 0 3px #aba37280;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Node 2</span></div>
+              <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#ff3d40;box-shadow:0 0 3px #ff3d4080;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ff3d40;font-family:'JetBrains Mono',monospace;font-style:italic;">Columbus</span></div>
+              <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Cupola</span></div>
+              <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">Airlock</span></div>
+              <div style="display:flex;align-items:center;gap:3px;padding:2px 3px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">JLP&amp;JPM</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -211,34 +193,58 @@
         <li>Mass Spectrometer Module (N₂, O₂, CO₂, CH₄, H₂O)</li>
       </ul>
     </div>
-    <!-- Dashboard mock -->
+    <!-- Dashboard mock — actual loc-card layout -->
     <div class="split-image">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">Dashboard</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>LIVE · 1s REFRESH</span></div>
-        <div style="display:flex;gap:4px;padding:5px 10px;background:#0d0d10;border-bottom:1px solid #1e1f28;flex-shrink:0;flex-wrap:wrap;">
-          <span style="background:rgba(171,163,114,0.15);border:1px solid rgba(171,163,114,0.4);color:#aba372;font-size:7.5px;padding:2px 7px;border-radius:3px;">US Lab</span>
-          <span style="color:#6b6555;font-size:7.5px;padding:2px 7px;border:1px solid #2a2a35;border-radius:3px;">Node 2</span>
-          <span style="color:#6b6555;font-size:7.5px;padding:2px 7px;border:1px solid #2a2a35;border-radius:3px;">Columbus</span>
-          <span style="color:#6b6555;font-size:7.5px;padding:2px 7px;border:1px solid #2a2a35;border-radius:3px;">Node 1</span>
-          <span style="color:#6b6555;font-size:7.5px;padding:2px 7px;border:1px solid #2a2a35;border-radius:3px;">Cupola</span>
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Digital Twin</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">Dashboard</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Sensor Detail</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
+          </div>
+          <span style="font-size:6px;color:#ff3d40;border:1px solid #7a1d1f;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">⚠ FAULT</span>
         </div>
-        <div style="padding:4px 10px;background:#0a0a0e;font-size:7.5px;color:#6b6555;letter-spacing:2px;border-bottom:1px solid #1e1f28;flex-shrink:0;">ATMOSPHERE REVITALIZATION SYSTEM</div>
-        <div class="mk-body" style="gap:0;padding:0 10px;">
-          <div class="mk-row"><span class="mk-row-label">O₂ Partial Pressure</span><span class="mk-row-val">20.87</span><span class="mk-row-unit">%vol</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">CO₂ Partial Pressure</span><span class="mk-row-val">0.38</span><span class="mk-row-unit">%atm</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">Humidity</span><span class="mk-row-val">52.1</span><span class="mk-row-unit">%RH</span><span class="mk-row-ok">✓</span></div>
+        <div style="padding:4px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2a2a2a;flex-shrink:0;">
+          <span style="font-size:7.5px;font-weight:600;color:#fff;">ECLSS System Overview</span>
+          <span style="font-size:6px;color:#8c8470;border:1px solid #383838;padding:1px 6px;border-radius:4px;">Refresh</span>
         </div>
-        <div style="padding:4px 10px;background:#0a0a0e;font-size:7.5px;color:#6b6555;letter-spacing:2px;border-top:1px solid #1e1f28;border-bottom:1px solid #1e1f28;flex-shrink:0;">OXYGEN GENERATION SYSTEM</div>
-        <div class="mk-body" style="gap:0;padding:0 10px;">
-          <div class="mk-row"><span class="mk-row-label">O₂ Output Rate</span><span class="mk-row-val">5.42</span><span class="mk-row-unit">kg/day</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">O₂ Purity</span><span class="mk-row-val">99.7</span><span class="mk-row-unit">%</span><span class="mk-row-ok">✓</span></div>
-        </div>
-        <div style="padding:4px 10px;background:#0a0a0e;font-size:7.5px;color:#6b6555;letter-spacing:2px;border-top:1px solid #1e1f28;border-bottom:1px solid #1e1f28;flex-shrink:0;">PRESSURE &amp; ENVIRONMENT</div>
-        <div class="mk-body" style="gap:0;padding:0 10px;">
-          <div class="mk-row"><span class="mk-row-label">Cabin Pressure</span><span class="mk-row-val">14.68</span><span class="mk-row-unit">psia</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">Temperature</span><span class="mk-row-val">21.5</span><span class="mk-row-unit">°C</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row"><span class="mk-row-label">Airflow Rate</span><span class="mk-row-val">0.19</span><span class="mk-row-unit">m/s</span><span class="mk-row-ok">✓</span></div>
-          <div class="mk-row" style="border:none;"><span class="mk-row-label">NH₃</span><span class="mk-row-val">0.31</span><span class="mk-row-unit">ppm</span><span class="mk-row-ok">✓</span></div>
+        <div class="mk-body" style="gap:5px;padding:6px;">
+          <!-- US Lab card - nominal -->
+          <div style="background:#161616;border:1px solid #2a2a2a;border-radius:5px;overflow:hidden;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:4px 8px;background:#1e1e1e;border-bottom:1px solid #2a2a2a;">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;font-weight:700;color:#fff;">US LAB</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:6px;font-weight:700;padding:1px 5px;border-radius:3px;background:rgba(171,163,114,.1);color:#aba372;">NOMINAL</span>
+            </div>
+            <div style="padding:4px 8px;display:flex;flex-direction:column;gap:3px;">
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">O2 PP</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:62%;background:#aba372;border-radius:2px;"></div></div><span style="font-size:6px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;text-align:right;">20.87</span></div>
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">CO2 PP</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:35%;background:#aba372;border-radius:2px;"></div></div><span style="font-size:6px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;text-align:right;">0.38</span></div>
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Humidity</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:55%;background:#aba372;border-radius:2px;"></div></div><span style="font-size:6px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;text-align:right;">52.1%</span></div>
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Temp</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:48%;background:#aba372;border-radius:2px;"></div></div><span style="font-size:6px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;text-align:right;">21.5°C</span></div>
+            </div>
+            <div style="padding:3px 8px;border-top:1px solid #2a2a2a;background:#1e1e1e;display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:6px;font-family:'JetBrains Mono',monospace;font-weight:600;color:#aba372;">DQN: No Action Needed (96%)</span>
+              <span style="font-size:5.5px;font-family:'JetBrains Mono',monospace;color:#aba372;">LSTM: NOMINAL</span>
+            </div>
+          </div>
+          <!-- Columbus card - fault active -->
+          <div style="background:#161616;border:1px solid #7a1d1f;border-radius:5px;overflow:hidden;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:4px 8px;background:rgba(229,57,53,.12);border-bottom:1px solid #7a1d1f;">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;font-weight:700;color:#fff;">COLUMBUS</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:6px;font-weight:700;padding:1px 5px;border-radius:3px;background:rgba(229,57,53,.2);color:#ff3d40;">FAULT</span>
+            </div>
+            <div style="padding:3px 8px;background:rgba(255,171,0,.07);border-bottom:1px solid #2a2a2a;font-size:6px;color:#ffab00;font-family:'JetBrains Mono',monospace;">⚠ Detected: CO₂ Scrubber Failure</div>
+            <div style="padding:4px 8px;display:flex;flex-direction:column;gap:3px;">
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;">CO2 PP</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:90%;background:#ff3d40;border-radius:2px;"></div></div><span style="font-size:6px;color:#ff3d40;font-family:'JetBrains Mono',monospace;text-align:right;">1.31</span></div>
+              <div style="display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:4px;"><span style="font-size:6px;color:#8c8470;font-family:'JetBrains Mono',monospace;">Temp</span><div style="background:#1e1e1e;border-radius:2px;height:4px;overflow:hidden;"><div style="height:100%;width:72%;background:#ffab00;border-radius:2px;"></div></div><span style="font-size:6px;color:#ffab00;font-family:'JetBrains Mono',monospace;text-align:right;">24.8°C</span></div>
+            </div>
+            <div style="padding:3px 8px;border-top:1px solid #7a1d1f;background:#1e1e1e;display:flex;justify-content:space-between;">
+              <span style="font-size:6px;font-family:'JetBrains Mono',monospace;font-weight:600;color:#ff3d40;">DQN: Replace CO₂ Filter (89%)</span>
+              <span style="font-size:5.5px;font-family:'JetBrains Mono',monospace;color:#ff3d40;">LSTM: CRITICAL</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -249,44 +255,56 @@
 <div class="section-alt">
   <div class="section-alt-inner fade-in">
     <div class="split split-reverse">
-      <!-- Trend chart mock -->
+      <!-- Sensor Detail mock — actual app layout with dropdowns + chart -->
       <div class="split-image">
-        <div class="mock-screen">
-          <div class="mk-bar"><span class="mk-title">Trends — Sensor Detail</span><span class="mk-status">US Lab</span></div>
-          <div style="display:flex;gap:0;border-bottom:1px solid #1e1f28;flex-shrink:0;">
-            <span style="padding:5px 10px;font-size:8px;color:#aba372;border-bottom:2px solid #aba372;">O₂ Partial</span>
-            <span style="padding:5px 10px;font-size:8px;color:#6b6555;border-bottom:2px solid transparent;">CO₂ Partial</span>
-            <span style="padding:5px 10px;font-size:8px;color:#6b6555;border-bottom:2px solid transparent;">Humidity</span>
-            <span style="padding:5px 10px;font-size:8px;color:#6b6555;border-bottom:2px solid transparent;">Temp</span>
+        <div class="mock-screen" style="background:#0e0e0e;">
+          <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+            <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Dashboard</span>
+              <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">Sensor Detail</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">AI Analyst</span>
+            </div>
+            <span style="font-size:6px;color:#aba372;border:1px solid #383838;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">● NOMINAL</span>
           </div>
-          <div class="mk-body" style="padding:8px 10px;gap:6px;">
-            <div style="display:flex;gap:10px;font-size:8.5px;align-items:baseline;">
-              <span style="color:#ddd8cc;font-size:14px;font-weight:700;">20.87</span><span style="color:#6b6555;">%vol</span>
-              <span style="color:#5fe61f;margin-left:auto;">● NOMINAL</span>
-              <span style="color:#6b6555;font-size:8px;">range 19.5–23.1</span>
+          <div style="display:flex;align-items:flex-end;gap:5px;padding:5px 8px;border-bottom:1px solid #2a2a2a;flex-shrink:0;flex-wrap:wrap;">
+            <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Location</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:2px 6px;font-size:6.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">US Lab ▾</div></div>
+            <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Parameter</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:2px 6px;font-size:6.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">O₂ Partial Pressure ▾</div></div>
+            <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Points</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:2px 6px;font-size:6.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">100 ▾</div></div>
+            <div style="background:#272214;border:1px solid #4d4530;border-radius:4px;padding:3px 8px;font-size:6px;color:#c9bc8a;">Load</div>
+          </div>
+          <div class="mk-body" style="padding:6px 8px;gap:4px;">
+            <div style="display:flex;align-items:baseline;gap:5px;">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#ddd8cc;">20.87</span>
+              <span style="font-size:7px;color:#8c8470;">%vol</span>
+              <span style="margin-left:auto;font-size:6.5px;color:#aba372;font-weight:700;">● NOMINAL</span>
+              <span style="font-size:6.5px;color:#8c8470;">range 19.5–23.1</span>
             </div>
-            <div style="display:flex;gap:10px;font-size:8px;">
-              <span style="color:#6b6555;">IF SCORE <span style="color:#ddd8cc;">0.08</span></span>
-              <span style="color:#6b6555;">FAIL PROB <span style="color:#5fe61f;">2.1%</span></span>
-              <span style="color:#6b6555;">RUL <span style="color:#5fe61f;">— hrs</span></span>
+            <div style="display:flex;gap:10px;font-size:7.5px;">
+              <span style="color:#8c8470;">IF SCORE <span style="color:#ddd8cc;">0.08</span></span>
+              <span style="color:#8c8470;">FAIL PROB <span style="color:#aba372;">2.1%</span></span>
+              <span style="color:#8c8470;">RUL <span style="color:#aba372;">— hrs</span></span>
             </div>
-            <svg viewBox="0 0 256 110" style="width:100%;" xmlns="http://www.w3.org/2000/svg">
-              <line x1="26" y1="5" x2="26" y2="95" stroke="#2a2a35" stroke-width="1"/>
-              <line x1="26" y1="95" x2="254" y2="95" stroke="#2a2a35" stroke-width="1"/>
-              <line x1="26" y1="18" x2="254" y2="18" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.6"/>
-              <line x1="26" y1="55" x2="254" y2="55" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.6"/>
-              <text x="0" y="10" fill="#6b6555" font-size="6" font-family="monospace">23.1</text>
-              <text x="0" y="47" fill="#6b6555" font-size="6" font-family="monospace">21.3</text>
-              <text x="0" y="88" fill="#6b6555" font-size="6" font-family="monospace">19.5</text>
-              <rect x="26" y="12" width="228" height="80" fill="rgba(171,163,114,0.04)"/>
-              <line x1="26" y1="12"  x2="254" y2="12"  stroke="#aba372" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.2"/>
-              <line x1="26" y1="92"  x2="254" y2="92"  stroke="#aba372" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.2"/>
-              <path d="M26,58 C36,55 44,62 56,59 C68,56 76,64 90,60 C102,56 112,62 126,58 C140,54 148,61 162,57 C176,53 184,60 198,56 C212,52 220,58 234,55 C242,53 248,56 254,57" fill="none" stroke="#5fe61f" stroke-width="2" stroke-linejoin="round"/>
-              <text x="26" y="107" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">0</text>
-              <text x="102" y="107" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">20</text>
-              <text x="178" y="107" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">40</text>
-              <text x="254" y="107" fill="#6b6555" font-size="6" font-family="monospace" text-anchor="middle">60</text>
-            </svg>
+            <div style="background:#161616;border:1px solid #2a2a2a;border-radius:4px;padding:6px;">
+              <svg viewBox="0 0 240 82" style="width:100%;" xmlns="http://www.w3.org/2000/svg">
+                <line x1="26" y1="5" x2="26" y2="70" stroke="#2a2a2a" stroke-width="0.8"/>
+                <line x1="26" y1="70" x2="238" y2="70" stroke="#2a2a2a" stroke-width="0.8"/>
+                <line x1="26" y1="20" x2="238" y2="20" stroke="#2a2a2a" stroke-width="0.4" stroke-dasharray="3,3"/>
+                <line x1="26" y1="40" x2="238" y2="40" stroke="#2a2a2a" stroke-width="0.4" stroke-dasharray="3,3"/>
+                <text x="22" y="8" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">23.1</text>
+                <text x="22" y="24" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">21.3</text>
+                <text x="22" y="44" text-anchor="end" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">19.5</text>
+                <rect x="26" y="12" width="212" height="52" fill="rgba(171,163,114,.05)"/>
+                <line x1="26" y1="12" x2="238" y2="12" stroke="#aba372" stroke-width="0.4" stroke-dasharray="3,2" opacity="0.3"/>
+                <line x1="26" y1="64" x2="238" y2="64" stroke="#aba372" stroke-width="0.4" stroke-dasharray="3,2" opacity="0.3"/>
+                <path d="M26,46 C42,44 56,48 70,45 C84,42 98,46 112,43 C126,40 140,44 154,41 C168,38 182,43 198,40 C212,37 224,39 238,38" fill="none" stroke="#00e676" stroke-width="1.5" stroke-linejoin="round"/>
+                <text x="26" y="78" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">-100</text>
+                <text x="132" y="78" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">-50</text>
+                <text x="238" y="78" text-anchor="middle" fill="#6b6555" font-size="5" font-family="JetBrains Mono,monospace">now</text>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -327,32 +345,40 @@
         <li>All 8 fault types verified — zero false positives in 1,000 nominal samples</li>
       </ul>
     </div>
-    <!-- Alert mock -->
+    <!-- Alert mock — actual 3-column grid layout -->
     <div class="split-image">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">Alerts</span><span class="mk-status"><span class="mk-dot mk-dot-r"></span>1 CRITICAL · <span class="mk-dot mk-dot-a" style="margin-left:2px;"></span>2 WARNING</span></div>
-        <div class="mk-body" style="gap:6px;">
-          <div style="background:rgba(255,61,64,0.08);border:1px solid rgba(255,61,64,0.35);border-radius:5px;padding:10px 12px;">
-            <div style="color:#ff3d40;font-size:8px;letter-spacing:3px;font-weight:700;margin-bottom:4px;">⚠ CRITICAL FAULT ACTIVE</div>
-            <div style="color:#fff;font-size:15px;font-weight:700;margin-bottom:7px;letter-spacing:1px;">CABIN LEAK</div>
-            <div style="display:flex;flex-direction:column;gap:3px;">
-              <div style="display:flex;"><span style="color:#6b6555;font-size:9px;flex:1;">LOCATION</span><span style="color:#ddd8cc;font-size:9px;">Node 1</span></div>
-              <div style="display:flex;"><span style="color:#6b6555;font-size:9px;flex:1;">RF CONFIDENCE</span><span style="color:#ff3d40;font-size:9px;">97.3%</span></div>
-              <div style="display:flex;"><span style="color:#6b6555;font-size:9px;flex:1;">LSTM RUL</span><span style="color:#ffab00;font-size:9px;">4.2 hrs</span></div>
-              <div style="display:flex;"><span style="color:#6b6555;font-size:9px;flex:1;">FAILURE PROB</span><span style="color:#ff3d40;font-size:9px;">94.1%</span></div>
-            </div>
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Sensor Detail</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">Alerts <span style="background:#ff3d40;color:#fff;font-size:5px;padding:0 3px;border-radius:6px;margin-left:1px;vertical-align:middle;">2</span></span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">AI Analyst</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Maintenance</span>
           </div>
-          <div style="background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:4px;padding:7px 10px;">
-            <div style="color:#6b6555;font-size:7.5px;letter-spacing:1.5px;margin-bottom:2px;">DQN RECOMMENDATION</div>
-            <div style="color:#aba372;font-size:10px;">Use Sealant to Close Leak</div>
+          <span style="font-size:6px;color:#ff3d40;border:1px solid #7a1d1f;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">⚠ FAULT</span>
+        </div>
+        <div style="padding:4px 8px;display:flex;align-items:center;gap:5px;border-bottom:1px solid #2a2a2a;flex-shrink:0;">
+          <span style="font-size:7px;font-weight:600;color:#fff;">Alert History</span>
+          <span style="font-size:6px;color:#8c8470;border:1px solid #383838;padding:1px 6px;border-radius:4px;margin-left:auto;">Refresh</span>
+          <span style="font-size:6px;color:#8c8470;border:1px solid #383838;padding:1px 6px;border-radius:4px;">Ack All</span>
+        </div>
+        <div class="mk-body" style="gap:4px;padding:6px 8px;">
+          <div style="background:#161616;border:1px solid #7a1d1f;border-radius:5px;padding:6px 8px;display:grid;grid-template-columns:46px 1fr auto;gap:5px;align-items:center;">
+            <span style="font-size:5.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 4px;border-radius:8px;text-align:center;background:#7a1d1f;color:#ff3d40;line-height:1.4;">CRITICAL</span>
+            <div><div style="font-size:7.5px;color:#ddd8cc;">Cabin Leak (97.3%) — Node 1</div><div style="font-size:6px;color:#6b6555;font-family:'JetBrains Mono',monospace;margin-top:1px;">2025-01-01 14:23:01</div></div>
+            <span style="font-size:6px;color:#c9bc8a;border:1px solid #4d4530;padding:1px 5px;border-radius:4px;white-space:nowrap;">Ack</span>
           </div>
-          <div style="display:flex;gap:6px;">
-            <div style="flex:1;background:#ff3d40;color:#0d0d0d;text-align:center;padding:6px;border-radius:4px;font-size:8.5px;font-weight:700;letter-spacing:1px;">ACKNOWLEDGE</div>
-            <div style="flex:1;border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:6px;border-radius:4px;font-size:8.5px;">DETAILS</div>
+          <div style="background:#161616;border:1px solid #7a1d1f;border-radius:5px;padding:6px 8px;display:grid;grid-template-columns:46px 1fr auto;gap:5px;align-items:center;opacity:.5;">
+            <span style="font-size:5.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 4px;border-radius:8px;text-align:center;background:#7a1d1f;color:#ff3d40;line-height:1.4;">CRITICAL</span>
+            <div><div style="font-size:7.5px;color:#ddd8cc;">NH₃ Coolant Leak (91.5%) — Node 2</div><div style="font-size:6px;color:#6b6555;font-family:'JetBrains Mono',monospace;margin-top:1px;">2025-01-01 14:18:44</div></div>
+            <span style="font-size:6px;color:#6b6555;border:1px solid #383838;padding:1px 5px;border-radius:4px;white-space:nowrap;">Acked</span>
           </div>
-          <div style="border-top:1px solid #1e1f28;padding-top:5px;">
-            <div class="mk-alert-item warn" style="margin-bottom:4px;"><div class="mk-alert-level">⬤ WARNING</div><div class="mk-alert-msg">CO₂ rising · Columbus · 0.61% atm</div></div>
-            <div class="mk-alert-item warn"><div class="mk-alert-level">⬤ WARNING</div><div class="mk-alert-msg">NH₃ elevated · Node 2 · 0.89 ppm</div></div>
+          <div style="background:#161616;border:1px solid #604000;border-radius:5px;padding:6px 8px;display:grid;grid-template-columns:46px 1fr auto;gap:5px;align-items:center;">
+            <span style="font-size:5.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 4px;border-radius:8px;text-align:center;background:#3a2800;color:#ffab00;line-height:1.4;">WARNING</span>
+            <div><div style="font-size:7.5px;color:#ddd8cc;">CO₂ Rising — Columbus</div><div style="font-size:6px;color:#6b6555;font-family:'JetBrains Mono',monospace;margin-top:1px;">2025-01-01 14:09:04</div></div>
+            <span style="font-size:6px;color:#c9bc8a;border:1px solid #4d4530;padding:1px 5px;border-radius:4px;white-space:nowrap;">Ack</span>
           </div>
         </div>
       </div>
@@ -364,24 +390,41 @@
 <div class="section-alt">
   <div class="section-alt-inner fade-in">
     <div class="split split-reverse">
-      <!-- AI analyst mock -->
+      <!-- AI Analyst mock — actual sidebar + chat layout -->
       <div class="split-image">
-        <div class="mock-screen">
-          <div class="mk-bar"><span class="mk-title">🤖 AI Analyst</span><span class="mk-status"><span class="mk-dot mk-dot-g"></span>LLM ONLINE</span></div>
-          <div class="mk-body" style="padding:8px 12px;gap:6px;">
-            <div style="background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:4px;padding:7px 10px;flex-shrink:0;">
-              <div style="color:#6b6555;font-size:7.5px;letter-spacing:2px;margin-bottom:4px;">SYSTEM SNAPSHOT</div>
-              <div style="display:flex;gap:14px;">
-                <div><span style="color:#6b6555;font-size:7.5px;display:block;">STATUS</span><span style="color:#5fe61f;font-size:10px;">NOMINAL</span></div>
-                <div><span style="color:#6b6555;font-size:7.5px;display:block;">IF SCORE</span><span style="color:#ddd8cc;font-size:10px;">0.08</span></div>
-                <div><span style="color:#6b6555;font-size:7.5px;display:block;">FAIL PROB</span><span style="color:#ddd8cc;font-size:10px;">2.1%</span></div>
-                <div><span style="color:#6b6555;font-size:7.5px;display:block;">RUL</span><span style="color:#5fe61f;font-size:10px;">— hrs</span></div>
+        <div class="mock-screen" style="background:#0e0e0e;">
+          <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+            <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Trends</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Alerts</span>
+              <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">AI Analyst</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Maintenance</span>
+              <span style="color:#6b6555;font-size:6px;padding:2px 5px;">⚙ Settings</span>
+            </div>
+            <span style="font-size:6px;color:#aba372;border:1px solid #383838;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">● NOMINAL</span>
+          </div>
+          <div style="flex:1;display:flex;gap:5px;padding:5px;overflow:hidden;min-height:0;">
+            <div style="width:68px;flex-shrink:0;background:#161616;border:1px solid #2a2a2a;border-radius:4px;padding:5px;display:flex;flex-direction:column;gap:3px;overflow:hidden;">
+              <span style="font-size:6.5px;font-weight:600;color:#ddd8cc;border-bottom:1px solid #2a2a2a;padding-bottom:3px;margin-bottom:1px;">AI Analyst</span>
+              <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:5.5px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Scope</span><div style="background:#1e1e1e;border:1px solid #383838;border-radius:3px;padding:2px 4px;font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">All Locs ▾</div></div>
+              <div style="display:flex;align-items:center;gap:3px;margin-top:1px;"><span style="width:5px;height:5px;border-radius:50%;background:#aba372;box-shadow:0 0 3px #aba37280;flex-shrink:0;display:inline-block;"></span><span style="font-size:5.5px;color:#8c8470;">Ollama (local)</span></div>
+              <div style="border-top:1px solid #2a2a2a;padding-top:3px;margin-top:1px;"><span style="font-size:5.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#8c8470;">Live Anomalies</span></div>
+              <div style="background:rgba(171,163,114,.07);border:1px solid #383838;border-radius:3px;padding:3px 4px;"><span style="font-size:5px;color:#8c8470;font-family:'JetBrains Mono',monospace;display:block;">All nominal</span><span style="font-size:5.5px;color:#aba372;font-weight:700;display:block;">NOMINAL</span></div>
+            </div>
+            <div style="flex:1;background:#161616;border:1px solid #2a2a2a;border-radius:4px;display:flex;flex-direction:column;overflow:hidden;">
+              <div style="flex:1;padding:8px;display:flex;flex-direction:column;gap:8px;overflow:hidden;">
+                <div style="align-self:flex-end;max-width:85%;"><div style="background:#1e1e1e;border:1px solid #383838;border-radius:8px 3px 8px 8px;padding:5px 8px;font-size:7px;color:#ddd8cc;">Give me a status summary.</div></div>
+                <div style="display:flex;gap:5px;align-self:flex-start;max-width:92%;">
+                  <div style="width:16px;height:16px;border-radius:4px;background:#1e1e1e;border:1px solid #383838;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:8px;color:#aba372;">◈</div>
+                  <div style="font-size:7px;color:#ddd8cc;line-height:1.6;">All 7 ISS modules nominal. O₂ PP at <span style="color:#aba372;">20.87%</span>, CO₂ PP <span style="color:#aba372;">0.38 mmHg</span>. IF scores below 0.1 across all locations. DQN: <em style="color:#c9bc8a;">No Action Needed (96%).</em></div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:4px;padding:5px;border-top:1px solid #2a2a2a;flex-shrink:0;">
+                <div style="flex:1;background:#1e1e1e;border:1px solid #383838;border-radius:4px;padding:3px 7px;font-size:6.5px;color:#6b6555;">Ask about anomalies, faults…</div>
+                <div style="width:20px;height:20px;border-radius:4px;background:#4d4933;border:1px solid #4d4933;display:flex;align-items:center;justify-content:center;font-size:8px;color:#aba372;">➤</div>
               </div>
             </div>
-            <div class="mk-ai-label">AI ANALYST</div>
-            <div class="mk-ai-msg">All 7 ISS modules operating within nominal bounds. O₂ partial pressure in US Lab trending toward upper threshold at 21.2% — limit 23.1%. No action required; recommend monitoring over next 30 ticks.</div>
-            <div class="mk-user-msg">What should I watch for in Node 1?</div>
-            <div class="mk-ai-msg">Node 1 (Unity) shows nominal readings across all parameters. Cabin pressure stable at 14.71 psia. Anomaly scores below 0.05. DQN recommendation: No Action Needed (confidence 96.4%).</div>
           </div>
         </div>
       </div>
@@ -424,31 +467,72 @@
         <li>3 additional fault-specific procedures</li>
       </ul>
     </div>
-    <!-- Maintenance mock -->
+    <!-- Maintenance mock — actual replacement cards + calibration table -->
     <div class="split-image">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">🔧 Maintenance Planner</span><span class="mk-status">DQN Recommended</span></div>
-        <div class="mk-body" style="padding:8px 12px;gap:5px;">
-          <div style="font-size:8px;letter-spacing:2px;color:#6b6555;margin-bottom:3px;">RECOMMENDED ACTIONS — ALL MODULES NOMINAL</div>
-          <div class="mk-action-item">
-            <span class="mk-action-num">①</span>
-            <div><div class="mk-action-name">No Action Needed</div><div class="mk-action-conf">Confidence: 96.4% · System nominal</div></div>
-            <span class="mk-action-check">✓</span>
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">AI Analyst</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">Maintenance</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">⚙ Settings</span>
           </div>
-          <div class="mk-action-item" style="opacity:0.55;">
-            <span class="mk-action-num">②</span>
-            <div><div class="mk-action-name">Monitor O₂ Levels — US Lab</div><div class="mk-action-conf">Confidence: 2.1% · Low priority</div></div>
+          <span style="font-size:6px;color:#aba372;border:1px solid #383838;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">● NOMINAL</span>
+        </div>
+        <div style="padding:3px 8px;border-bottom:1px solid #2a2a2a;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:6.5px;color:#8c8470;font-family:'JetBrains Mono',monospace;">Mission Elapsed: <span style="color:#ddd8cc;">142.3 d</span></span>
+          <span style="font-size:6px;color:#8c8470;border:1px solid #383838;padding:1px 6px;border-radius:4px;">Refresh</span>
+        </div>
+        <div class="mk-body" style="gap:5px;padding:6px 8px;">
+          <!-- CO2 Scrubber card - warning -->
+          <div style="background:#161616;border:1px solid #604000;border-radius:5px;padding:7px 8px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2px;">
+              <span style="font-size:7.5px;font-weight:700;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">CO₂ Scrubber</span>
+              <div style="display:flex;gap:3px;">
+                <span style="font-size:5.5px;padding:1px 4px;border-radius:3px;background:#2a1a00;color:#ffab00;border:1px solid #604000;">CONDITION</span>
+                <span style="font-size:5.5px;padding:1px 4px;border-radius:3px;background:#3a2800;color:#ffab00;">WARNING</span>
+              </div>
+            </div>
+            <div style="font-size:6px;color:#8c8470;margin-bottom:4px;">LiOH Canisters — Atmospheric Revitalization</div>
+            <div style="background:#1e1e1e;border-radius:2px;height:5px;overflow:hidden;margin-bottom:3px;"><div style="height:100%;width:78%;background:#ffab00;border-radius:2px;"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:6px;font-family:'JetBrains Mono',monospace;"><span style="color:#8c8470;">78% life used</span><span style="color:#ddd8cc;">2.1 wk remaining</span></div>
+            <div style="font-size:6px;color:#8c8470;margin-top:3px;">MTBF 6.0 wk · Elapsed 4.7 wk</div>
+            <div style="font-size:6px;color:#c9bc8a;margin-top:2px;">ACTION: Replace LiOH canister cartridge</div>
           </div>
-          <div class="mk-action-item" style="opacity:0.4;">
-            <span class="mk-action-num">③</span>
-            <div><div class="mk-action-name">Use Sealant to Close Leak</div><div class="mk-action-conf">Confidence: 0.8% · Not applicable</div></div>
+          <!-- HEPA filter card - nominal -->
+          <div style="background:#161616;border:1px solid #2a2a2a;border-radius:5px;padding:7px 8px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2px;">
+              <span style="font-size:7.5px;font-weight:700;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">HEPA Filter</span>
+              <div style="display:flex;gap:3px;">
+                <span style="font-size:5.5px;padding:1px 4px;border-radius:3px;background:#1a1a00;color:#8c8470;border:1px solid #383838;">CALENDAR</span>
+                <span style="font-size:5.5px;padding:1px 4px;border-radius:3px;background:rgba(171,163,114,.1);color:#aba372;">OK</span>
+              </div>
+            </div>
+            <div style="background:#1e1e1e;border-radius:2px;height:5px;overflow:hidden;margin-bottom:3px;"><div style="height:100%;width:42%;background:#aba372;border-radius:2px;"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:6px;font-family:'JetBrains Mono',monospace;"><span style="color:#8c8470;">42% life used</span><span style="color:#ddd8cc;">5.8 wk remaining</span></div>
+            <div style="font-size:6px;color:#c9bc8a;margin-top:2px;">ACTION: Inspect and replace filter element</div>
           </div>
-          <div class="mk-action-item" style="opacity:0.3;">
-            <span class="mk-action-num">④</span>
-            <div><div class="mk-action-name">Remove gas bubbles from O₂ generator</div><div class="mk-action-conf">Confidence: 0.4% · Not applicable</div></div>
-          </div>
-          <div style="margin-top:4px;padding:5px 8px;background:rgba(171,163,114,0.05);border:1px solid #2a2a35;border-radius:3px;">
-            <span style="color:#6b6555;font-size:7.5px;">RF bypass active at &gt;92% — direct fault→action mapping enabled</span>
+          <!-- Calibration table header -->
+          <div style="border:1px solid #2a2a2a;border-radius:4px;overflow:hidden;margin-top:2px;">
+            <div style="padding:3px 7px;background:#1e1e1e;border-bottom:1px solid #2a2a2a;font-size:6px;color:#8c8470;text-transform:uppercase;letter-spacing:.5px;">Sensor Calibration</div>
+            <div style="display:grid;grid-template-columns:1fr 50px 60px 36px;padding:2px 7px;background:#1e1e1e;border-bottom:1px solid #383838;gap:3px;">
+              <span style="font-size:5.5px;color:#6b6555;">Parameter</span>
+              <span style="font-size:5.5px;color:#6b6555;">Drift/wk</span>
+              <span style="font-size:5.5px;color:#6b6555;">Cumul.</span>
+              <span style="font-size:5.5px;color:#6b6555;">Status</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 50px 60px 36px;padding:2px 7px;gap:3px;border-bottom:1px solid #1e1e1e;">
+              <span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">CO₂ PP mmHg</span>
+              <span style="font-size:5.5px;color:#8c8470;font-family:'JetBrains Mono',monospace;">0.8%/wk</span>
+              <div style="display:flex;align-items:center;gap:3px;"><div style="flex:1;background:#1e1e1e;border-radius:1px;height:3px;overflow:hidden;"><div style="height:100%;width:65%;background:#ffab00;"></div></div><span style="font-size:5px;color:#ffab00;">65%</span></div>
+              <span style="font-size:5px;padding:1px 3px;border-radius:2px;background:#3a2800;color:#ffab00;text-align:center;">WARN</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 50px 60px 36px;padding:2px 7px;gap:3px;">
+              <span style="font-size:5.5px;color:#ddd8cc;font-family:'JetBrains Mono',monospace;">O₂ PP %vol</span>
+              <span style="font-size:5.5px;color:#8c8470;font-family:'JetBrains Mono',monospace;">0.4%/wk</span>
+              <div style="display:flex;align-items:center;gap:3px;"><div style="flex:1;background:#1e1e1e;border-radius:1px;height:3px;overflow:hidden;"><div style="height:100%;width:32%;background:#aba372;"></div></div><span style="font-size:5px;color:#aba372;">32%</span></div>
+              <span style="font-size:5px;padding:1px 3px;border-radius:2px;background:rgba(171,163,114,.1);color:#aba372;text-align:center;">OK</span>
+            </div>
           </div>
         </div>
       </div>
@@ -510,19 +594,37 @@
         <li>Data generation interval and random seed for reproducible scenarios</li>
       </ul>
     </div>
-    <!-- Settings mock -->
+    <!-- Settings mock — actual admin panel with sub-tabs -->
     <div class="split-image">
-      <div class="mock-screen">
-        <div class="mk-bar"><span class="mk-title">⚙ Settings</span><span class="mk-status">Runtime Config · JSON</span></div>
-        <div class="mk-body" style="padding:10px 14px;gap:2px;">
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">alert_min_consecutive</span><span class="mk-setting-val">10</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:45%;"></div><div class="mk-slider-thumb" style="left:45%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>1</span><span>30</span></div></div>
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">alert_cooldown_seconds</span><span class="mk-setting-val">600</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:60%;"></div><div class="mk-slider-thumb" style="left:60%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>0</span><span>1800</span></div></div>
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">alert_critical_rf_gate</span><span class="mk-setting-val">0.85</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:85%;"></div><div class="mk-slider-thumb" style="left:85%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>0.5</span><span>1.0</span></div></div>
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">latch_threshold</span><span class="mk-setting-val">0.95</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:95%;"></div><div class="mk-slider-thumb" style="left:95%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>0.5</span><span>1.0</span></div></div>
-          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label">latch_min_consecutive</span><span class="mk-setting-val">3</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:20%;"></div><div class="mk-slider-thumb" style="left:20%;"></div></div><div style="display:flex;justify-content:space-between;font-size:7px;color:#6b6555;margin-top:1px;"><span>1</span><span>20</span></div></div>
-          <div style="display:flex;gap:6px;margin-top:8px;">
-            <div style="background:#aba372;color:#0d0d0d;text-align:center;padding:6px 14px;border-radius:4px;font-size:9px;font-weight:700;letter-spacing:1px;">SAVE</div>
-            <div style="border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:6px 12px;border-radius:4px;font-size:9px;">RESTORE DEFAULTS</div>
+      <div class="mock-screen" style="background:#0e0e0e;">
+        <div style="background:#161616;border-bottom:1px solid #2a2a2a;padding:5px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#aba372;">AURA</span>
+          <div style="display:flex;gap:1px;flex:1;justify-content:center;">
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">AI Analyst</span>
+            <span style="color:#6b6555;font-size:6px;padding:2px 5px;">Maintenance</span>
+            <span style="background:#383838;color:#aba372;font-size:6px;padding:2px 6px;border-radius:4px;font-weight:600;">⚙ Settings</span>
+          </div>
+          <span style="font-size:6px;color:#aba372;border:1px solid #383838;padding:1px 5px;border-radius:10px;font-family:'JetBrains Mono',monospace;">● NOMINAL</span>
+        </div>
+        <!-- Admin panel unlocked — sub-tabs row -->
+        <div style="display:flex;gap:0;padding:0 8px;border-bottom:1px solid #2a2a2a;flex-shrink:0;overflow:hidden;">
+          <span style="font-size:6px;padding:4px 7px;color:#8c8470;border-bottom:2px solid transparent;white-space:nowrap;">Data</span>
+          <span style="font-size:6px;padding:4px 7px;color:#aba372;border-bottom:2px solid #aba372;white-space:nowrap;">Alerts</span>
+          <span style="font-size:6px;padding:4px 7px;color:#8c8470;border-bottom:2px solid transparent;white-space:nowrap;">Generation</span>
+          <span style="font-size:6px;padding:4px 7px;color:#8c8470;border-bottom:2px solid transparent;white-space:nowrap;">Faults</span>
+          <span style="font-size:6px;padding:4px 7px;color:#8c8470;border-bottom:2px solid transparent;white-space:nowrap;">ML</span>
+          <span style="font-size:6px;padding:4px 7px;color:#8c8470;border-bottom:2px solid transparent;white-space:nowrap;">Security</span>
+        </div>
+        <!-- Alerts sub-tab content -->
+        <div class="mk-body" style="padding:8px;gap:6px;">
+          <div style="font-size:6px;color:#8c8470;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;">Alert Thresholds</div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label" style="font-size:7px;">alert_min_consecutive</span><span class="mk-setting-val">10</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:45%;"></div><div class="mk-slider-thumb" style="left:45%;"></div></div><div style="display:flex;justify-content:space-between;font-size:6.5px;color:#6b6555;margin-top:1px;"><span>1</span><span>30</span></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label" style="font-size:7px;">alert_cooldown_seconds</span><span class="mk-setting-val">600</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:60%;"></div><div class="mk-slider-thumb" style="left:60%;"></div></div><div style="display:flex;justify-content:space-between;font-size:6.5px;color:#6b6555;margin-top:1px;"><span>0</span><span>1800</span></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label" style="font-size:7px;">alert_critical_rf_gate</span><span class="mk-setting-val">0.85</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:85%;"></div><div class="mk-slider-thumb" style="left:85%;"></div></div><div style="display:flex;justify-content:space-between;font-size:6.5px;color:#6b6555;margin-top:1px;"><span>0.5</span><span>1.0</span></div></div>
+          <div class="mk-setting-row"><div class="mk-setting-hdr"><span class="mk-setting-label" style="font-size:7px;">latch_threshold</span><span class="mk-setting-val">0.95</span></div><div class="mk-slider-track"><div class="mk-slider-fill" style="width:95%;"></div><div class="mk-slider-thumb" style="left:95%;"></div></div><div style="display:flex;justify-content:space-between;font-size:6.5px;color:#6b6555;margin-top:1px;"><span>0.5</span><span>1.0</span></div></div>
+          <div style="display:flex;gap:6px;margin-top:6px;">
+            <div style="background:#aba372;color:#0d0d0d;text-align:center;padding:5px 12px;border-radius:4px;font-size:8px;font-weight:700;letter-spacing:1px;font-family:'JetBrains Mono',monospace;">SAVE</div>
+            <div style="border:1px solid #2a2a35;color:#8c8470;text-align:center;padding:5px 10px;border-radius:4px;font-size:8px;">RESTORE DEFAULTS</div>
           </div>
         </div>
       </div>
@@ -539,6 +641,109 @@ const fadeObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.08 });
 document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+function buildISSScene(containerId, faultModule) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const CLR = {
+    nominal: 0x5fe61f, fault: 0xff3d40,
+    module: 0xc8c4b8, moduleDark: 0xa09c90,
+    truss: 0x686460, solar: 0x04080f, solarGlow: 0x010508,
+    mast: 0x888078, sun: 0xfff5e8,
+  };
+
+  function stdMat(c, m=0.65, r=0.35) { return new THREE.MeshStandardMaterial({color:c,metalness:m,roughness:r}); }
+  function cylZ(r,h,c){const g=new THREE.CylinderGeometry(r,r,h,20);g.rotateX(Math.PI/2);return new THREE.Mesh(g,stdMat(c));}
+  function cylX(r,h,c){const g=new THREE.CylinderGeometry(r,r,h,20);g.rotateZ(Math.PI/2);return new THREE.Mesh(g,stdMat(c));}
+  function box(w,h,d,c,m,rr){return new THREE.Mesh(new THREE.BoxGeometry(w,h,d),stdMat(c,m??0.65,rr??0.35));}
+  function capsZ(p,cx,cy,cz,r,h,c){const g=new THREE.SphereGeometry(r,16,8,0,Math.PI*2,0,Math.PI/2),mat=stdMat(c);const f=new THREE.Mesh(g,mat);f.rotation.x=Math.PI/2;f.position.set(cx,cy,cz-h/2);p.add(f);const a=new THREE.Mesh(g,mat);a.rotation.x=-Math.PI/2;a.position.set(cx,cy,cz+h/2);p.add(a);}
+  function capsX(p,cx,cy,cz,r,h,c){const g=new THREE.SphereGeometry(r,16,8,0,Math.PI*2,0,Math.PI/2),mat=stdMat(c);const f=new THREE.Mesh(g,mat);f.rotation.z=-Math.PI/2;f.position.set(cx+h/2,cy,cz);p.add(f);const a=new THREE.Mesh(g,mat);a.rotation.z=Math.PI/2;a.position.set(cx-h/2,cy,cz);p.add(a);}
+
+  const W=container.clientWidth||400, H=container.clientHeight||280;
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  renderer.setSize(W,H);
+  container.appendChild(renderer.domElement);
+
+  const scene=new THREE.Scene();
+  scene.fog=new THREE.FogExp2(0x000000,0.0012);
+  const camera=new THREE.PerspectiveCamera(42,W/H,0.5,2000);
+  camera.position.set(55,38,82); camera.lookAt(0,0,12);
+
+  const controls=new OrbitControls(camera,renderer.domElement);
+  controls.target.set(0,0,12); controls.enableDamping=true; controls.dampingFactor=0.06;
+  controls.autoRotate=true; controls.autoRotateSpeed=0.35; controls.minDistance=18; controls.maxDistance=250; controls.update();
+
+  scene.add(new THREE.DirectionalLight(CLR.sun,4.0).position.set(90,70,50) && new THREE.DirectionalLight(CLR.sun,4.0));
+  const sun=new THREE.DirectionalLight(CLR.sun,4.0); sun.position.set(90,70,50); scene.add(sun);
+  const fill=new THREE.DirectionalLight(0x102030,0.6); fill.position.set(-60,-30,-40); scene.add(fill);
+  scene.add(new THREE.AmbientLight(0x0e0e0e,1.2));
+
+  const sp=new Float32Array(4000*3); for(let i=0;i<sp.length;i++)sp[i]=(Math.random()-0.5)*2000;
+  const sg=new THREE.BufferGeometry(); sg.setAttribute('position',new THREE.BufferAttribute(sp,3));
+  scene.add(new THREE.Points(sg,new THREE.PointsMaterial({color:0xffffff,size:0.55,sizeAttenuation:true})));
+
+  const earth=new THREE.Mesh(new THREE.SphereGeometry(320,32,32),new THREE.MeshStandardMaterial({color:0x0a1e3a,emissive:0x071428,emissiveIntensity:0.6,metalness:0,roughness:1,side:THREE.BackSide,depthWrite:false}));
+  earth.position.set(0,-520,30); scene.add(earth);
+  const el=new THREE.PointLight(0x0a2040,1.8,600); el.position.set(0,-180,30); scene.add(el);
+
+  const root=new THREE.Group(); scene.add(root);
+  const conn=box(2.2,5,2.2,CLR.truss); conn.position.set(0,2.5,0); root.add(conn);
+  const truss=box(112,2.2,3,CLR.truss,0.5,0.5); truss.position.set(0,5,0); root.add(truss);
+  for(let x=-48;x<=48;x+=12){const b=box(0.4,1.8,2.8,CLR.truss,0.5,0.6);b.position.set(x,5,0);root.add(b);}
+  const sm2=new THREE.MeshStandardMaterial({color:CLR.solar,metalness:0.85,roughness:0.12,emissive:CLR.solarGlow,emissiveIntensity:1});
+  const mm=stdMat(CLR.mast,0.7,0.3);
+  const pg=new THREE.BoxGeometry(0.18,13,36);
+  const we=new THREE.EdgesGeometry(pg);
+  const wm=new THREE.LineBasicMaterial({color:0x0a1428});
+  [-46,-20,20,46].forEach(x=>{
+    const mst=new THREE.Mesh(new THREE.BoxGeometry(0.5,20,0.5),mm); mst.position.set(x,5,0); root.add(mst);
+    [14.5,-4.5].forEach(y=>{
+      const pn=new THREE.Mesh(pg,sm2); pn.position.set(x,y,0); root.add(pn);
+      const wr=new THREE.LineSegments(we,wm); wr.position.set(x,y,0); root.add(wr);
+    });
+  });
+  const n2=cylZ(2.5,6,CLR.module); n2.position.set(0,0,0); root.add(n2); capsZ(root,0,0,0,2.5,6,CLR.module);
+  const lab=cylZ(3.3,9,CLR.module); lab.position.set(0,0,12); root.add(lab); capsZ(root,0,0,12,3.3,9,CLR.module);
+  const t1=cylZ(1.8,3,CLR.moduleDark); t1.position.set(0,0,7.5); root.add(t1);
+  const n1=cylZ(2.5,6,CLR.module); n1.position.set(0,0,25); root.add(n1); capsZ(root,0,0,25,2.5,6,CLR.module);
+  const t2=cylZ(1.8,4,CLR.moduleDark); t2.position.set(0,0,19.5); root.add(t2);
+  const col=cylX(2.3,9,0xc0cce0); col.position.set(10,0,-2); root.add(col); capsX(root,10,0,-2,2.3,9,0xc0cce0);
+  const tc=cylX(1.6,3.5,CLR.moduleDark); tc.position.set(4.5,0,-2); root.add(tc);
+  const kbo=box(14,4.2,4.5,0xb8c4d8); kbo.position.set(-12,0,-5); root.add(kbo);
+  const tk=cylX(1.6,4.5,CLR.moduleDark); tk.position.set(-5.5,0,-4); root.add(tk);
+  const air=cylX(2.0,7,0xb0bcd0); air.position.set(9.5,0,25); root.add(air);
+  const cb=new THREE.Mesh(new THREE.CylinderGeometry(2.0,2.2,1.8,12),stdMat(0xb0bcd0)); cb.position.set(-2,-4.5,27); root.add(cb);
+  const cd=new THREE.Mesh(new THREE.SphereGeometry(2.0,14,10,0,Math.PI*2,0,Math.PI/2),new THREE.MeshStandardMaterial({color:0x8090a8,metalness:0.3,roughness:0.15})); cd.rotation.x=Math.PI; cd.position.set(-2,-5.5,27); root.add(cd);
+  const fgb=cylZ(2.1,10,0xa8b8c8); fgb.position.set(0,0,35); root.add(fgb);
+  const sm=cylZ(2.2,13,0xa0b0c0); sm.position.set(0,0,50); root.add(sm);
+
+  const MODULE_POS={'Node 2':[0,0,0],'US Lab':[0,0,12],'Columbus':[10,0,-2],'JLP & JPM':[-12,0,-5],'Node 1':[0,0,25],'Cupola':[-3,-5,27],'Joint Airlock':[10,0,25]};
+  const indicators=[];
+  Object.entries(MODULE_POS).forEach(([name,[x,y,z]])=>{
+    const isFault = faultModule && name === faultModule;
+    const clr = isFault ? CLR.fault : CLR.nominal;
+    const glow=new THREE.Mesh(new THREE.SphereGeometry(0.85,16,16),new THREE.MeshStandardMaterial({color:clr,emissive:clr,emissiveIntensity:1.2,metalness:0,roughness:0.2}));
+    glow.position.set(x,y+4.2,z); scene.add(glow);
+    const light=new THREE.PointLight(clr,2.0,18); light.position.copy(glow.position); scene.add(light);
+    indicators.push({mesh:glow,light,isFault});
+  });
+
+  const ro=new ResizeObserver(()=>{const w=container.clientWidth,h=container.clientHeight;if(!w||!h)return;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h);});
+  ro.observe(container);
+
+  let clock=0;
+  function animate(){requestAnimationFrame(animate);clock+=0.016;indicators.forEach(({mesh,light,isFault})=>{if(!isFault){const b=0.5+0.5*Math.sin(clock*1.2);mesh.material.emissiveIntensity=0.8+0.4*b;light.intensity=1.6+0.8*b;}});controls.update();renderer.render(scene,camera);}
+  animate();
+}
+
+buildISSScene('twin-feat', 'Columbus');
 </script>
 </body>
 </html>
